@@ -1,0 +1,28 @@
+#banner{
+margin-top: 100px;
+height: auto;
+position: relative;
+}
+.background{
+    background-color: rgb(79, 58, 58);
+    border-radius: 15px;
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: 5%;
+}
+.imgBackground{
+    opacity: 0.6;
+}
+#bannerTxt{
+    position: absolute;
+    
+    padding-left: 28%;
+    padding-top: 6%;
+  
+    font-family: $font1;
+    color: $secondary-color;
+    font-weight: 500;
+font-size: 48px;
+line-height: 142.6%;
+}

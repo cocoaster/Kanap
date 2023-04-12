@@ -1,0 +1,48 @@
+#header{
+    margin-top: 50px;
+    margin-left: 6%;
+    margin-right: 50%;
+    width: 88%;
+    height: 68px;
+    display: flex;
+    flex-direction: raw;
+    justify-content: space-between;
+
+}
+#logo {
+    margin:0;
+}
+#navigation {
+
+font-size: 24px;
+line-height: 142.6%;
+
+}
+#navUl{
+    width: 100%;
+    display: flex;
+align-items: flex-end;
+    list-style-type: none;
+    padding-top: 18px;
+
+}
+.homeNav{
+    
+    
+    font-family: $font1;
+        color: $primary-color;
+margin-right: 75px;
+
+    text-decoration-line: underline; 
+    /* or 34px */
+
+text-align: right;
+}
+.aboutNav{
+    color: $primary-color;
+font-family: $font1;
+/* or 34px */
+
+text-align: right;
+
+}
