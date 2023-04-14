@@ -1,13 +1,15 @@
 import React from 'react';
-import data from "../../../backend/models/Apartment.js"
+import { Link } from 'react-router-dom';
+import data from "../data.js"
 
-const ApartmentsList = ({data}) => {
+export default function List () {
     return (
         <div className='apartmentCard'>
             {data.map(item => {
+                const title = item.title.split(' ').join('-');
                 return (
                     <div key={item.id}>
-                        <h3>{item.title}</h3>
+                        <h3><Link to={`/Apartment/${title}`} state={{ id : item.id}} >{item.title}</Link></h3>
                         <img src={item.cover} alt={item.title} />
                     </div>
                 )
@@ -17,4 +19,3 @@ const ApartmentsList = ({data}) => {
 }
 
 
-export default ApartmentsList;

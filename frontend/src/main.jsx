@@ -2,7 +2,7 @@ import App from './components/App.jsx'
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Root from "./routes/root";
-import ErrorPage from "./pages/Erreur404.jsx";
+import ErrorPage from "./pages/Error404.jsx";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,15 +10,15 @@ import {
 import "./styles/index.css";
 import "./styles/index.scss";
 import AppHome from './pages/Home.jsx';
-import A_Propos from './pages/A_Propos.jsx';
-import AppHeader from './components/Header.jsx'
+import About from './pages/About.jsx';
+import AppHeader from './components/Header.jsx';
+import List from './components/ApartmentsList.jsx'
+import ApartmentCard from './pages/Apartement_File.jsx'
 
 const router = createBrowserRouter(
-
-  [ 
-
-  {
-    path: "/",
+  [
+    {
+      path: "/",
       element: <AppHeader />,
       errorElement: <ErrorPage />,
       children: [
@@ -27,17 +27,24 @@ const router = createBrowserRouter(
           element: <AppHome />,
         },
       ],
-    
-    
-
-  },
+    },
+    {
+      path: "/About",
+      element: <AppHeader />,
+      children: [
+        {
+          path: "/About",
+          element: <About />,
+        },
+      ],
+    },
   {
-    path: "/A_Propos",
+    path: "/Apartment/:title",
     element: <AppHeader />,
     children: [
       {
-        path: "/A_Propos",
-        element: <A_Propos />,
+        path: "/Apartment/:title",
+        element: <ApartmentCard />,
       },
     ],
 

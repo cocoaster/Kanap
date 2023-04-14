@@ -2,7 +2,7 @@ import React from "react";
 import backgound from "../assets/Background.png"
 import imgBackgound2 from "../assets/IMGbackground2.png"
 
-const A_Propos = () => {
+const About = () => {
   return (
     <div id="homeContent" >
       <div id="banner">
@@ -13,4 +13,4 @@ const A_Propos = () => {
   );
 };
 
-export default A_Propos;
+export default About;

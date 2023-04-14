@@ -11,7 +11,7 @@ function AppHeader() {
             <nav id="navigation">
                 <ul id="navUl">
                 <li><NavLink className="homeNav" to="/">Accueil</NavLink></li>
-                <li><NavLink className="aboutNav" to="/A_Propos">A propos</NavLink></li>
+                <li><NavLink className="aboutNav" to="/About">A propos</NavLink></li>
                
             </ul>
             </nav>
