@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
-import data from "../data.js";
 
 const NextArrow = (props) => {
   const { className, onClick } = props;
@@ -23,7 +22,7 @@ const PrevArrow = (props) => {
 
 function ApartmentCard() {
   const params = useLocation();
-  const apartment = data.find(apartment => apartment.id === params?.state?.id);
+  const apartment = apartments.find(apartment => apartment.id === params?.state?.id);
   const settings = {
     dots: false,
     infinite: true,

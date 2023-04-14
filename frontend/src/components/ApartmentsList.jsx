@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react' ;
 import { Link } from 'react-router-dom';
-import data from "../data.js"
+import { getApartments } from '../service/index.jsx';
 
-export default function List () {
+export default function List() {
+    const [apartments, setApartments] = useState([]);
+    useEffect(() => {
+        getApartments().then(setApartments )
+     }, [])
     return (
         <div className='apartmentCard'>
-            {data.map(item => {
-                const title = item.title.split(' ').join('-');
+            {apartments.map(apartment => {
+                const title = apartment?.title.split(' ').join('-');
                 return (
-                    <div key={item.id}>
-                        <h3><Link to={`/Apartment/${title}`} state={{ id : item.id}} >{item.title}</Link></h3>
-                        <img src={item.cover} alt={item.title} />
+                    <div key={apartment?.id}>
+                        <h3><Link to={`/Apartment/${title}`} state={{ id : apartment?.id}} >{apartment?.title}</Link></h3>
+                        <img src={apartment?.cover} alt={apartment?.title} />
                     </div>
                 )
             })}

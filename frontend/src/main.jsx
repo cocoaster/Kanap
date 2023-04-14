@@ -1,6 +1,7 @@
 import App from './components/App.jsx'
 import React from "react";
 import ReactDOM from "react-dom/client";
+import AppProvider from './context/index.jsx';
 import Root from "./routes/root";
 import ErrorPage from "./pages/Error404.jsx";
 import {
@@ -55,6 +56,9 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* <AppProvider>
+      <App/>
+    </AppProvider> */}
     <RouterProvider router={router} />
   </React.StrictMode>
 );
