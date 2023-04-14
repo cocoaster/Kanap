@@ -1,5 +1,4 @@
 import React from "react";
-import AppHeader from "../components/Header";
 import backgound from "../assets/Background.png"
 import imgBackgound from "../assets/IMGbackground.png"
 import List from '../components/ApartmentsList'

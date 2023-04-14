@@ -1,5 +1,6 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState} from 'react' ;
+import { useLocation} from "react-router-dom";
+import { getApartments } from '../service/index.jsx';
 import Slider from "react-slick";
 
 const NextArrow = (props) => {
@@ -21,6 +22,7 @@ const PrevArrow = (props) => {
 };
 
 function ApartmentCard() {
+  const [apartments, setApartments] = useState([]);
   const params = useLocation();
   const apartment = apartments.find(apartment => apartment.id === params?.state?.id);
   const settings = {
@@ -45,7 +47,9 @@ function ApartmentCard() {
       },
     ],
   };
-
+  useEffect(() => {
+    getApartments().then(setApartments )
+ }, [])
   return (
     <>
       <div>
