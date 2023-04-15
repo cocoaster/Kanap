@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0px;
@@ -26,7 +28,7 @@ body {
 }
 
 #navigation {
-  font-size: 24px;
+  font-size: 1.8vw;
   line-height: 142.6%;
 }
 
@@ -41,7 +43,7 @@ body {
 .homeNav {
   font-family: Montserrat;
   color: #ff6060;
-  margin-right: 75px;
+  margin-right: 60px;
   text-decoration-line: underline;
   /* or 34px */
   text-align: right;
@@ -111,11 +113,11 @@ body {
 
 #bannerTxt {
   position: absolute;
-  padding-left: 28%;
-  padding-top: 6%;
+  padding-left: 25.4%;
+  padding-top: 5%;
   font-family: Montserrat;
   color: #ffffff;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 3.4vw;
   line-height: 142.6%;
 }/*# sourceMappingURL=index.css.map */
