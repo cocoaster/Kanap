@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react' ;
-import { useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { getApartments } from '../service/index.jsx';
 import Slider from "react-slick";
+import AppHeader from '../components/Header.jsx';
 
 const NextArrow = (props) => {
   const { className, onClick } = props;
@@ -52,6 +53,8 @@ function ApartmentCard() {
  }, [])
   return (
     <>
+            <AppHeader />
+
       <div>
         <Slider {...settings}>
           <div>

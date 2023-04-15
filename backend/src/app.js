@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-
+const path = require('path');
 const apartmentRoutes = require('./route/apartment.js');
 
 
@@ -19,6 +19,12 @@ app.use(cors());
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+// const public_path = path.join(__dirname, '../build');
+// app.use(express.static(public_path));
+// app.get("*", (_, res) => {
+//     res.sendFile(path.join(public_path, 'index.html'));
+// })
 
 const uri = process.env.STRING_URI;
 

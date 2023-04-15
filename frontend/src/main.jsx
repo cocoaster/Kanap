@@ -13,7 +13,7 @@ import AppHome from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import ApartmentCard from './pages/Apartement_File.jsx';
 import ErrorPage from "./pages/Error404.jsx";
-import AppHeader from './components/Header.jsx';
+
 
 
 
@@ -21,38 +21,19 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <AppHeader />,
+      element: <AppHome />,
       errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <AppHome />,
-        },
-      ],
     },
     {
-      path: "/About",
-      element: <AppHeader />,
-      children: [
-        {
-          path: "/About",
-          element: <About />,
+        path: "/About",
+            element: <About />,
         },
-      ],
-    },
+     
   {
     path: "/Apartment/:title",
-    element: <AppHeader />,
-    children: [
-      {
-        path: "/Apartment/:title",
         element: <ApartmentCard />,
       },
-    ],
-
     
-
-  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
