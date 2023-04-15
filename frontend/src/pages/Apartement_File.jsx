@@ -1,71 +1,83 @@
 import React, { useEffect, useState} from 'react' ;
 import { useLocation } from "react-router-dom";
 import { getApartments } from '../service/index.jsx';
-import Slider from "react-slick";
+import rightArrow from '../assets/RightArrow.png';
+import leftArrow from '../assets/LeftArrow.png';
+
+
+
 import AppHeader from '../components/Header.jsx';
 
-const NextArrow = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <i className="fas fa-chevron-right arrow arrow-right"></i>
-    </div>
-  );
-};
+import Footer from '../components/Footer.jsx';
 
-const PrevArrow = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <i className="fas fa-chevron-left arrow arrow-left"></i>
-    </div>
-  );
-};
+
 
 function ApartmentCard() {
+
   const [apartments, setApartments] = useState([]);
   const params = useLocation();
   const apartment = apartments.find(apartment => apartment.id === params?.state?.id);
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          nextArrow: <NextArrow className="slick-next slick-arrow-right" />,
-          prevArrow: <PrevArrow className="slick-prev slick-arrow-left" />,
-        },
-      },
-    ],
-  };
-  useEffect(() => {
+
+   useEffect(() => {
     getApartments().then(setApartments )
- }, [])
+  }, [])
+  // constante contenant les images du carousel
+  const apartmentPictures = apartment?.pictures.map((picture, index) => (
+    <img className='imgCarousel' key={index} src={picture} alt={apartment?.title} style={{ width: '100%' }} />
+  ));
+  console.log(apartmentPictures);
+  const [slidePosition, setSlidePosition] = useState(0);
+  const slideCount = apartment?.pictures.length;
+
+  const handlePrevClick = () => {
+    if (slidePosition === 0) {
+      setSlidePosition(slideCount - 1);
+    } else {
+      setSlidePosition(slidePosition - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (slidePosition === slideCount - 1) {
+      setSlidePosition(0);
+    } else {
+      setSlidePosition(slidePosition + 1);
+    }
+  };
+
+
+
   return (
     <>
-            <AppHeader />
+      <AppHeader />
 
       <div>
-        <Slider {...settings}>
-          <div>
-            <img src={apartment?.cover} alt={apartment?.title} />
+      <div id="carousel">
+  <div className="carousel-slide" style={{ transform: `translateX(-${slidePosition * 100}%)` }}>
+    {apartmentPictures}
           </div>
-          {apartment?.pictures.map((picture, index) => (
-            <div key={index}>
-              <img src={picture} alt={apartment?.title} />
-            </div>
-          ))}
-        </Slider>
+          
+          
+          
+  <div className="carousel-counter">
+    {slidePosition + 1}/{slideCount}
+  </div>
+  <button className="carousel-prev" onClick={handlePrevClick}>
+    <img className='arrow leftArrow' src={leftArrow} alt="Previous" />
+  </button>
+  <button className="carousel-next" onClick={handleNextClick}>
+    <img className='arrow rightArrow' src={rightArrow} alt="Next" />
+  </button>
+</div>
+      {/* <Carousel >
+    
+            {apartment?.pictures.map((picture, index) => (
+              <div id="carouselBackground" key={index} >
+              <img className='imgCarousel' src={picture} alt={apartment?.title} /> </div>))}
+          
+          </Carousel> */}
+        </div>
+        
         <div className="mediumSection">
           <div className="leftMediumSection">
             <h1>{apartment?.title} </h1>
@@ -103,7 +115,9 @@ function ApartmentCard() {
             </ul>
           </div>
         </div>
-      </div>
+      
+      <Footer />
+
     </>
   );
 }

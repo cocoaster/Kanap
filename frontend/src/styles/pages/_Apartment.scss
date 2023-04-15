@@ -1,0 +1,38 @@
+.slick-slider{
+    position: relative;
+    margin: auto;
+    margin-top: 160px;
+    width: 90%;
+    border-radius: 0px 0px 20px 20px;
+    .slick-prev, .slick-next{
+        position: absolute;
+        top: 34%;
+        color: black;
+        width: 10%;
+        height: 6%;
+       
+
+    }
+    
+}
+
+.fa-solid, .fas{
+    width: 60%;
+
+}
+.slick-prev:before, .slick-next:before{
+    width: 60%;
+
+        height: 60%;
+        z-index: 19;
+}
+
+
+  
+  .arrow-left {
+    left: 0;
+  }
+  
+  .arrow-right {
+    right: 0;
+  }

@@ -7,42 +7,66 @@
     display: flex;
     flex-direction: raw;
     justify-content: space-between;
+    svg {
+        margin-top: -40px;
+        width: 500px;
+        height: 240px;
+    }
+}
 
-}
-#logo {
-    margin:0;
-}
 #navigation {
 
-font-size: 1.8vw;
-line-height: 142.6%;
-
+padding-bottom: 40px;
 }
 #navUl{
     width: 100%;
     display: flex;
 align-items: flex-end;
     list-style-type: none;
-    padding-top: 18px;
+    padding-top: 57px;
 
 }
 .homeNav{
     
-    
+
+    text-decoration: none;
+
     font-family: $font1;
         color: $primary-color;
+        font-size: 1.6vw;
+font-size: 2vw;
+
 margin-right: 60px;
+&.active {
+    &::before, &::after{
+        content: "";
+        height: 20px;
+    }
 
-    text-decoration-line: underline; 
-    /* or 34px */
 
-text-align: right;
+    }
 }
+
+
+
+
 .aboutNav{
-    color: $primary-color;
-font-family: $font1;
-/* or 34px */
+padding-bottom: 0px;
 
-text-align: right;
+}
+.navActive{
+    text-decoration: none;
+    border-bottom: 4px solid $primary-color;
 
+    
+    &.active {
+    &::before, &::after{
+        content: "";
+    border-bottom: 10px solid $primary-color;
+       
+       
+           
+        }
+    }
+    
 }

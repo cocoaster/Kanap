@@ -26,12 +26,14 @@ const router = createBrowserRouter(
     },
     {
         path: "/About",
-            element: <About />,
+      element: <About />,
+      errorElement: <ErrorPage />,
         },
      
   {
     path: "/Apartment/:title",
-        element: <ApartmentCard />,
+    element: <ApartmentCard />,
+    errorElement: <ErrorPage />,
       },
     
 ]);
