@@ -15,7 +15,7 @@ export default function List() {
                 return (
                     <div key={apartment?.id } className= "apartCard"><Link to={`/Apartment/${title}`} state={{ id : apartment?.id}} >
                         <h3>{apartment?.title}</h3>
-                        <img src={apartment?.cover} alt={apartment?.title} />
+                        <img className='img-fluid' src={apartment?.cover} alt={apartment?.title} />
                         </Link>         </div>
                 )
             })}
