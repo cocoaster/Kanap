@@ -59,7 +59,7 @@ return (
     <div className='carousel-content'>
       <div className="carousel slide" data-bs-ride="carousel" id='kasa-carousel'>
         <div className="carousel-inner">
-          {/* Ajout de la classe "active" uniquement à la première div contenant la première image */}
+          /* Ajout de la classe "active" uniquement à la première div contenant la première image */
           {hasPictures && (
             <div className={`carousel-item${slidePosition === 0 ? " active" : ""}`}>
               {apartmentPictures[0]}
@@ -106,20 +106,34 @@ return (
               })}
             </div>
           </div>
-        </div>
-        <div className="bottomSection">
-          <div className="leftBottomSection">
-            <h3 className="descriptionTitle">Description</h3>
-            <p className="descriptionTxt">{apartment?.description} </p>
+    </div>
+    
+    <div className=" bottom">
+        <div className="accordion d-flex g-4   " id="bottomSectiont">
+          <div className="accordion-item col-6">
+            <h3 className="accordion-header">
+              <button type="button " className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#description"  >Description</button></h3>
+            <section className="accordion-body collapse" data-bs-parent="#bottomSection" id="description">{apartment?.description}               
+            </section> 
           </div>
-          <div className="rightBottomSection">
-            <h3 className="descriptionTitle">Equipements</h3>
-            <ul className="equipmentList">
+          <div className="accordion-item col-6">
+            <h3 className="accordion-header">
+              <button type="button " className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fiability"  >Equipements</button>
+            </h3>
+            <section className="accordion-body collapse" data-bs-parent="#bottomSection" id="fiability"><ul className="equipmentList">
               {apartment?.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}
-            </ul>
+              </ul>
+            </section> 
           </div>
+          
+           
+          </div>
+          
+            
+            
+          
         </div>
       
       <Footer />

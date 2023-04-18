@@ -87,37 +87,118 @@ body {
   margin-bottom: 0px;
 }
 
-.slick-slider {
-  position: relative;
+.accordion {
   margin: auto;
-  margin-top: 160px;
+  margin-top: 100px;
   width: 90%;
-  border-radius: 0px 0px 20px 20px;
-}
-.slick-slider .slick-prev, .slick-slider .slick-next {
-  position: absolute;
-  top: 34%;
-  color: black;
-  width: 10%;
-  height: 6%;
+  --bs-accordion-active-bg: $primary-color;
 }
 
-.fa-solid, .fas {
-  width: 60%;
+.accordion-item {
+  background: #F7F7F7 !important;
+  margin-bottom: 100px;
+}
+.accordion-item .accordion-button {
+  font-family: Montserrat;
+  font-size: 1.5vw;
+  color: #ffffff;
 }
 
-.slick-prev:before, .slick-next:before {
-  width: 60%;
-  height: 60%;
-  z-index: 19;
+.accordion-button {
+  background-color: #ff6060;
+  border: --bs-border-color-translucent;
+  --bs-accordion-active-bg: #ff6060 !important;
+}
+.accordion-button:active {
+  background-color: #ff6060;
 }
 
-.arrow-left {
-  left: 0;
+.accordion-button.collapsed {
+  --bs-accordion-btn-icon-color: white;
 }
 
-.arrow-right {
-  right: 0;
+.accordion-button {
+  --bs-accordion-btn-icon-color: white;
+}
+.accordion-button:not(.collapsed) {
+  --bs-accordion-btn-icon-color: white;
+}
+
+.accordion-button::after {
+  width: var(--bs-accordion-btn-icon-width);
+  --bs-accordion-btn-icon-width: 2vw;
+  --bs-accordion-btn-icon-color: white;
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+section {
+  font-family: Montserrat;
+  font-size: 1vw;
+  color: #ff6060;
+}
+
+.mediumSection, .bottomSection {
+  width: 90%;
+  margin: auto;
+}
+
+.mediumSection {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+}
+
+.leftMediumSection {
+  width: 50%;
+  font-family: Montserrat;
+}
+.leftMediumSection h2 {
+  font-family: Montserrat;
+}
+.leftMediumSection ul {
+  padding: 0%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2vw;
+  list-style-type: none;
+}
+.leftMediumSection ul li {
+  color: #ffffff;
+  background-color: #ff6060;
+  border-radius: 15px;
+  width: 30%;
+  text-align: center;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 3vw;
+}
+
+.rating {
+  margin-left: 34%;
+  margin-top: 20px;
+  width: 20%;
+  font-size: 4vw;
+}
+
+.rightMediumSection {
+  font-size: 2.5vw;
+}
+.rightMediumSection img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.cite {
+  width: 5%;
+  font-size: 2vw;
 }
 
 #header {
@@ -174,69 +255,141 @@ body {
   border-bottom: 10px solid #ff6060;
 }
 
-#listContent {
-  width: 90%;
+.main-container {
   margin: auto;
-  padding-left: 2%;
-  position: relative;
-  margin-top: 0px;
+  margin-top: 100px;
+  width: 90%;
 }
 
-#apartmentCard {
-  position: relative;
-  background-color: #F7F7F7;
-  border-radius: 30px;
-  padding-top: 4%;
+.cardContainer {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  justify-content: space-between;
 }
 
 .apartCard {
   position: relative;
-  margin-top: 0px;
-  margin-bottom: 90px;
-  margin-left: 4%;
-  width: 28%;
-  height: 700px;
-  border-radius: 20px;
-  box-shadow: -3px 5px 15px 2px #C2C2C2;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(50%);
-  animation: fadeInUp 0.7s ease forwards;
-}
-.apartCard img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-.apartCard h3 {
-  padding-left: 5%;
-  font-family: Montserrat;
-  font-size: 2.9vh;
-  color: #ffffff;
-  position: absolute;
-  bottom: 5%;
-  width: 60%;
-  line-height: 142.6%;
-  text-shadow: -3px 5px 15px 2px #C2C2C2;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50%);
+.card-image {
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.apartCard:hover .card-image::before,
+.apartCard:focus .card-image::before {
+  opacity: 1;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 3%;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.apartCard .card-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card-image:hover,
+.card-image:focus {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.apartCard .card-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.apartCard:hover .card-image,
+.apartCard:focus .card-image {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lastRow {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 150px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .card-title {
+    font-size: 1.2rem;
   }
 }
+@media (max-width: 576px) {
+  .card-image {
+    height: 120px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+}
+.apartCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 #footerBackground {
   width: 100%;
   height: 300px;
