@@ -154,19 +154,16 @@ body {
     top: 0;
   }
 }
-#accordionAbout {
+.accordion {
   margin: auto;
   margin-top: 100px;
   width: 90%;
   --bs-accordion-active-bg: $primary-color;
-  --bs-accordion-color: white;
 }
 
 .accordion-item {
   background: #F7F7F7 !important;
-  margin: auto;
   margin-bottom: 100px;
-  width: 80%;
 }
 .accordion-item .accordion-button {
   font-family: Montserrat;
@@ -176,10 +173,35 @@ body {
 
 .accordion-button {
   background-color: #ff6060;
+  border: --bs-border-color-translucent;
   --bs-accordion-active-bg: #ff6060 !important;
 }
 .accordion-button:active {
   background-color: #ff6060;
+}
+
+.accordion-button.collapsed {
+  --bs-accordion-btn-icon-color: white;
+}
+
+.accordion-button {
+  --bs-accordion-btn-icon-color: white;
+}
+.accordion-button:not(.collapsed) {
+  --bs-accordion-btn-icon-color: white;
+}
+
+.accordion-button::after {
+  width: var(--bs-accordion-btn-icon-width);
+  --bs-accordion-btn-icon-width: 2vw;
+  --bs-accordion-btn-icon-color: white;
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
 }
 
 section {
@@ -188,38 +210,6 @@ section {
   color: #ff6060;
 }
 
-.aboutAccordionButton {
-  width: 80%;
-}
-
-@media (max-width: 576px) {
-  #banner {
-    margin-top: 20px;
-  }
-  .background {
-    border-radius: 8px;
-    height: 90px;
-  }
-  #accordionAbout {
-    margin: auto;
-    margin-top: 20px;
-    width: 90%;
-  }
-  .accordion-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .accordion-item .accordion-button {
-    font-size: 4vw;
-  }
-  section {
-    font-size: 3.5vw;
-    margin-bottom: 40px;
-  }
-  .accordion-button::after {
-    --bs-accordion-btn-icon-width: 7vw;
-  }
-}
 .mediumSection, .bottomSection {
   width: 90%;
   margin: auto;
@@ -829,11 +819,6 @@ rightMediumSection .rating {
   height: 5vw;
 }
 
-.bottom {
-  margin-bottom: 60px;
-  height: auto;
-  margin-bottom: 0;
-}
 
 @media (max-width: 900px) {
   .carousel-content {

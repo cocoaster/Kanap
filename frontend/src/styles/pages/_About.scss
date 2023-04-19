@@ -32,7 +32,26 @@ section{
     width : 80%;
 }
 @media (max-width: 900px) {
-   
+    #banner{
+        margin-top: 80px;
+    }
+    section{  
+        font-size: 2vw ;
+        margin-bottom: 40px;   
+    }
+    .accordion-item{
+        width: 100%;
+        margin-bottom: 50px;
+    .accordion-button{
+        font-size: 3vw;
+    }
+    }
+    #accordionAbout{
+        margin: auto;
+        margin-top: 50px;
+        width: 90%;  
+        height: 650px; 
+    }
 }
 
 @media (max-width: 576px) {
@@ -46,18 +65,18 @@ section{
 #accordionAbout{
     margin: auto;
     margin-top: 20px;
-    width: 90%;
-   
+    width: 90%; 
+    height: 490px;  
 }
 .accordion-item{
     width: 100%;
     margin-bottom: 20px;
 .accordion-button{
+    border-radius: 9px !important;
     font-size: 4vw;
 }
 }
-section{
-    
+section{  
     font-size: 3.5vw ;
     margin-bottom: 40px;   
 }

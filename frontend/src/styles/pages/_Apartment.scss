@@ -30,10 +30,11 @@ margin: auto;
     justify-content: flex-start;
     font-size: 1.2vw;
     list-style-type: none;
+    width: auto;
+
     li{
       margin-right: 15px;
       margin-top: 30px ;
-
       color: $secondary-color;
       background-color: $primary-color;
       border-radius: 15px;
@@ -60,8 +61,6 @@ margin: auto;
   }
 }
 
-
-
 .hostContent{
   display: flex;
   justify-content: flex-end;
@@ -75,7 +74,7 @@ margin: auto;
 .bottom{
   display: flex; 
   justify-content: space-between; 
-  height: 400px;
+  height: 450px;
   margin: auto;
   margin-top: 0px;
   margin-bottom: 150px;
@@ -137,41 +136,46 @@ margin: auto;
         }
     }
   }
-}
-.hostContent{
-  width: 100%;
-}
-.hostName{
-  margin-top: 0px;
-  margin-right: 10px;
-  font-size: 2vw;
-  p{
-    margin-bottom: 0;
+  .hostContent{
+    width: 100%;
   }
-}
-rightMediumSection{
-  font-size: 2.5vw;
-  position: relative;
- 
-  width: 40%;
-  img{
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-  }
-  .rating{
-    position: absolute;
+  .hostName{
     margin-top: 0px;
-    right: 30%;
-    width: 7%;
-    font-size: 3vw; 
+    margin-right: 10px;
+    font-size: 2vw;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  rightMediumSection{
+    font-size: 2.5vw;
+    position: relative;
+   
+    width: 40%;
+    img{
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+    }
+    .rating{
+      position: absolute;
+      margin-top: 0px;
+      right: 30%;
+      width: 7%;
+      font-size: 3vw; 
+    }
+  }
+  .bottom{
+    height: 280px;
   }
 }
+
 
 @media (max-width: 576px) {
   .mediumSection{
     flex-direction: column;
-   
+   margin : auto;
+   width: 90%;
   }
   .leftMediumSection{
     width: 90%;
@@ -207,13 +211,14 @@ rightMediumSection{
       position: relative;
       width: 100%;
       img{
+        margin-right: 8px;
         width: 14%;
         height: 14%;
         border-radius: 60%;
       }
       .rating{
         position: absolute;
-        left: -34%;
+        left: 0%;
         font-size: 6vw; 
         top: 5px;
       }
@@ -232,6 +237,7 @@ rightMediumSection{
   #apartAccordion1{
     margin-top: 16px;
     margin-bottom: 25px;
+    width:100%;
   }
   #apartAccordion2{
     margin-top: 0px;
@@ -239,14 +245,22 @@ rightMediumSection{
   }
   .bottom{
     flex-direction: column;
-    height: 400px;
+    height: 445px;
     margin: auto;
     margin-top: 0px;
-    width: 110%;
+    width: 90%;
     margin-bottom: 120px;
     }
+    .apartAccordionItem1{
+      width: 100%;
+      margin: 0;
+      margin-left: 0;
+      margin-top: 0!important;
+      left: 0;
+    }
+    
     .apartAccordionItem2{
-      width: 90%;
+      width: 100%;
       margin-right: 0;
       margin-left: 0;
       margin-bottom: 30px;

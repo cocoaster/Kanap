@@ -48,7 +48,7 @@ return (
           </div>
           <div className="rating">
             {Array.from({ length: 5 }, (_, i) => {
-              const starColor = i < apartment?.rating ? "#ff6060" : "#                 e3e3e3";
+              const starColor = i < apartment?.rating ? "#ff6060" : "#e3e3e3";
               return <span key={i} style={{ color: starColor }}>★</span>;
             })}
           </div>
