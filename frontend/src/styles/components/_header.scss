@@ -24,13 +24,11 @@ padding-bottom: 40px;
     align-items: flex-end;
     list-style-type: none;
     padding-top: 57px;
-
 }
 .homeNav{
     text-decoration: none;
     font-family: $font1;
     color: $primary-color;
-    font-size: 1.6vw;
     font-size: 2vw;
     margin-right: 60px;
 &.active {
@@ -69,11 +67,40 @@ padding-bottom: 0px;
     opacity: 0.5;
   }
   
-  @media (max-width: 768px) {
-   
+  @media (max-width: 900px) {
+    #header{
+        margin-top: 50px;
+        margin-left: 6%;
+        margin-right: 50%;
+        width: 88%;
+        height: 68px;
+        display: flex;
+        flex-direction: raw;
+        justify-content: space-between;
+        svg {
+            margin-top: -20px;
+            width: 250px;
+            height: 140px;
+        }
+    }
+    #navUl{
+        width: 100%;    
+        padding-top: 57px;
+    }
+    .homeNav{
+        height: 20px;
+        text-align: left;
+        white-space: nowrap;   
+        font-size: 3vw;
+        margin-right: 20px;   
+        }
+        #navigation{
+            padding-top: 0;
+            margin-top: -30px;
+        }
   }
   @media (max-width: 576px) {
-    }
+    
     #header{
         text-transform: uppercase;
         margin-top: 0px;
@@ -102,12 +129,10 @@ padding-bottom: 0px;
     text-align: left;
     white-space: nowrap;   
     font-size: 3.5vw;
-    margin-right: 20px;
-    
-        
+    margin-right: 20px;   
     }
 }
 .navActive{
     border-bottom: 1px solid $primary-color;
-      
+}     
 }

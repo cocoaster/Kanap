@@ -18,6 +18,11 @@ const AppHome = () => {
                     <img className="background" src={backgound} alt="background" />
                     <img className="background imgBackground" src={imgBackgound} alt="landscape" />
                     <p id="bannerTxt">Chez vous, partout et ailleurs</p>
+                    <div id="mobileQuoteVersion">
+                      <p className="mobileQuoteVersionP p1">Chez vous,</p>
+                      <p className="mobileQuoteVersionP p2">partout et ailleurs</p>
+                    </div>
+          
                 </div >
             <div id="listContent">
             <List/>

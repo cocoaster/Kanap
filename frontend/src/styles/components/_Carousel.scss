@@ -40,9 +40,32 @@ width: 10rem;
   height: 5vw;
 }
   
+.bottom{
+  margin-bottom: 60px;
+  height: auto;
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+   .carousel-content{
+    margin-top: 80px;
+    height: 500px;
+    margin-bottom: 30px;
 
-@media (max-width: 768px) {
-   
+   }
+   .carousel-slide{
+    height: 500px;
+  }
+.carousel-inner{
+  height: 500px;
+}
+.carousel-item{
+  height: 500px;
+}
+.imgCarousel{
+  height: 500px; 
+  border-radius: 15px;
+}
+
 }
 
 @media (max-width: 576px) {
