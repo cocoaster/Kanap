@@ -34,3 +34,17 @@ font-size: 3.4vw;
 line-height: 142.6%;
 margin-bottom: 0px;
 }
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+
+#bannerTxt{
+    padding-left: 10.4%;
+    top: 20%;    
+    font-size: 7vw;
+    line-height: 142.6%;
+    margin-bottom: 10px;
+    } 
+}

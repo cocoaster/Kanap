@@ -9,18 +9,18 @@ import Footer from "../components/Footer.jsx";
 const AppHome = () => {
   return (
     <>
-              <AppHeader />
+      <AppHeader />
 
       < div id="homeContent" >
         <div>
-          </div>
-      <div id="banner">
-      <img className="background" src={backgound} alt="background" />
-        <img className="background imgBackground" src={imgBackgound} alt="landscape" />
-        <p id="bannerTxt">Chez vous, partout et ailleurs</p>
-        </div >
-        <div id="listContent">
-    <List/>
+            </div>
+                <div id="banner">
+                    <img className="background" src={backgound} alt="background" />
+                    <img className="background imgBackground" src={imgBackgound} alt="landscape" />
+                    <p id="bannerTxt">Chez vous, partout et ailleurs</p>
+                </div >
+            <div id="listContent">
+            <List/>
         </div>
        
       </div>

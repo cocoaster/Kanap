@@ -6,6 +6,11 @@
     align-items: center;
 justify-content: center;
 margin-top: 200px;
+a{
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-color: $primary-color;
+}
 }
 #errorNumber{
 
@@ -22,16 +27,37 @@ font-family: $font1;
 font-weight: 500;
 font-size: 36px;
 line-height: 142.6%;
-
 color: $primary-color;
 }
 #homeBack{
     font-family: $font1;
     color: $primary-color;
     font-weight: 500;
-font-size: 18px;
-line-height: 142.6%;
+    font-size: 18px;
+    line-height: 142.6%;
     margin-top: 200px;
     text-decoration-line: underline;
+    text-decoration-color: $primary-color;
+    margin-bottom: 200px;
+}
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+    #errorNumber{
+        font-size: 100px;   
+        }
+    #errorTxt{
+        font-size: 15px;
+        text-align: center;
+        }
+  }
+  #homeBack{
+    
+    font-size: 16px;
+    line-height: 142.6%;
+    margin-top: 100px;
+text-decoration: none;    text-decoration-thickness: 0.5px;
     margin-bottom: 200px;
 }

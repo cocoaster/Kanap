@@ -14,7 +14,7 @@
     }
     .imgCarousel{
       height: 820px;
-
+      border-radius: 15px;
     }
     
   .carousel-counter {
@@ -40,3 +40,41 @@ width: 10rem;
   height: 5vw;
 }
   
+
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+  .carousel-content {
+    margin:  auto;
+    margin-top: 25px;
+    height: 280px;
+    margin-bottom: 12px; 
+    }
+    .carousel-slide{
+      height: 280px;
+    }
+  .carousel-inner{
+    height: 280px;
+  }
+  .carousel-item{
+    height: 280px;
+  }
+  .imgCarousel{
+    height: 280px;experience, drag and drop this view into the Secondary Side Bar.
+    
+    
+    border-radius: 15px;
+  }
+  .carousel-control-prev-icon{
+    $carousel-control-prev-icon-width: 30;
+    $carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width: viewBox='0 0 30 30' ><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 10vw;
+  height: 10vw;
+}
+  }

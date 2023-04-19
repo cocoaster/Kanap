@@ -31,3 +31,38 @@ section{
 .aboutAccordionButton{
     width : 80%;
 }
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+  #banner{
+    margin-top: 20px;
+}
+.background{
+    border-radius: 8px;
+    height: 90px;
+}
+#accordionAbout{
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+   
+}
+.accordion-item{
+    width: 100%;
+    margin-bottom: 20px;
+.accordion-button{
+    font-size: 4vw;
+}
+}
+section{
+    
+    font-size: 3.5vw ;
+margin-bottom: 40px;   
+}
+
+.accordion-button::after {
+    --bs-accordion-btn-icon-width: 7vw;
+}
+  }
