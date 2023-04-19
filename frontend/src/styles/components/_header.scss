@@ -21,52 +21,55 @@ padding-bottom: 40px;
 #navUl{
     width: 100%;
     display: flex;
-align-items: flex-end;
+    align-items: flex-end;
     list-style-type: none;
     padding-top: 57px;
 
 }
 .homeNav{
-    
-
     text-decoration: none;
 
     font-family: $font1;
-        color: $primary-color;
-        font-size: 1.6vw;
-font-size: 2vw;
-
-margin-right: 60px;
+    color: $primary-color;
+    font-size: 1.6vw;
+    font-size: 2vw;
+    margin-right: 60px;
 &.active {
     &::before, &::after{
         content: "";
         height: 20px;
     }
-
-
     }
 }
-
-
-
 
 .aboutNav{
 padding-bottom: 0px;
 
 }
+
 .navActive{
     text-decoration: none;
     border-bottom: 4px solid $primary-color;
+    &:hover{
+        color: $primary-color;
+        opacity: 0.5;
+        border-bottom: 4px solid rgba($primary-color, 0.5);
 
-    
+    }
     &.active {
     &::before, &::after{
         content: "";
-    border-bottom: 10px solid $primary-color;
-       
-       
-           
+    border-bottom: 10px solid $primary-color;  
+    opacity: 0.5;
+        border-bottom: 4px solid rgba($primary-color, 0.5);         
         }
-    }
-    
+    }    
 }
+
+.homeNav:not(.navActive):hover {
+    color: $primary-color;
+    opacity: 0.5;
+  }
+  
+ 
+  

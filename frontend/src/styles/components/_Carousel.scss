@@ -1,24 +1,22 @@
-
 .carousel-content {
-
     width: 90%;
     margin:  auto;
     margin-top: 180px;
     height: 820px;
-    margin-bottom: 100px;
-
-   
+    margin-bottom: 100px; 
     }
 
-  
-
-  
   .carousel-item{
     border-radius: 0px 0px 30px 30px;
     object-fit: cover;
-  width: 100%;
-  height: 820px;
-}
+    width: 100%;
+    height: 820px;
+    }
+    .imgCarousel{
+      height: 820px;
+
+    }
+    
   .carousel-counter {
     position: absolute;
     top: 85%;
@@ -30,29 +28,15 @@
     text-shadow: -12px -1px 14px -5px rgba(0,0,0,0.38);
   }
   
-
-  
-  
-  
-  .arrow{
-    position: absolute;
-    width: 10%;
-    height: 28%;
-top: 50%;
-transform: translateY(-50%);
-opacity: 0.6;
-transition: 0.5s ease;
-&:hover{
-    opacity: 1;
+  .carousel-control-prev-icon{
+    $carousel-control-prev-icon-width: 5rem;
+    $carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' ><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+width: 10rem; 
 }
 
-  }
-  .leftArrow {
-    left: 0;
-
-  }
-  
-  .rightArrow {
-    right: 0;
-  }
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 5vw;
+  height: 5vw;
+}
   

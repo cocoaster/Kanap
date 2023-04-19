@@ -1,6 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import AppHeader from "../components/Header";
 import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -8,7 +9,9 @@ export default function ErrorPage() {
   
   return (
     <>
-              <AppHeader />
+      <AppHeader />
+      {/* <Carousel /> */}
+      
 
       <div >
         <div id="error-page">
