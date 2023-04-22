@@ -334,11 +334,11 @@ body {
   .accordionAbout-button {
     width: 100%;
     padding: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
     border-radius: 7px;
   }
   .accordion-body {
-    font-size: 6vw;
+    font-size: 8vw;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 20px;
@@ -348,6 +348,9 @@ body {
   .accordion-body p {
     margin-top: 50px;
     margin-bottom: 37px;
+  }
+  .sectionText {
+    font-size: 3.8vw;
   }
   .arrows {
     width: 7.5%;
