@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   justify-content: center;
   margin-top: 200px;
 }
@@ -54,17 +55,39 @@ body {
   margin-bottom: 200px;
 }
 
+@media (max-width: 768px) {
+  #error-page {
+    width: 65%;
+    height: auto;
+  }
+  #errorTxt {
+    font-size: 34px;
+    text-align: center;
+  }
+  #homeBack {
+    font-size: 14px;
+    line-height: 142.6%;
+    margin-top: 100px;
+    text-decoration: none;
+    text-decoration-thickness: 0.5px;
+    margin-bottom: 200px;
+  }
+}
 @media (max-width: 576px) {
+  #error-page {
+    width: 65%;
+    height: auto;
+  }
   #errorNumber {
     font-size: 100px;
   }
   #errorTxt {
-    font-size: 15px;
+    font-size: 19px;
     text-align: center;
   }
 }
 #homeBack {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 142.6%;
   margin-top: 100px;
   text-decoration: none;
@@ -124,6 +147,18 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1200px) {
+  #bannerTxt {
+    top: 0%;
+    font-size: 3.4vw;
+  }
+}
+@media (max-width: 900px) {
+  #bannerTxt {
+    top: 30%;
+    font-size: 3.4vw;
+  }
+}
 @media (max-width: 576px) {
   #banner {
     width: 100%;
@@ -134,24 +169,27 @@ body {
   #mobileQuoteVersion {
     position: absolute;
     display: block;
-    top: 18px;
+    top: 20px;
     left: 14px;
   }
   #mobileQuoteVersion .mobileQuoteVersionP {
     white-space: nowrap;
     line-height: 0;
-    font-family: Montserrat;
     padding-left: 10.4%;
-    z-index: 100;
     font-size: 6.9vw;
     line-height: 24px;
     margin-bottom: 0px;
   }
+  P {
+    margin-top: 0%;
+  }
   p1 {
     position: relative;
+    margin-top: 5%;
   }
   p2 {
     position: absolute;
+    margin-top: 0%;
     top: 0;
   }
 }
@@ -159,16 +197,16 @@ body {
   margin: auto;
   margin-top: 100px;
   width: 90%;
-  --bs-accordion-active-bg: $primary-color;
-  --bs-accordion-color: white;
 }
-#accordionAbout .accordion-item {
-  background: #F7F7F7 !important;
+
+.accordionAbout-item {
+  background: #F7F7F7;
   margin: auto;
   margin-bottom: 80px;
   width: 80%;
 }
-#accordionAbout .accordion-item .accordion-button {
+
+.accordionAbout-button {
   width: 100%;
   padding: 20px;
   justify-content: left;
@@ -176,64 +214,65 @@ body {
   font-size: 1.5vw;
   color: #ffffff;
   background-color: #ff6060;
-  --bs-accordion-active-bg: #ff6060 !important;
   display: flex;
   justify-content: space-between;
   position: relative;
   border-radius: 7px;
 }
-#accordionAbout .accordion-item .accordion-button:active {
+.accordionAbout-button:active {
   background-color: #ff6060;
 }
-#accordionAbout .accordion-item .accordion-button svg {
-  transition: transform 0.3s ease-in-out;
-  position: absolute;
-  right: 2%;
-}
-#accordionAbout .accordion-item .accordion-button.active svg {
+.accordionAbout-button.active {
   transform: rotate(180deg);
 }
-#accordionAbout .accordion-item .accordion-button.active {
+.accordionAbout-button.active {
   flex-direction: row-reverse;
 }
-#accordionAbout .accordion-item section {
+
+.accordion-body {
   font-family: Montserrat;
   font-size: 1vw;
   color: #ff6060;
   padding-left: 2%;
   padding-bottom: 20px;
   margin-top: -20px;
+  padding-top: 0px;
   margin-bottom: 20px;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
 }
-#accordionAbout .accordion-item .accordion-body {
+.accordion-body p {
+  margin-top: 70px;
+}
+
+.accordion-body {
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   height: 0;
 }
-#accordionAbout .accordion-item .accordion-body.collapse {
+.accordion-body.collapse {
   height: 0;
 }
-#accordionAbout .accordion-item .accordion-body.show {
+.accordion-body.show {
   height: auto;
 }
-#accordionAbout .accordion-item .aboutAccordionButton {
+
+.aboutAccordionButton {
   width: 80%;
 }
-#accordionAbout .accordion-item.show .accordion-body {
+
+.accordionAbout-item.show .accordion-body {
   padding-top: 40px;
   padding-bottom: 40px;
   height: auto;
   overflow: visible;
 }
 
-section {
-  padding-top: 0px;
+.arrows {
+  width: 3.5%;
 }
-
-p {
-  margin-top: 70px;
+.arrows:hover {
+  opacity: 0.6;
 }
 
 .accordion-body {
@@ -241,15 +280,24 @@ p {
   transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
 }
 
-.accordion-item:not(.show) .accordion-body {
+.accordionAbout-item:not(.show) .accordion-body {
   padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
 }
 
-.accordion-item.show .accordion-body {
+.accordionAbout-item.show .accordion-body {
   padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
 }
 
+@media (max-width: 900px) {
+  #aboutContent {
+    height: auto;
+  }
+}
 @media (max-width: 576px) {
+  #aboutContent {
+    height: auto;
+    width: 100%;
+  }
   #banner {
     margin-top: 20px;
   }
@@ -258,25 +306,33 @@ p {
     height: 90px;
   }
   #accordionAbout {
-    margin: auto;
     margin-top: 20px;
-    width: 90%;
-    height: 490px;
-  }
-  .accordion-item {
     width: 100%;
+  }
+  .accordionAbout-item {
     margin-bottom: 20px;
+    width: 90%;
+    border-radius: 8px;
   }
-  .accordion-item .accordion-button {
-    border-radius: 9px !important;
+  .accordionAbout-button {
+    width: 100%;
+    padding: 10px;
     font-size: 4vw;
+    border-radius: 7px;
   }
-  section {
-    font-size: 3.5vw;
-    margin-bottom: 40px;
+  .accordion-body {
+    font-size: 4vw;
+    padding-left: 2%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
   }
-  .accordion-button::after {
-    --bs-accordion-btn-icon-width: 7vw;
+  .accordion-body p {
+    margin-top: 50px;
+    margin-bottom: 37px;
+  }
+  .arrows {
+    width: 7.5%;
   }
 }
 .mediumSection, .bottomSection {
@@ -289,6 +345,7 @@ p {
   justify-content: space-between;
   font-family: Montserrat;
   color: #ff6060;
+  margin-top: 15px;
 }
 
 .leftMediumSection {
@@ -370,7 +427,7 @@ p {
   margin-bottom: 150px;
   width: 90%;
 }
-.bottom .accordionApart-iten {
+.bottom .accordionApart-item {
   flex-basis: 45%;
 }
 .bottom .equalHeight {
@@ -410,7 +467,7 @@ button img.active {
   transform: rotate(180deg);
 }
 
-.accordionApart-iten {
+.accordionApart-item {
   font-family: Montserrat;
   border-radius: 15px;
   width: 45%;
@@ -476,6 +533,51 @@ accordion-icon {
   flex: 1 0 50%;
 }
 
+@media (max-width: 1200px) {
+  .leftMediumSection h1 {
+    font-size: 2.8vw;
+  }
+  .leftMediumSection h2 {
+    font-size: 1.8vw;
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
+  .leftMediumSection ul {
+    font-size: 1.3vw;
+  }
+  .rightMediumSection {
+    font-size: 2.5vw;
+    position: relative;
+    width: 40%;
+  }
+  .rightMediumSection img {
+    margin-top: 40px;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+  }
+  .rightMediumSection .rating {
+    position: absolute;
+    margin-top: 0px;
+    right: 30%;
+    width: 6%;
+    font-size: 3vw;
+  }
+  .hostName {
+    margin-top: 27px;
+    margin-right: 15px;
+    font-size: 1.7vw;
+  }
+  .hostName p {
+    margin-top: 15px;
+  }
+  .accordionTextApart {
+    font-size: 2vw;
+  }
+  .accordionSectionApart {
+    font-size: 2vw;
+  }
+}
 @media (max-width: 900px) {
   .leftMediumSection {
     width: 90%;
@@ -513,17 +615,17 @@ accordion-icon {
   .hostName p {
     margin-bottom: 0;
   }
-  rightMediumSection {
+  .rightMediumSection {
     font-size: 2.5vw;
     position: relative;
     width: 40%;
   }
-  rightMediumSection img {
+  .rightMediumSection img {
     width: 20%;
     height: 20%;
     border-radius: 50%;
   }
-  rightMediumSection .rating {
+  .rightMediumSection .rating {
     position: absolute;
     margin-top: 0px;
     right: 30%;
@@ -532,6 +634,10 @@ accordion-icon {
   }
   .bottom {
     height: 280px;
+  }
+  .accordion-button {
+    font-size: 3.5vw;
+    height: 60px;
   }
 }
 @media (max-width: 576px) {
@@ -572,6 +678,7 @@ accordion-icon {
     width: 100%;
   }
   .rightMediumSection img {
+    margin-top: 15px;
     margin-right: 8px;
     width: 14%;
     height: 14%;
@@ -581,17 +688,18 @@ accordion-icon {
     position: absolute;
     left: 0%;
     font-size: 6vw;
-    top: 5px;
+    top: 20px;
   }
   .hostContent {
     width: 100%;
   }
   .hostName {
-    margin-top: 0px;
+    margin-top: 15px;
     margin-right: 10px;
     font-size: 4vw;
   }
   .hostName p {
+    margin-top: 5px;
     margin-bottom: 0;
   }
   #apartAccordion1 {
@@ -601,6 +709,7 @@ accordion-icon {
   }
   #apartAccordion2 {
     margin-top: 0px;
+    width: 100%;
   }
   .bottom {
     flex-direction: column;
@@ -625,6 +734,24 @@ accordion-icon {
   }
   .accordion-button {
     padding: 7px;
+    height: 30px;
+    border-radius: 6px;
+  }
+  .accordionSectionApart {
+    border-radius: 7px;
+    font-size: 4vw;
+    margin-left: 0;
+  }
+  .accordionTextApart {
+    font-size: 4vw;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+  }
+  .accordionSectionApart ul {
+    padding: 0;
+    padding-left: 12px;
+    padding-top: 20px;
   }
 }
 #header {
@@ -654,6 +781,7 @@ accordion-icon {
   justify-content: space-between;
   list-style-type: none;
   padding-top: 57px;
+  white-space: nowrap;
 }
 
 .homeNav {
@@ -693,20 +821,14 @@ accordion-icon {
   opacity: 0.5;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   #header {
-    margin-top: 50px;
-    margin-left: 6%;
-    margin-right: 50%;
     width: 88%;
-    height: 68px;
-    display: flex;
-    flex-direction: raw;
-    justify-content: space-between;
+    height: 140px;
   }
   #header svg {
     margin-top: -20px;
-    width: 250px;
+    width: 200px;
     height: 140px;
   }
   #navUl {
@@ -717,13 +839,21 @@ accordion-icon {
     height: 20px;
     text-align: left;
     white-space: nowrap;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-right: 20px;
   }
   #navigation {
-    width: 33%;
+    width: 30%;
     padding-top: 0;
     margin-top: -30px;
+  }
+}
+@media (max-width: 900px) {
+  #header {
+    margin-top: 16px;
+  }
+  #navUl {
+    padding-top: 74px;
   }
 }
 @media (max-width: 576px) {
@@ -767,11 +897,12 @@ accordion-icon {
 .cardContainer {
   margin: auto;
   margin-top: 100px;
-  width: 91.7%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   height: auto;
+  margin-right: 3.5%;
 }
 
 .apartCard {
@@ -781,13 +912,13 @@ accordion-icon {
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
   margin-bottom: 60px;
-  width: 30.7%;
-  height: 750px;
+  margin-right: 3%;
+  width: 30%;
+  height: 680px;
 }
 
 .card-image {
   background-size: cover;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -825,7 +956,8 @@ accordion-icon {
   text-decoration: none !important;
   color: #ffffff;
   margin: 0;
-  bottom: 9%;
+  bottom: 6%;
+  width: 45%;
 }
 
 .apartCard .card-image,
@@ -835,9 +967,8 @@ accordion-icon {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
-  padding-bottom: 95%;
-  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 56.25%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
@@ -849,56 +980,38 @@ accordion-icon {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-.apartCard .card-image {
-  border-radius: 20px;
-  height: 750px;
-}
 .apartCard:hover {
-  transform: translateY(-4px);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 900px) {
-  .card-image {
-    height: 150px;
+@media (max-width: 1200px) {
+  .cardContainer {
+    margin-top: 60px;
   }
-  .card {
-    flex-basis: 96%;
+  .apartCard {
+    margin-right: 3%;
+    width: 30%;
+    height: 350px;
   }
   .card-title {
     font-size: 0.8rem;
-    width: 60%;
+    bottom: 5%;
   }
   .main-container {
     margin-top: 30px;
   }
 }
 @media (max-width: 576px) {
-  .listContent {
-    margin: auto;
-  }
-  .main-container {
-    margin-right: -2.5%;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 25px;
-    width: 94%;
-  }
   .cardContainer {
-    width: 100%;
+    width: 90%;
     margin: auto;
-    margin-right: 0;
+    justify-content: center;
   }
   .apartCard {
-    margin-bottom: 9px;
-  }
-  .card {
-    margin-bottom: 0%;
-    margin-top: 0;
-  }
-  .card-image {
-    height: 120px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    height: 280px;
   }
   .card-title {
     width: 60%;
@@ -911,11 +1024,12 @@ accordion-icon {
   background-color: black;
   position: relative;
   color: #ffffff;
+  margin-top: 50px;
 }
 #footerBackground svg {
   margin-left: 16%;
   width: 68%;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-bottom: 1%;
 }
 #footerBackground svg path {
@@ -926,7 +1040,7 @@ accordion-icon {
   font-family: Montserrat;
   text-align: center;
   vertical-align: auto;
-  font-size: 4vh;
+  font-size: 3vh;
   margin-top: 34px;
 }
 
@@ -958,13 +1072,14 @@ accordion-icon {
     color: #ffffff;
   }
   #footerBackground svg {
-    margin-left: 27%;
-    width: 42%;
+    margin-left: 34%;
+    width: 32%;
     margin-top: 10%;
-    margin-bottom: 4%;
+    margin-bottom: 0%;
   }
   #footerBackground P {
     text-align: center;
+    margin-top: 10px;
     font-size: 2vh;
   }
 }
@@ -978,6 +1093,7 @@ accordion-icon {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 30px;
 }
 .carousel-content .carousel .carousel-inner {
   position: relative;
@@ -996,8 +1112,9 @@ accordion-icon {
 .carousel-content .carousel .carousel-inner .carousel-item.active {
   opacity: 1;
 }
-.carousel-content .carousel .carousel-control-prev,
-.carousel-content .carousel .carousel-control-next {
+
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1006,241 +1123,150 @@ accordion-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 50%;
   height: 60px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.carousel-content .carousel .carousel-control-prev:focus,
-.carousel-content .carousel .carousel-control-next:focus {
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
   outline: none;
 }
-.carousel-content .carousel .carousel-control-prev.carousel-control-prev,
-.carousel-content .carousel .carousel-control-next.carousel-control-prev {
-  left: 0;
+.carousel-control-prev.carousel-control-prev,
+.carousel-control-next.carousel-control-prev {
+  left: -18%;
 }
-.carousel-content .carousel .carousel-control-prev.carousel-control-next,
-.carousel-content .carousel .carousel-control-next.carousel-control-next {
-  right: 0;
+.carousel-control-prev.carousel-control-next,
+.carousel-control-next.carousel-control-next {
+  right: -18%;
 }
-.carousel-content .carousel .carousel-control-prev .carousel-control-icon,
-.carousel-content .carousel .carousel-control-next .carousel-control-icon {
-  width: 40%;
+.carousel-control-prev .carousel-control-icon,
+.carousel-control-next .carousel-control-icon {
+  width: 15%;
 }
-.carousel-content .carousel-content {
-  width: 90%;
-  height: 800px;
-  margin: 0 auto;
-}
-.carousel-content .carousel-content .carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.carousel-content .carousel-content .carousel .carousel-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.carousel-content .carousel-content .carousel .carousel-inner .carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-.carousel-content .carousel-content .carousel .carousel-inner .carousel-item.active {
-  opacity: 1;
-}
-.carousel-content .carousel-content .carousel .carousel-control-prev,
-.carousel-content .carousel-content .carousel .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-.carousel-content .carousel-content .carousel .carousel-control-prev:focus,
-.carousel-content .carousel-content .carousel .carousel-control-next:focus {
-  outline: none;
-}
-.carousel-content .carousel-content .carousel .carousel-control-prev.carousel-control-prev,
-.carousel-content .carousel-content .carousel .carousel-control-next.carousel-control-prev {
-  left: 0;
-}
-.carousel-content .carousel-content .carousel .carousel-control-prev.carousel-control-next,
-.carousel-content .carousel-content .carousel .carousel-control-next.carousel-control-next {
-  right: 0;
-}
-.carousel-content .carousel-content .carousel .carousel-control-prev .carousel-control-icon,
-.carousel-content .carousel-content .carousel .carousel-control-next .carousel-control-icon {
-  width: 40%;
-  transition: filter 0.3s ease-in-out;
-}
-.carousel-content .carousel-content .carousel .carousel-counter {
-  position: absolute;
-  bottom: 10px;
-  right: 45%;
-  color: #fff;
-  font-size: 5px;
-  font-weight: 500;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-.carousel-content .carousel-content .imgCarousel {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.carousel-content .carousel-counter {
+
+.carousel-counter {
   position: absolute;
   top: 85%;
-  right: 45%;
+  right: 50%;
   transform: translateX(-50%);
   font-family: Montserrat;
   color: #ffffff;
   font-size: 1.7vw;
   text-shadow: -12px -1px 14px -5px rgba(0, 0, 0, 0.38);
 }
-.carousel-content .carousel-control-prev,
-.carousel-content .carousel-control-next {
-  width: 10%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (max-width: 900px) {
-  .carousel-content .carousel-content {
-    margin-top: 80px;
-    height: 500px;
-    margin-bottom: 30px;
-  }
-  .carousel-content .carousel-slide {
-    height: 500px;
-  }
-  .carousel-content .carousel-inner {
-    height: 500px;
-  }
-  .carousel-content .carousel-item {
-    height: 500px;
-  }
-  .carousel-content .imgCarousel {
-    height: 500px;
-    border-radius: 15px;
-  }
-}
-@media (max-width: 576px) {
-  .carousel-content .carousel-content {
-    margin: auto;
-    margin-top: 25px;
-    height: 280px;
-    margin-bottom: 12px;
-  }
-  .carousel-content .carousel-slide {
-    height: 280px;
-  }
-  .carousel-content .carousel-inner {
-    height: 280px;
-  }
-  .carousel-content .carousel-item {
-    height: 280px;
-  }
-  .carousel-content .imgCarousel {
-    height: 280px;
-    border-radius: 15px;
-  }
-  .carousel-content .carousel-control-next-icon,
-  .carousel-content .carousel-control-prev-icon {
-    width: 10vw;
-    height: 10vw;
-  }
-}
-.carousel-content .imgCarousel {
-  object-fit: cover;
+
+.imgCarousel {
   width: 100%;
-  height: 100%;
 }
 
-.carousel-counter {
-  position: absolute;
-  top: 85%;
-  right: 45%;
-  transform: translateX(-50%);
-  font-family: Montserrat;
-  color: #ffffff;
-  font-size: 3.5vw;
-  text-shadow: -12px -1px 14px -5px rgba(0, 0, 0, 0.38);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 10%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 0.5;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .carousel-content {
-    margin-top: 80px;
-    height: 500px;
+    margin-top: 0px;
+    height: 600px;
     margin-bottom: 30px;
   }
   .carousel-slide {
-    height: 500px;
+    height: 100%;
   }
   .carousel-inner {
-    height: 500px;
+    height: 100%;
   }
   .carousel-item {
-    height: 500px;
+    height: 100%;
   }
   .imgCarousel {
-    height: 500px;
+    height: 100%;
     border-radius: 15px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .carousel-control-prev:focus,
+  .carousel-control-next:focus {
+    outline: none;
+  }
+  .carousel-control-prev.carousel-control-prev,
+  .carousel-control-next.carousel-control-prev {
+    left: -1%;
+  }
+  .carousel-control-prev.carousel-control-next,
+  .carousel-control-next.carousel-control-next {
+    right: -1%;
+  }
+  .carousel-control-prev .carousel-control-icon,
+  .carousel-control-next .carousel-control-icon {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-content {
+    margin-bottom: 30px;
+    height: 400px;
+  }
+  .imgCarousel {
+    border-radius: 15px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    height: 60px;
+  }
+  .carousel-control-prev.carousel-control-prev,
+  .carousel-control-next.carousel-control-prev {
+    left: 0;
+  }
+  .carousel-control-prev.carousel-control-next,
+  .carousel-control-next.carousel-control-next {
+    right: 0;
+  }
+  .carousel-counter {
+    position: absolute;
+    top: 85%;
+    right: 45%;
+    transform: translateX(-50%);
+    font-family: Montserrat;
+    color: #ffffff;
+    font-size: 1.7vw;
+    text-shadow: -12px -1px 14px -5px rgba(0, 0, 0, 0.38);
   }
 }
 @media (max-width: 576px) {
   .carousel-content {
     margin: auto;
     margin-top: 25px;
-    height: 280px;
+    height: 240px;
     margin-bottom: 12px;
+    border-radius: 10px;
   }
-  .carousel-slide {
-    height: 280px;
-  }
-  .carousel-inner {
-    height: 280px;
-  }
-  .carousel-item {
-    height: 280px;
+  .carousel-content .carousel {
+    border-radius: 10px;
   }
   .imgCarousel {
-    height: 280px;
-    border-radius: 15px;
+    border-radius: 10px;
   }
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 10vw;
-    height: 10vw;
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 20%;
+  }
+  .carousel-control-prev.carousel-control-prev,
+  .carousel-control-next.carousel-control-prev {
+    left: -5%;
+  }
+  .carousel-control-prev.carousel-control-next,
+  .carousel-control-next.carousel-control-next {
+    right: -5%;
+  }
+  .carousel-control-icon {
+    width: 20%;
   }
 }/*# sourceMappingURL=index.css.map */

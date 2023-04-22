@@ -1,110 +1,115 @@
 #accordionAbout {
-    margin: auto;
-    margin-top: 100px;
-    width: 90%;
-    --bs-accordion-active-bg: $primary-color;
-    --bs-accordion-color: white;
-    
-    .accordion-item {
-      background: $tertiary-color !important; //important pour passer en priorité devant bootstrap au cas ou.
-      margin: auto;
-      margin-bottom: 80px;
-      width: 80%;
-
-      .accordion-button {
-        width: 100%;
-        padding: 20px;
-        justify-content: left;
-        font-family: $font1;
-        font-size: 1.5vw;
-        color: $secondary-color;
-        background-color: $primary-color;
-        --bs-accordion-active-bg: #ff6060 !important;
-  
-        &:active {
-          background-color: $primary-color;
-        }
-  
-        svg {
-          transition: transform 0.3s ease-in-out;
-          position: absolute;
-          right: 2%;
-        }
-  
-        &.active svg {
-          transform: rotate(180deg);
-        }
-  
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        border-radius: 7px;
-  
-        &.active {
-          flex-direction: row-reverse;
-        }
-      }
-  
-      section {
-        font-family: $font1;
-        font-size: 1vw;
-        color: $primary-color;
-        padding-left: 2%;
-        padding-bottom: 20px;
-        margin-top: -20px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        transition: height 0.3s ease-in-out;
-      }
-  
-      .accordion-body {
-        overflow: hidden;
-        transition: height 0.3s ease-in-out;
-        height: 0;
-  
-        &.collapse {
-          height: 0;
-        }
-  
-        &.show {
-          height: auto;
-        }
-      }
-  
-      .aboutAccordionButton {
-        width: 80%;
-      }
-  
-      &.show .accordion-body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        height: auto;
-        overflow: visible;
-      }
-    }
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
 }
 
-section {
-    padding-top: 0px;
+.accordionAbout-item {
+  background: $tertiary-color ;
+  margin: auto;
+  margin-bottom: 80px;
+  width: 80%;
+}
+
+.accordionAbout-button {
+  width: 100%;
+  padding: 20px;
+  justify-content: left;
+  font-family: $font1;
+  font-size: 1.5vw;
+  color: $secondary-color;
+  background-color: $primary-color;
+  
+  &:active {
+    background-color: $primary-color;
   }
-  p{
+
+  &.active {
+    transform: rotate(180deg);
+  }
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 7px;
+
+  &.active {
+    flex-direction: row-reverse;
+  }
+}
+
+.accordion-body {
+  font-family: $font1;
+  font-size: 1vw;
+  color: $primary-color;
+  padding-left: 2%;
+  padding-bottom: 20px;
+  margin-top: -20px;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+
+  p {
     margin-top: 70px;
   }
+}
+
+.accordion-body {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  height: 0;
+
+  &.collapse {
+    height: 0;
+  }
+
+  &.show {
+    height: auto;
+  }
+}
+
+.aboutAccordionButton {
+  width: 80%;
+}
+
+.accordionAbout-item.show .accordion-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto;
+  overflow: visible;
+}
+
+.arrows{
+  width: 3.5%;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
   .accordion-body {
     padding-top: 0; /* réinitialise la valeur par défaut du padding */
     transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
   }
   
-  .accordion-item:not(.show) .accordion-body {
+  .accordionAbout-item:not(.show) .accordion-body {
     padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
   }
   
-  .accordion-item.show .accordion-body {
+  .accordionAbout-item.show .accordion-body {
     padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
   }
-  
+  @media (max-width: 900px) {
+  #aboutContent{
+    height: auto;
+  }
+  }
   
 @media (max-width: 576px) {
+  #aboutContent{
+    height: auto;
+    width: 100%;
+  }
   #banner{
     margin-top: 20px;
 }
@@ -112,26 +117,40 @@ section {
     border-radius: 8px;
     height: 90px;
 }
-#accordionAbout{
-    margin: auto;
-    margin-top: 20px;
-    width: 90%; 
-    height: 490px;  
+
+#accordionAbout {
+  margin-top: 20px;
+  width: 100%;
 }
-.accordion-item{
-    width: 100%;
-    margin-bottom: 20px;
-.accordion-button{
-    border-radius: 9px !important;
-    font-size: 4vw;
+.accordionAbout-item {
+  margin-bottom: 20px;
+  width: 90%;
+  border-radius: 8px;
+
 }
-}
-section{  
-    font-size: 3.5vw ;
-    margin-bottom: 40px;   
+.accordionAbout-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 4vw;
+  border-radius: 7px;
+
 }
 
-.accordion-button::after {
-    --bs-accordion-btn-icon-width: 7vw;
-}
+.accordion-body {
+  font-size: 4vw;
+  padding-left: 2%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+
+  p {
+    margin-top: 50px;
+    margin-bottom: 37px;
   }
+}
+  .arrows{
+    width: 7.5%;
+  }
+
+}

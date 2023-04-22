@@ -66,7 +66,7 @@ return (
     </div>
     
     <div className="bottom">
-  <div className="accordionApart-iten" id="apartAccordion1">
+  <div className="accordionApart-item" id="apartAccordion1">
     <h3 className="accordion-header">
       <button type="button" className="accordion-button" onClick={() => toggleAccordion(1)}>
         Description
@@ -87,7 +87,7 @@ return (
       <p className="accordionTextApart">{apartment?.description}</p>
     </section>
   </div>
-  <div className="accordionApart-iten" id="apartAccordion2">
+  <div className="accordionApart-item" id="apartAccordion2">
     <div className="accordion-item apartAccordionItem2">
       <h3 className="accordion-header">
         <button

@@ -1,10 +1,11 @@
 ##Procédure de démarrage:
 
 1. Pour démarer le dossier backend :
-- placer le fichier .env à la racine du dossier backend
 - cd backend
+- intaller les dépendances avec npm install
 - npm start
 
 2. Pour démarer le dossier frontend:
 - cd frontend
+- intaller les dépendances avec npm install
 - npm run dev

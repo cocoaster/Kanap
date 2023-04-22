@@ -21,8 +21,11 @@ padding-bottom: 40px;
 #navUl{
     width: 100%;
     display: flex;
-justify-content: space-between;    list-style-type: none;
+    justify-content: space-between;    
+    list-style-type: none;
     padding-top: 57px;
+    white-space: nowrap;
+
 }
 .homeNav{
     text-decoration: none;
@@ -66,19 +69,14 @@ padding-bottom: 0px;
     opacity: 0.5;
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     #header{
-        margin-top: 50px;
-        margin-left: 6%;
-        margin-right: 50%;
+      
         width: 88%;
-        height: 68px;
-        display: flex;
-        flex-direction: raw;
-        justify-content: space-between;
-        svg {
+        height: 140px;
+               svg {
             margin-top: -20px;
-            width: 250px;
+            width: 200px;
             height: 140px;
         }
     }
@@ -90,14 +88,23 @@ padding-bottom: 0px;
         height: 20px;
         text-align: left;
         white-space: nowrap;   
-        font-size: 3vw;
+        font-size: 2vw;
         margin-right: 20px;   
         }
         #navigation{
-            width: 33%;
+            width: 30%;
             padding-top: 0;
             margin-top: -30px;
         }
+  }
+    
+  @media (max-width: 900px) {
+#header{
+    margin-top: 16px;
+}
+#navUl{
+    padding-top: 74px;
+}
   }
   @media (max-width: 576px) {
     

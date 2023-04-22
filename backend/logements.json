@@ -1,4 +1,4 @@
-const apartments = [
+[
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -617,17 +617,3 @@ const apartments = [
 		]
 	}
 ]
-
-exports.find = () => {
-  return new Promise((resolve, reject) => resolve(JSON.parse(JSON.stringify(apartments))));
-}
-
-exports.findById = (id) => {
-  return new Promise((resolve, reject) =>
-    resolve(JSON.parse(JSON.stringify(apartments)).find(apartment =>
-      apartment.id == id)
-    )
-  );
-}
-
-

@@ -1,20 +1,13 @@
-import axios from "axios";
+export function getApartments() {
+    return fetch("http://localhost:3000/api/apartments/")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  }
 
-
-export function getApartments() { 
-    return new Promise(resolve => { 
-        axios.get("http://localhost:3000/api/apartments/")
-            .then(res => res.status === 200 && res.data)
-            .then(resolve)
-        .catch(console.error)
-    })
-}
-
-export function insertApartment(body) {
-    return new Promise(resolve => {
-        axios.post("http://localhost:3000/api/apartments/insert", body)
-        .then(res => res.status === 200 && res.data)
-        .then(resolve)
-        .catch(console.error)
-    })
-}

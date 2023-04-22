@@ -3,7 +3,8 @@ import AppHeader from "../components/Header.jsx";
 import backgound from "../assets/Background.png";
 import imgBackground from "../assets/IMGbackground2.png";
 import Footer from "../components/Footer.jsx";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import  DownArrow  from "../assets/DownArrow.png";
+import  UpArrow  from "../assets/UpArrow.png";
 
 const About = () => {
   const [activeAccordionIndex, setActiveAccordionIndex] = useState(null);
@@ -16,7 +17,7 @@ const About = () => {
     <>
       <AppHeader />
 
-      <div id="homeContent" style={{ height: "90vh", overflowY: "scroll" }}>
+      <div id="aboutContent" style={{ height: "90vh", overflowY: "scroll" }}>
         <div id="banner">
           <img className="background" src={backgound} alt="background" />
           <img className="background imgBackground" src={imgBackground} alt="landscape" />
@@ -24,19 +25,19 @@ const About = () => {
 
         <div className="accordion" id="accordionAbout">
           {["Fiabilité", "Respect", "Service", "Sécurité"].map((title, index) => (
-            <div className="accordion-item" key={index}>
+            <div className="accordionAbout-item" key={index}>
               <h2 className="accordion-header">
                 <button
                   type="button"
-                  className="accordion-button"
+                  className="accordionAbout-button"
                   onClick={() => toggleAccordion(index)}
                 >
                   {title}
                   {activeAccordionIndex === index ? (
-                    <FaAngleDown className="active" />
-                  ) : (
-                    <FaAngleUp className="active" />
-                  )}
+    <img src={UpArrow} alt="arrow-down" className="arrows active" />
+  ) : (
+    <img src={DownArrow} alt="arrow-up" className="arrows active" />
+  )}
                 </button>
               </h2>
               <section
@@ -47,12 +48,12 @@ const About = () => {
                 id={`about-${title.toLowerCase()}`}
               >
                 {title === "Respect" && (
-                  <p>
+                  <p className="sectionText">
                     La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.
                   </p>
                 )}
                 {title !== "Respect" && (
-                  <p>
+                  <p className="sectionText">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Ut lacinia vulputate imperdiet. Nullam nec lacus diam.
                     Nullam egestas viverra vehicula. Interdum et malesuada fames

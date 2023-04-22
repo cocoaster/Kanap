@@ -1,11 +1,12 @@
 .cardContainer {
   margin: auto;
   margin-top: 100px;
-  width: 91.7%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   height: auto;
+  margin-right: 3.5%;
   }
   
   .apartCard {
@@ -15,13 +16,13 @@
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
   margin-bottom: 60px;
-  width: 30.7%;
-  height: 750px;
+  margin-right: 3%;
+  width: 30%;
+  height: 680px;
   }
    
   .card-image {
   background-size: cover;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -31,7 +32,6 @@
   overflow: hidden;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  
   }
   
   .card-image::before {
@@ -60,7 +60,8 @@
   text-decoration: none !important;
   color: $secondary-color;
   margin: 0;
-  bottom: 9%;
+  bottom: 6%;
+  width: 45%;
   }
   
   .apartCard .card-image,
@@ -70,9 +71,10 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
-  padding-bottom: 95%;
-  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 56.25%;
+
+  // padding-bottom: 98%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   }
@@ -84,29 +86,28 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   }
   
-  .apartCard {
-  .card-image {
-  border-radius: 20px;
-  height: 750px;
-  }
-  
+  .apartCard {  
   &:hover {
-  transform: translateY(-4px);
+  // transform: translateY(-4px);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   }
   }
 
-@media (max-width: 900px) {
- 
-  .card-image {
-    height: 150px;
+@media (max-width: 1200px) {
+  .cardContainer{
+    margin-top: 60px;
   }
-  .card {
-    flex-basis: 96%;
+  .apartCard {
+    margin-right: 3%;
+    width: 30%;
+    height: 350px;
     }
+
+
   .card-title {
     font-size: 0.8rem;
-    width: 60%;
+  bottom: 5%;
+
   }
   .main-container{
     margin-top: 30px;
@@ -114,33 +115,22 @@
   }
 }
 
+@media (max-width: 900px) {
+}
 @media (max-width: 576px) {
-  .listContent{
-    margin: auto;
-  }
-  .main-container{
-    margin-right: -2.5%;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 25px;
-    width: 94%;
-}  
   .cardContainer{
-    width: 100%;
+    width: 90%;
     margin: auto;
-    margin-right: 0;
+    justify-content: center;
   }
   .apartCard{
-    margin-bottom: 9px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    height: 280px;
   }
-  .card{
-    margin-bottom: 0%;
-    margin-top: 0;
-  }
-  .card-image {
-    height: 120px;
-  }
+  
+
 
   .card-title {
     width: 60%;
