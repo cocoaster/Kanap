@@ -24,9 +24,7 @@ const AppHome = () => {
                     </div>
           
                 </div >
-            <div id="listContent">
             <List/>
-        </div>
        
       </div>
       <Footer />

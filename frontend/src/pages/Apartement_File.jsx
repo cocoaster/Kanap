@@ -1,9 +1,13 @@
-import React, { useEffect, useState} from 'react' ;
+import React, { useEffect, useState } from 'react';
+
 import { useLocation } from "react-router-dom";
 import { getApartments } from '../service/index.jsx';
 import AppHeader from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import Carousel from '../components/Carousel.jsx';
+import  DownArrow  from "../assets/DownArrow.png";
+import  UpArrow  from "../assets/UpArrow.png";
+
 function ApartmentCard() {
 
   const [apartments, setApartments] = useState([]);
@@ -21,9 +25,15 @@ const apartmentPictures = apartment?.pictures?.map((picture, index) => (
 
 // Vérification si apartmentPictures est défini
 const hasPictures = !!apartmentPictures && apartmentPictures.length > 0;
+const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
 
-
-  // variable séparant les noms et prénoms des hôtes
+const toggleAccordion = (index) => {
+if (activeAccordionIndexes.includes(index)) {
+setActiveAccordionIndexes(activeAccordionIndexes.filter(i => i !== index));
+} else {
+setActiveAccordionIndexes([...activeAccordionIndexes, index]);
+}
+};
 return (
   <>
     <AppHeader />
@@ -55,34 +65,61 @@ return (
         </div>
     </div>
     
-    <div className=" bottom">
-        <div className="accordion   " id='apartAccordion1'>
-            <div className="accordion-item apartAccordionItem1 rounded-3">
-                <h3 className="accordion-header">
-                <button type="button" className="accordion-button rounded-3 " data-bs-toggle="collapse" data-bs-target="#description" >Description
-                </button>
-                </h3>
-              <section className="accordion-body collapse rounded" id="description" data-bs-parent="#apartAccordion1">{apartment?.description}
-              </section>
-            </div>
-        </div>
-        <div className="accordion " id='apartAccordion2'>
-            <div className="accordion-item apartAccordionItem2 rounded-3">
-                <h3 className="accordion-header">
-                    <button type="button" className="accordion-button rounded-3" data-bs-toggle="collapse" data-bs-target="#equipments" >Equipements
-                    </button>
-                </h3>
-                <section className="accordion-body collapse rounded" id="equipments" data-bs-parent="#apartAccordion2">
-                    <ul className="apartAccordion2">
-                      {apartment?.equipments.map((equipment, index) => (
-                        <li key={index}>{equipment}</li>
-                      ))}
-                    </ul>
-                </section>
-            </div>
-        </div>  
+    <div className="bottom">
+  <div className="accordionApart-iten" id="apartAccordion1">
+    <h3 className="accordion-header">
+      <button type="button" className="accordion-button" onClick={() => toggleAccordion(1)}>
+        Description
+        {activeAccordionIndexes.includes(1) ? (
+          <img src={UpArrow} className="accordion-icon active" alt="up-arrow" />
+        ) : (
+          <img src={DownArrow} className="accordion-icon active" alt="down-arrow" />
+        )}
+      </button>
+    </h3>
+    <section
+      className={
+        "accordionSectionApart equalHeight " +
+        (activeAccordionIndexes.includes(1) ? "show" : "")
+      }
+      id="description"
+    >
+      <p className="accordionTextApart">{apartment?.description}</p>
+    </section>
+  </div>
+  <div className="accordionApart-iten" id="apartAccordion2">
+    <div className="accordion-item apartAccordionItem2">
+      <h3 className="accordion-header">
+        <button
+          type="button"
+          className="accordion-button"
+          onClick={() => toggleAccordion(2)}
+        >
+          Equipements
+          {activeAccordionIndexes.includes(2) ? (
+            <img src={UpArrow} className="accordion-icon active" alt="up-arrow" />
+          ) : (
+            <img src={DownArrow} className="accordion-icon active" alt="down-arrow" />
+          )}
+        </button>
+      </h3>
+      <section
+        className={
+          "accordionSectionApart equalHeight " +
+          (activeAccordionIndexes.includes(2) ? "show" : "")
+        }
+        id="equipments"
+        data-bs-parent="#apartAccordion2"
+      >
+        <ul className="apartAccordion2">
+          {apartment?.equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
+        </ul>
+      </section>
     </div>
-      
+  </div>
+</div>
     <Footer />
   </>
   );

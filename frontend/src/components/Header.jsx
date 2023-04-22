@@ -17,7 +17,7 @@ function AppHeader() {
             <nav id="navigation">
                 <ul id="navUl">
                     <li><NavLink className= {(nav) =>(nav.isActive ? " homeNav navActive": "homeNav ") }  to="/">Accueil</NavLink></li>
-                    <li><NavLink className={(nav) =>(nav.isActive ? "homeNav aboutLi navActive": "homeNav  ") } to="/About">A propos</NavLink></li>
+                    <li><NavLink className={(nav) =>(nav.isActive ? "homeNav aboutLi navActive": "homeNav  ") } to="/About">A Propos</NavLink></li>
                 </ul>
             </nav>
         </div>

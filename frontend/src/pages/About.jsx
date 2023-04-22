@@ -1,52 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import AppHeader from "../components/Header.jsx";
-import backgound from "../assets/Background.png"
-import imgBackgound2 from "../assets/IMGbackground2.png"
+import backgound from "../assets/Background.png";
+import imgBackground from "../assets/IMGbackground2.png";
 import Footer from "../components/Footer.jsx";
-  
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const About = () => {
+  const [activeAccordionIndex, setActiveAccordionIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveAccordionIndex(activeAccordionIndex === index ? null : index);
+  };
+  
   return (
     <>
-            <AppHeader />
+      <AppHeader />
 
-    <div id="homeContent" >
-      <div id="banner">
-      
-      <img className="background" src={backgound} alt="background" />
-        <img className="background imgBackground" src={imgBackgound2} alt="landscape" />
+      <div id="homeContent" style={{ height: "90vh", overflowY: "scroll" }}>
+        <div id="banner">
+          <img className="background" src={backgound} alt="background" />
+          <img className="background imgBackground" src={imgBackground} alt="landscape" />
         </div>
-       
+
         <div className="accordion" id="accordionAbout">
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button type="button " className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fiability">Fiabilité</button></h2>
-            <section className="accordion-body collapse" data-bs-parent="#accordionAbout" id="fiability">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia vulputate imperdiet. Nullam nec lacus diam. Nullam egestas viverra vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac eros vehicula, elementum nisi vitae, pretium elit. Etiam hendrerit auctor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque congue auctor tellus. Integer. </section> 
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button type="button " className="accordion-button " data-bs-toggle="collapse" data-bs-target="#respect"  >Respect</button></h2>
-            <section className="accordion-body collapse show" data-bs-parent="#accordionAbout"  id="respect">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme. </section> 
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button type="button " className="accordion-button collapsed" data-bs-toggle="collapse"  data-bs-target="#service" >Service</button></h2>
-            <section className="accordion-body collapse" data-bs-parent="#accordionAbout"  id="service">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia vulputate imperdiet. Nullam nec lacus diam. Nullam egestas viverra vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac eros vehicula, elementum nisi vitae, pretium elit. Etiam hendrerit auctor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque congue auctor tellus. Integer. </section> 
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header">
-              <button type="button " className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#security"  >Sécurité</button></h2>
-            <section className="accordion-body collapse" data-bs-parent="#accordionAbout"  id="security">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia vulputate imperdiet. Nullam nec lacus diam. Nullam egestas viverra vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac eros vehicula, elementum nisi vitae, pretium elit. Etiam hendrerit auctor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque congue auctor tellus. Integer. </section> 
-          </div>
+          {["Fiabilité", "Respect", "Service", "Sécurité"].map((title, index) => (
+            <div className="accordion-item" key={index}>
+              <h2 className="accordion-header">
+                <button
+                  type="button"
+                  className="accordion-button"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {title}
+                  {activeAccordionIndex === index ? (
+                    <FaAngleDown className="active" />
+                  ) : (
+                    <FaAngleUp className="active" />
+                  )}
+                </button>
+              </h2>
+              <section
+                className={
+                  "accordion-body collapse" +
+                  (activeAccordionIndex === index ? " show" : "")
+                }
+                id={`about-${title.toLowerCase()}`}
+              >
+                {title === "Respect" && (
+                  <p>
+                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.
+                  </p>
+                )}
+                {title !== "Respect" && (
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut lacinia vulputate imperdiet. Nullam nec lacus diam.
+                    Nullam egestas viverra vehicula. Interdum et malesuada fames
+                    ac ante ipsum primis in faucibus. Morbi ac eros vehicula,
+                    elementum nisi vitae, pretium elit. Etiam hendrerit auctor
+                    volutpat. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Quisque congue
+                    auctor tellus. Integer.
+                  </p>
+                )}
+              </section>
+            </div>
+          ))}
         </div>
-
       </div>
-      <Footer />
 
-      </>
+      <Footer />
+    </>
   );
 };
 
