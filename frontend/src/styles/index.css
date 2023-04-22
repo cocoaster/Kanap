@@ -956,14 +956,14 @@ accordion-icon {
     position: relative;
   }
   #header .homeNav {
-    height: 20px;
+    height: 9px;
     text-align: left;
     white-space: nowrap;
     font-size: 3vw;
     margin-right: 20px;
   }
   #navigation {
-    width: 36%;
+    width: 42%;
   }
   .navActive {
     border-bottom: 1px solid #ff6060;
