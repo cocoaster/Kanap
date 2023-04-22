@@ -92,7 +92,7 @@ margin: auto;
   height: 450px;
   margin: auto;
   margin-top: 90px;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   width: 90%;
  
     .accordionApart-item {
@@ -287,9 +287,10 @@ margin: auto;
     width: 100%;
   }
   .hostName{
-    margin-top: 0px;
+    margin-top: 10px;
     margin-right: 10px;
     font-size: 2vw;
+    height: 35px;
     p{
       margin-bottom: 0;
     }
@@ -300,8 +301,9 @@ margin: auto;
    
     width: 40%;
     img{
-      width: 20%;
-      height: 20%;
+      margin-top: 20px;
+      width: 28%;
+      height: 28%;
       border-radius: 50%;
     }
     .rating{
@@ -316,8 +318,27 @@ margin: auto;
     height: 280px;
   }
   .accordion-button {
-    font-size: 3.5vw;
-    height: 60px;
+    font-size: 3vw;
+    height: 50px;
+    border-radius: 7px;
+    padding-top: 10px;
+  }
+  .accordionApart-item{
+      
+    height: 30px;
+  }
+  .apartAccordionItem2{
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .accordionTextApart{
+    padding-left: 10px;
+  }
+  .accordionSectionApart ul{
+    padding-left: 10px;
+
   }
 }
 
@@ -387,23 +408,28 @@ margin: auto;
         margin-bottom: 0;
       }
     }
-  #apartAccordion1{
-    margin-top: 16px;
-    margin-bottom: 25px;
-    width:100%;
-  }
-  #apartAccordion2{
-    margin-top: 0px;
-    width:100%;
-
-  }
+  
   .bottom{
     flex-direction: column;
-    height: 445px;
+    height: auto;
     margin: auto;
     margin-top: 0px;
     width: 90%;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
+    }
+    #apartAccordion1{
+      margin-top: 16px;
+      margin-bottom: 25px;
+      width:100%;
+    }
+    #apartAccordion2{
+      margin-top: 0px;
+      width:100%;
+  
+    }
+    .accordionApart-item{
+      
+      height: 30px;
     }
     .apartAccordionItem1{
       width: 100%;
@@ -425,9 +451,9 @@ margin: auto;
     border-radius: 6px;
   }
   .accordionSectionApart {
-border-radius: 7px;
-font-size: 4vw;
-margin-left: 0;
+    border-radius: 7px;
+    font-size: 4vw;
+    margin-left: 0;
 
   }
   .accordionTextApart{
@@ -436,13 +462,33 @@ margin-left: 0;
     padding-left: 12px;
     padding-bottom: 10px;
   }
- 
-
-
-
 .accordionSectionApart ul{
   padding: 0;
   padding-left: 12px;
   padding-top: 20px;
 }
+.accordionApart-item {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+
+}
+
+.accordionSectionApart {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-header {
+  margin: 0;
+}
+.accordionSectionApart {
+  display: none;
+  overflow: hidden;
+  transition: height 0.3s ease;
   }
+  
+  .show {
+  display: block;
+  }
+}

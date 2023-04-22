@@ -61,7 +61,7 @@
   color: $secondary-color;
   margin: 0;
   bottom: 6%;
-  width: 45%;
+  width: 37%;
   }
   
   .apartCard .card-image,
@@ -106,7 +106,9 @@
 
   .card-title {
     font-size: 0.8rem;
-  bottom: 5%;
+    width: 37%;
+
+    bottom: 5%;
 
   }
   .main-container{
@@ -116,6 +118,11 @@
 }
 
 @media (max-width: 900px) {
+  .apartCard{
+ 
+    height: 250px;
+  }
+  
 }
 @media (max-width: 576px) {
   .cardContainer{
@@ -130,10 +137,8 @@
     height: 280px;
   }
   
-
-
   .card-title {
-    width: 60%;
+    width: 30%;
     font-size: 1rem;
   }
 }

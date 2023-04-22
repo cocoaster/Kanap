@@ -7,6 +7,7 @@
     margin: auto;
     justify-content: center;
     margin-top: 200px;
+    margin-bottom: 50px;
 a{
     text-decoration: none;
     text-decoration-line: underline;
@@ -26,7 +27,7 @@ color: $primary-color;
 
 font-family: $font1;
 font-weight: 500;
-font-size: 36px;
+font-size: 42px;
 line-height: 142.6%;
 color: $primary-color;
 }
@@ -34,7 +35,7 @@ color: $primary-color;
     font-family: $font1;
     color: $primary-color;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1vw;
     line-height: 142.6%;
     margin-top: 200px;
     text-decoration-line: underline;
@@ -73,7 +74,7 @@ color: $primary-color;
         font-size: 19px;
         text-align: center;
         }
-  }
+ 
   #homeBack{
     
     font-size: 14px;
@@ -82,4 +83,5 @@ color: $primary-color;
     text-decoration: none;    
     text-decoration-thickness: 0.5px;
     margin-bottom: 200px;
+}
 }
