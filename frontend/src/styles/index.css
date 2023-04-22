@@ -83,11 +83,11 @@ body {
     font-size: 100px;
   }
   #errorTxt {
-    font-size: 19px;
+    font-size: 15px;
     text-align: center;
   }
   #homeBack {
-    font-size: 14px;
+    font-size: 11px;
     line-height: 142.6%;
     margin-top: 100px;
     text-decoration: none;
@@ -974,7 +974,7 @@ accordion-icon {
   margin-bottom: 60px;
   margin-right: 3%;
   width: 30%;
-  height: 680px;
+  height: 550px;
 }
 
 .card-image {
