@@ -31,6 +31,9 @@ font-size: 42px;
 line-height: 142.6%;
 color: $primary-color;
 }
+#mobileErrorTxtVersion{
+    display: none;
+}
 #homeBack{
     font-family: $font1;
     color: $primary-color;
@@ -71,9 +74,17 @@ color: $primary-color;
         font-size: 100px;   
         }
     #errorTxt{
+        display: none;
         font-size: 15px;
         text-align: center;
         }
+    #mobileErrorTxtVersion{
+        font-family: $font1;
+        color: $primary-color;
+        font-size: 15px;
+        text-align: center;
+        display: block;
+    }
  
   #homeBack{
     
