@@ -89,7 +89,7 @@ body {
 @media (max-width: 576px) {
   #error-page {
     width: 65%;
-    height: auto;
+    height: 450px;
   }
   #errorNumber {
     font-size: 100px;
