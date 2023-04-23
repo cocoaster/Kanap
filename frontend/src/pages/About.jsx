@@ -46,13 +46,13 @@ const About = () => {
                                         {activeAccordionIndex === index ? (
                                             <img
                                                 src={UpArrow}
-                                                alt="arrow-down"
+                                                alt="arrow-up"
                                                 className="arrows active"
                                             />
                                         ) : (
                                             <img
                                                 src={DownArrow}
-                                                alt="arrow-up"
+                                                alt="arrow-down"
                                                 className="arrows active"
                                             />
                                         )}

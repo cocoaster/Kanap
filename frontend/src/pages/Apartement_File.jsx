@@ -6,6 +6,8 @@ import Footer from "../components/Footer.jsx";
 import Carousel from "../components/Carousel.jsx";
 import DownArrow from "../assets/DownArrow.png";
 import UpArrow from "../assets/UpArrow.png";
+import { Outlet } from "react-router-dom";
+
 
 function ApartmentCard() {
     // State to store the list of apartments
@@ -23,19 +25,7 @@ function ApartmentCard() {
     useEffect(() => {
         getApartments().then(setApartments);
     }, []);
-
-    // Create an array of images for the carousel component
-    const apartmentPictures = apartment?.pictures?.map((picture, index) => (
-        <img
-            className="imgCarousel d-block w-100"
-            key={index}
-            src={picture}
-            alt={apartment?.title}
-        />
-    ));
-
-    // Check if there are any pictures to display
-    const hasPictures = !!apartmentPictures && apartmentPictures.length > 0;
+   
 
     // State to store the active accordion indexes
     const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
@@ -171,6 +161,8 @@ function ApartmentCard() {
                 </div>
             </div>
             <Footer />
+            <Outlet />
+
         </>
     );
 }
