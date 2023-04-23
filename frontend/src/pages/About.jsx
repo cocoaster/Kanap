@@ -18,7 +18,7 @@ const About = () => {
     <>
       <AppHeader />
 
-      <div id="aboutContent" style={{ height: "80vh", overflowY: "scroll" }}>
+      <div id="aboutContent" >
         <div className="banner bannerMobile">
           <img className="background backkgroundAbout" src={backgound} alt="background" />
           <img className="background imgBackground imgBackgroundAbout" src={imgBackground} alt="landscape" />
