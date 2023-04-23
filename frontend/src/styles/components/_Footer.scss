@@ -4,9 +4,7 @@
     background-color: black;
     position: relative;
     color: $secondary-color;
-    margin-top: 50px ;
-    
-
+    margin-top: 50px ;    
 svg{
     margin-left: 16%;
     width: 68%;
@@ -15,7 +13,6 @@ svg{
     path {
         fill: $secondary-color;
       }
-
 }
 P{
    margin: auto;
@@ -29,11 +26,7 @@ P{
 }
 @media (max-width: 900px) {
     #footerBackground{
-        width: 100%;
         height: 300px;
-        background-color: black;
-        position: relative;
-    color: $secondary-color;
     
     svg{
         margin-left: 35%;
@@ -46,16 +39,12 @@ P{
          font-size: 2vh;
      
      }
-}  
+    }  
 }
 
 @media (max-width: 576px) {
     #footerBackground{
-        width: 100%;
         height: 180px;
-        background-color: black;
-        position: relative;
-    color: $secondary-color;
     
     svg{
         margin-left: 34%;
@@ -67,8 +56,6 @@ P{
          text-align: center;
          margin-top: 10px;
          font-size: 2vh;
-
-     
      }
-}  
+    }  
 }
