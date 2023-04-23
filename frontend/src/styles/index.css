@@ -957,7 +957,6 @@ accordion-icon {
     width: 80%;
     height: 68px;
     display: flex;
-    flex-direction: raw;
     justify-content: space-between;
   }
   #header svg {
