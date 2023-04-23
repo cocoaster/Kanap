@@ -1106,7 +1106,8 @@ accordion-icon {
     width: 100%;
     margin: auto;
     margin-top: 20px;
-    height: 280px;
+    height: 225px;
+    border-radius: 7px;
   }
   .card-title {
     width: 30%;
