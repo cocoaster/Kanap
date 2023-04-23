@@ -114,13 +114,14 @@ body {
   margin-bottom: 50px;
 }
 
-#banner {
+.banner {
   height: auto;
   position: relative;
 }
 
 .background {
   background-color: rgb(79, 58, 58);
+  height: auto;
   border-radius: 15px;
   position: relative;
   width: 90%;
@@ -129,6 +130,7 @@ body {
 }
 
 .imgBackground {
+  height: auto;
   object-fit: cover;
   position: absolute;
   opacity: 0.6;
@@ -173,8 +175,13 @@ body {
   }
 }
 @media (max-width: 576px) {
-  #banner {
+  .banner {
     width: 100%;
+    margin-top: 20px;
+  }
+  .background {
+    height: 90px;
+    border-radius: 8px;
   }
   #bannerTxt {
     display: none;
@@ -327,12 +334,18 @@ body {
     height: auto;
     width: 100%;
   }
-  #banner {
-    margin-top: 20px;
+  .backkgroundAbout {
+    background-image: url(../assets/IMGbackground2mob.png);
+    height: 190px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 190px;
+    width: 90%;
   }
-  .background {
-    border-radius: 8px;
-    height: 90px;
+  .imgBackgroundAbout {
+    display: none;
+    height: 190px;
   }
   #accordionAbout {
     margin-top: 20px;
@@ -346,11 +359,12 @@ body {
   .accordionAbout-button {
     width: 100%;
     padding: 10px;
-    font-size: 5vw;
+    font-size: 4vw;
     border-radius: 7px;
+    height: 32px;
   }
   .accordion-body {
-    font-size: 8vw;
+    font-size: 6vw;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 20px;

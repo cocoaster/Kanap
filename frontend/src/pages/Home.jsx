@@ -14,7 +14,7 @@ const AppHome = () => {
       < div id="homeContent" >
         <div>
             </div>
-                <div id="banner">
+                <div className="banner">
                     <img className="background" src={backgound} alt="background" />
                     <img className="background imgBackground" src={imgBackgound} alt="landscape" />
                     <p id="bannerTxt">Chez vous, partout et ailleurs</p>
