@@ -4,6 +4,7 @@ import { getApartments } from '../service/index.jsx';
 import rightArrow from '../assets/Rightarrow.png';
 import leftArrow from '../assets/Leftarrow.png';
 
+
 function Carousel() {
 const [apartments, setApartments] = useState([]);
 const [slidePosition, setSlidePosition] = useState(0);
@@ -27,55 +28,55 @@ setSlidePosition(slidePosition === slideCount - 1 ? 0 : slidePosition + 1);
 };
 
 return (
-<div className='carousel-content'>
-<div className='carousel' id='kasa-carousel'>
-<div className='carousel-inner'>
-{hasPictures &&
-apartmentPictures.map((picture, index) => (
-<div
-  className={`carousel-item ${slidePosition === index ? 'active' : ''}`}
-  key={index}
->
-<img
-               className='imgCarousel'
-               src={picture}
-               alt={apartment?.title}
-             />
-</div>
-))}
-</div>
-{hasPictures && (
-<>
-<button
-           type='button'
-           className='carousel-control-prev'
-           onClick={handlePrevClick}
-         >
-<img
-             src={leftArrow}
-             alt='Previous'
-             className='carousel-control-icon'
-           />
-</button>
-<button
-           type='button'
-           className='carousel-control-next'
-           onClick={handleNextClick}
-         >
-<img
-             src={rightArrow}
-             alt='Next'
-             className='carousel-control-icon'
-           />
-</button>
-<div className='carousel-counter'>
-  {slidePosition + 1}/{slideCount}
-</div>
+  <div className='carousel-content'>
+      <div className='carousel' id='kasa-carousel'>
+          <div className='carousel-inner'>
+  {hasPictures &&
+  apartmentPictures.map((picture, index) => (
+              <div
+    className={`carousel-item ${slidePosition === index ? 'active' : ''}`}
+    key={index}
+  >
+                  <img
+                className='imgCarousel'
+                src={picture}
+                alt={apartment?.title}
+              />
+  </div>
+  ))}
+          </div>
+          {hasPictures && (
+  <>
+          <button
+            type='button'
+            className='carousel-control-prev'
+            onClick={handlePrevClick}
+          >
+              <img
+              src={leftArrow}
+              alt='Previous'
+              className='carousel-control-icon'
+            />
+          </button>
+          <button
+            type='button'
+            className='carousel-control-next'
+            onClick={handleNextClick}
+          >
+              <img
+              src={rightArrow}
+              alt='Next'
+              className='carousel-control-icon'
+            />
+          </button>
+          <div className='carousel-counter'>
+           {slidePosition + 1}/{slideCount}
+          </div>
 
-</>
+  </>
 )}
-</div>
-</div>
+      </div>
+  </div>
 );
 }
 

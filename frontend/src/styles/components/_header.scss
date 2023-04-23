@@ -18,6 +18,7 @@
 width: 22%;
 padding-bottom: 40px;
 }
+
 #navUl{
     width: 100%;
     display: flex;
@@ -25,19 +26,19 @@ padding-bottom: 40px;
     list-style-type: none;
     padding-top: 57px;
     white-space: nowrap;
-
 }
+
 .homeNav{
     text-decoration: none;
     font-family: $font1;
     color: $primary-color;
     font-size: 1.4vw;
     margin-right: 60px;
-&.active {
-    &::before, &::after{
-        content: "";
-        height: 20px;
-    }
+    &.active {
+        &::before, &::after{
+            content: "";
+            height: 20px;
+        }
     }
 }
 
@@ -52,7 +53,6 @@ padding-bottom: 0px;
         color: $primary-color;
         opacity: 0.5;
         border-bottom: 4px solid rgba($primary-color, 0.5);
-
     }
     &.active {
     &::before, &::after{
@@ -69,42 +69,46 @@ padding-bottom: 0px;
     opacity: 0.5;
   }
   
-  @media (max-width: 1200px) {
-    #header{
-      
-        width: 88%;
+@media (max-width: 1200px) {
+
+#header{
+    
+    width: 88%;
+    height: 140px;
+            svg {
+        margin-top: -20px;
+        width: 200px;
         height: 140px;
-               svg {
-            margin-top: -20px;
-            width: 200px;
-            height: 140px;
-        }
     }
-    #navUl{
-        width: 100%;    
-        padding-top: 57px;
+}
+
+#navUl{
+    width: 100%;    
+    padding-top: 57px;
+}
+
+.homeNav{
+    height: 20px;
+    text-align: left;
+    white-space: nowrap;   
+    font-size: 2vw;
+    margin-right: 20px;   
     }
-    .homeNav{
-        height: 20px;
-        text-align: left;
-        white-space: nowrap;   
-        font-size: 2vw;
-        margin-right: 20px;   
-        }
-        #navigation{
-            width: 30%;
-            padding-top: 0;
-            margin-top: -30px;
-        }
-  }
+    #navigation{
+        width: 30%;
+        padding-top: 0;
+        margin-top: -30px;
+    }
+}
     
   @media (max-width: 900px) {
-#header{
-    margin-top: 16px;
-}
-#navUl{
-    padding-top: 74px;
-}
+
+    #header{
+        margin-top: 16px;
+    }
+    #navUl{
+        padding-top: 74px;
+    }
   }
   @media (max-width: 576px) {
     
@@ -130,19 +134,20 @@ padding-bottom: 0px;
             margin-right: -25px;
             position: relative;
         }
+        .homeNav{
+        height: 9px;
+        text-align: left;
+        white-space: nowrap;   
+        font-size: 3vw;
+        margin-right: 20px;   
+        }
+    }
 
-    .homeNav{
-    height: 9px;
-    text-align: left;
-    white-space: nowrap;   
-    font-size: 3vw;
-    margin-right: 20px;   
+    #navigation {
+        width: 42%;
     }
-}
-#navigation {
-    width: 42%;
-    }
-.navActive{
-    border-bottom: 1px solid $primary-color;
-}       
+    
+    .navActive{
+        border-bottom: 1px solid $primary-color;
+    }       
 }

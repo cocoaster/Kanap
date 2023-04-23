@@ -1,7 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import AppHeader from "../components/Header";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
+
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -10,9 +10,7 @@ export default function ErrorPage() {
   return (
     <>
       <AppHeader />
-      {/* <Carousel /> */}
       
-
       <div >
         <div id="error-page">
         <h1 id="errorNumber">404</h1>
@@ -22,9 +20,8 @@ export default function ErrorPage() {
                       <p className="mobileErrorTxtVersionP pError2">vous demandez n'existe pas.</p>
                     </div>
           <a href="/">
-            <p id="homeBack">Retourner sur la page d'accueil</p>
-            
-            </a>
+            <p id="homeBack">Retourner sur la page d'accueil</p>  
+          </a>
         </div>
 
       </div>

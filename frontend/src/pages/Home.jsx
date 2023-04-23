@@ -12,20 +12,16 @@ const AppHome = () => {
       <AppHeader />
 
       < div id="homeContent" >
-        <div>
-            </div>
-                <div className="banner">
-                    <img className="background" src={backgound} alt="background" />
-                    <img className="background imgBackground" src={imgBackgound} alt="landscape" />
-                    <p id="bannerTxt">Chez vous, partout et ailleurs</p>
-                    <div id="mobileQuoteVersion">
-                      <p className="mobileQuoteVersionP p1">Chez vous,</p>
-                      <p className="mobileQuoteVersionP p2">partout et ailleurs</p>
-                    </div>
-          
-                </div >
-            <List/>
-       
+          <div className="banner">
+              <img className="background" src={backgound} alt="background" />
+              <img className="background imgBackground" src={imgBackgound} alt="landscape" />
+              <p id="bannerTxt">Chez vous, partout et ailleurs</p>
+              <div id="mobileQuoteVersion">
+                <p className="mobileQuoteVersionP p1">Chez vous,</p>
+                <p className="mobileQuoteVersionP p2">partout et ailleurs</p>
+              </div>
+          </div >
+          <List/>
       </div>
       <Footer />
       </>

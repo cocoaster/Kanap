@@ -19,21 +19,17 @@
   font-family: $font1;
   font-size: 1.5vw;
   color: $secondary-color;
-  background-color: $primary-color;
-  
-  &:active {
-    background-color: $primary-color;
-  }
-
-  &.active {
-    transform: rotate(180deg);
-  }
-
+  background-color: $primary-color; 
   display: flex;
   justify-content: space-between;
   position: relative;
   border-radius: 7px;
-
+  &:active {
+    background-color: $primary-color;
+  }
+  &.active {
+    transform: rotate(180deg);
+  }  
   &.active {
     flex-direction: row-reverse;
   }
@@ -50,7 +46,6 @@
   margin-bottom: 20px;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
-
   p {
     margin-top: 70px;
   }
@@ -60,11 +55,9 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   height: 0;
-
   &.collapse {
     height: 0;
   }
-
   &.show {
     height: auto;
   }
@@ -88,98 +81,102 @@
   }
 }
 
-  .accordion-body {
-    padding-top: 0; /* réinitialise la valeur par défaut du padding */
-    transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
-  }
-  
-  .accordionAbout-item:not(.show) .accordion-body {
-    padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
-  }
-  
-  .accordionAbout-item.show .accordion-body {
-    padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
-  }
-  @media (max-width: 900px) {
+.accordion-body {
+  padding-top: 0; /* réinitialise la valeur par défaut du padding */
+  transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
+}
+
+.accordionAbout-item:not(.show) .accordion-body {
+  padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
+}
+
+.accordionAbout-item.show .accordion-body {
+  padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
+}
+@media (max-width: 900px) {
+
   #aboutContent{
     height: auto;
   }
+
   .sectionText{
     font-size: 1.8vw;
     padding: auto 10px;
   }
+
   .accordion-body{
     font-size: large;
     padding-left: 3%;
     padding-right: 3%;
-
   }
+
   .accordionAbout-button {
     width: 100%;
     padding: 10px;
     font-size: 2.75vw;
-    border-radius: 7px;
-  
+    border-radius: 7px; 
   }
-  }
+
+}
   
 @media (max-width: 576px) {
+
   #aboutContent{
     height: auto;
     width: 100%;
   }
   
-.backkgroundAbout{
-  background-image: url(../assets/IMGbackground2mob.png);
-height: 190px;
-background-position: top  ;
-background-repeat: no-repeat;
-background-size: cover ;
-height: 190px;
-width: 90%;
-
-}
-.imgBackgroundAbout{
-  display: none;
+  .backkgroundAbout{
+    background-image: url(../assets/IMGbackground2mob.png);
   height: 190px;
-}
-
-#accordionAbout {
-  margin-top: 20px;
-  width: 100%;
-}
-.accordionAbout-item {
-  margin-bottom: 20px;
+  background-position: top  ;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  height: 190px;
   width: 90%;
-  border-radius: 8px;
-
-}
-.accordionAbout-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 4vw;
-  border-radius: 7px;
-  height: 32px;
-}
-
-
-.accordion-body {
-  font-size: 6vw;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-
-
-  p {
-    margin-top: 50px;
-    margin-bottom: 37px;
   }
-}
-.sectionText{
-  font-size: 3.8vw;
-}
+
+  .imgBackgroundAbout{
+    display: none;
+    height: 190px;
+  }
+
+  #accordionAbout {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .accordionAbout-item {
+    margin-bottom: 20px;
+    width: 90%;
+    border-radius: 8px;
+  }
+
+  .accordionAbout-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 4vw;
+    border-radius: 7px;
+    height: 32px;
+  }
+
+  .accordion-body {
+    font-size: 6vw;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    p {
+      margin-top: 50px;
+      margin-bottom: 37px;
+    }
+  }
+
+  .sectionText{
+    font-size: 3.8vw;
+  }
+  
   .arrows{
     width: 7.5%;
   }

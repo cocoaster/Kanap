@@ -4,10 +4,12 @@
     height: auto;
     margin-bottom: 50px;
 }
+
 .banner{
 height: auto;
 position: relative;
 }
+
 .background{
     background-color: rgb(79, 58, 58);
     height: auto;
@@ -17,12 +19,14 @@ position: relative;
     top: 0;
     left: 5%;
 }
+
 .imgBackground{
     height: auto;
     object-fit: cover;
     position: absolute;
     opacity: 0.6;
 }
+
 #bannerTxt{
     position: absolute;
     padding-left: 25.4%;
@@ -34,10 +38,10 @@ position: relative;
     line-height: 142.6%;
     margin-bottom: 0px;
 }
+
 #mobileQuoteVersion{
     position: absolute;
     display: none;
-
     .mobileQuoteVersionP{
     font-family: $font1;
     color: $secondary-color;
@@ -47,6 +51,7 @@ position: relative;
     line-height: 142.6%;
     margin-bottom: 10px;
     }
+
 }
 
 
@@ -56,51 +61,57 @@ position: relative;
         font-size: 3.4vw;
     }
 }
+
 @media (max-width: 900px) {
     #bannerTxt{
         top:30%;
         font-size: 3.4vw;
     }
 }
+
 @media (max-width: 576px) {
     .banner {
         width: 100%;
-        margin-top: 20px;
-        
+        margin-top: 20px;      
     }
-.background{
-    height: 90px;
-    border-radius: 8px;
 
-}
+    .background{
+        height: 90px;
+        border-radius: 8px;
+    }
 
-#bannerTxt{
-    display: none;
+    #bannerTxt{
+        display: none;
     } 
+
     #mobileQuoteVersion{
         position: absolute;
         display: block;
         top: 20px;
         left: 14px; 
         .mobileQuoteVersionP{
-        white-space: nowrap;   
-        line-height: 0;
-        padding-left: 10.4%;
-        font-size: 6.9vw;
-        line-height: 24px;
-        margin-bottom: 0px;
+            white-space: nowrap;   
+            line-height: 0;
+            padding-left: 10.4%;
+            font-size: 6.9vw;
+            line-height: 24px;
+            margin-bottom: 0px;
         }
     }
+
     P{
         margin-top: 0%;
     }
+
     p1{ 
         position: relative;
         margin-top: 5%;
-
     }
+
     p2{ 
         position: absolute;
         margin-top: 0%;
-        top: 0;}
+        top: 0;
+    }
+    
 }

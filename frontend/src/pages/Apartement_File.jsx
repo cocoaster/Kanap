@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import { useLocation } from "react-router-dom";
 import { getApartments } from '../service/index.jsx';
 import AppHeader from '../components/Header.jsx';
