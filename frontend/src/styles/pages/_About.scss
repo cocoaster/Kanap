@@ -1,8 +1,11 @@
 #accordionAbout {
+  position: relative;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 50px;
   width: 90%;
+  overflow: hidden;
+  scrollbar-width: none;
 }
 
 .accordionAbout-item {
@@ -101,7 +104,8 @@
 
   .sectionText{
     font-size: 1.8vw;
-    padding: auto 10px;
+    padding-left:  10px;
+    padding-right: 10px;
   }
 
   .accordion-body{
@@ -128,12 +132,12 @@
   
   .backkgroundAbout{
     background-image: url(../assets/IMGbackground2mob.png);
-  height: 190px;
-  background-position: top  ;
-  background-repeat: no-repeat;
-  background-size: cover ;
-  height: 190px;
-  width: 90%;
+    height: 190px;
+    background-position: top  ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    height: 190px;
+    width: 90%;
   }
 
   .imgBackgroundAbout{

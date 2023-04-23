@@ -214,10 +214,13 @@ body {
   }
 }
 #accordionAbout {
+  position: relative;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 50px;
   width: 90%;
+  overflow: hidden;
+  scrollbar-width: none;
 }
 
 .accordionAbout-item {
@@ -315,7 +318,8 @@ body {
   }
   .sectionText {
     font-size: 1.8vw;
-    padding: auto 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .accordion-body {
     font-size: large;
@@ -850,7 +854,6 @@ accordion-icon {
   width: 90%;
   height: 207px;
   display: flex;
-  flex-direction: raw;
   justify-content: space-between;
 }
 #header svg {
@@ -1135,7 +1138,7 @@ accordion-icon {
   margin: auto;
   font-family: Montserrat;
   text-align: center;
-  vertical-align: auto;
+  vertical-align: middle;
   font-size: 3vh;
   margin-top: 34px;
 }
@@ -1243,7 +1246,6 @@ accordion-icon {
   font-family: Montserrat;
   color: #ffffff;
   font-size: 1.7vw;
-  text-shadow: -12px -1px 14px -5px rgba(0, 0, 0, 0.38);
 }
 
 .imgCarousel {
@@ -1327,7 +1329,6 @@ accordion-icon {
     font-family: Montserrat;
     color: #ffffff;
     font-size: 1.7vw;
-    text-shadow: -12px -1px 14px -5px rgba(0, 0, 0, 0.38);
   }
 }
 @media (max-width: 576px) {
