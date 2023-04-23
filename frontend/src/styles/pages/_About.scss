@@ -1,5 +1,6 @@
 #aboutContent{
   overflow-y: hidden;
+  position: relative;
   height: auto;
 }
 
@@ -132,7 +133,8 @@
 @media (max-width: 576px) {
 
   #aboutContent{
-    height: 980px;
+    height: 730px;
+    display: inline-block;
     width: 100%;
   }
   
