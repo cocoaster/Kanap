@@ -341,7 +341,7 @@ body {
 }
 @media (max-width: 576px) {
   #aboutContent {
-    height: auto;
+    height: 980px;
     width: 100%;
   }
   .backkgroundAbout {

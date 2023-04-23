@@ -10,7 +10,7 @@ import "./styles/index.css";
 import "./styles/index.scss";
 import AppHome from './pages/Home.jsx';
 import About from './pages/About.jsx';
-import ApartmentCard from './pages/Apartement_File.jsx/';
+import ApartmentCard from './pages/Apartement_File.jsx';
 import ErrorPage from "./pages/Error404.jsx";
 
 const router = createBrowserRouter(
@@ -25,7 +25,12 @@ const router = createBrowserRouter(
       element: <About />,
       errorElement: <ErrorPage />,
     },
-   
+    {
+      path: "/Apartment/*",
+      element: <ErrorPage />,
+      errorElement: <ErrorPage />,
+
+    },
     {
       path: "/Apartment/:title",
       element: <ApartmentCard />,
