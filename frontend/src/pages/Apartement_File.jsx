@@ -105,7 +105,7 @@ function ApartmentCard() {
                     </h3>
                     <section
                         className={
-                            "accordionSectionApart equalHeight " +
+                            "accordionSectionApart " +
                             (activeAccordionIndexes.includes(1) ? "show" : "")
                         }
                         id="description"
@@ -116,53 +116,46 @@ function ApartmentCard() {
                     </section>
                 </div>
                 <div className="accordionApart-item" id="apartAccordion2">
-                    <div className="accordion-item apartAccordionItem2">
-                        <h3 className="accordion-header">
-                            <button
-                                type="button"
-                                className="accordion-button"
-                                onClick={() => toggleAccordion(2)}
-                            >
-                                Equipements
-                                {activeAccordionIndexes.includes(2) ? (
-                                    <img
-                                        src={UpArrow}
-                                        className="accordion-icon active"
-                                        alt="up-arrow"
-                                    />
-                                ) : (
-                                    <img
-                                        src={DownArrow}
-                                        className="accordion-icon active"
-                                        alt="down-arrow"
-                                    />
-                                )}
-                            </button>
-                        </h3>
-                        <section
-                            className={
-                                "accordionSectionApart equalHeight " +
-                                (activeAccordionIndexes.includes(2)
-                                    ? "show"
-                                    : "")
-                            }
-                            id="equipments"
-                            data-bs-parent="#apartAccordion2"
+                    <h3 className="accordion-header">
+                        <button
+                            type="button"
+                            className="accordion-button"
+                            onClick={() => toggleAccordion(2)}
                         >
-                            <ul className="apartAccordion2">
-                                {apartment?.equipments.map(
-                                    (equipment, index) => (
-                                        <li key={index}>{equipment}</li>
-                                    )
-                                )}
-                            </ul>
-                        </section>
-                    </div>
+                            Equipements
+                            {activeAccordionIndexes.includes(2) ? (
+                                <img
+                                    src={UpArrow}
+                                    className="accordion-icon active"
+                                    alt="up-arrow"
+                                />
+                            ) : (
+                                <img
+                                    src={DownArrow}
+                                    className="accordion-icon active"
+                                    alt="down-arrow"
+                                />
+                            )}
+                        </button>
+                    </h3>
+                    <section
+                        className={
+                            "accordionSectionApart " +
+                            (activeAccordionIndexes.includes(2) ? "show" : "")
+                        }
+                        id="equipments"
+                        data-bs-parent="#apartAccordion2"
+                    >
+                        <ul className="apartAccordion2">
+                            {apartment?.equipments.map((equipment, index) => (
+                                <li key={index}>{equipment}</li>
+                            ))}
+                        </ul>
+                    </section>
                 </div>
             </div>
             <Footer />
             <Outlet />
-
         </>
     );
 }

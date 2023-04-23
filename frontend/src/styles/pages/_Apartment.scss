@@ -85,6 +85,7 @@
 
 .bottom {
     display: flex;
+    align-items: stretch;
     justify-content: space-between;
     height: 450px;
     margin: auto;
@@ -93,13 +94,9 @@
     width: 90%;
     .accordionApart-item {
         flex-basis: 45%;
-    }
-    .equalHeight {
-        display: flex;
-        flex-wrap: wrap;
-        > * {
-            flex: 1 0 50%;
-        }
+        font-family: $font1;
+        border-radius: 15px;
+        width: 45%;
     }
 }
 
@@ -132,15 +129,18 @@ button {
     }
 }
 
-.accordionApart-item {
-    font-family: $font1;
-    border-radius: 15px;
-    width: 45%;
+.accordion-button {
+    font-size: 2rem;
+    height: 80px;
 }
 
 h3 {
     font-size: 2rem;
     font-family: $font1;
+}
+
+accordion-icon {
+    width: 0.1%;
 }
 
 .accordionSectionApart {
@@ -149,6 +149,7 @@ h3 {
     color: $primary-color;
     border-radius: 0px 0px 25px 25px;
     max-height: 0;
+    height: 510px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     &.show {
@@ -168,33 +169,10 @@ h3 {
         padding: 25px 25px 80px 40px;
     }
 }
-accordion-icon {
-    width: 0.1%;
-}
-.accordion-button {
-    font-size: 2rem;
-    height: 80px;
-}
+
 .accordionTextApart {
     margin-top: 0%;
     padding: 25px 25px 80px 40px;
-}
-
-#apartAccordionItem1 {
-    width: 15%;
-}
-
-#apartAccordionItem2 {
-    width: 45%;
-}
-
-.equalHeight {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.equalHeight > * {
-    flex: 1 0 50%;
 }
 
 @media (max-width: 1200px) {
@@ -246,6 +224,7 @@ accordion-icon {
 
     .accordionSectionApart {
         font-size: 2vw;
+        height: 350px;
     }
 }
 
@@ -334,7 +313,10 @@ accordion-icon {
     .accordionTextApart {
         padding-left: 10px;
     }
+.accordionSectionApart{
+    height: 300px;
 
+}
     .accordionSectionApart ul {
         padding-left: 10px;
     }
@@ -456,6 +438,7 @@ accordion-icon {
         border-radius: 7px;
         font-size: 4vw;
         margin-left: 0;
+        height: auto;
     }
 
     .accordionTextApart {
