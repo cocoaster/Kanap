@@ -1,503 +1,498 @@
-.mediumSection, .bottomSection{
-width:90%;
-margin: auto;
+.mediumSection,
+.bottomSection {
+    width: 90%;
+    margin: auto;
 }
 
-.mediumSection{
-  display: flex;
-  justify-content: space-between;
-  font-family: $font1;
-  color: $primary-color;
-  margin-top: 15px;
-}
-
-.leftMediumSection{
-  width: 50%;
-  margin-top: 20px;
-  font-family: $font1; 
-  h1{
-    font-weight: 100;
-    font-size: 2.8vw;
-    margin-bottom: 5px;
-  }
-  h2{
-    font-weight: 100 ;
-    font-size: 1.2vw;
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
-  ul{
-    padding: 0%;
+.mediumSection {
     display: flex;
-    justify-content: flex-start;
-    font-size: 1.2vw;
-    list-style-type: none;
-    width: auto;
-    li{
-      margin-right: 15px;
-      margin-top: 30px ;
-      color: $secondary-color;
-      background-color: $primary-color;
-      border-radius: 15px;
-      width : 22%;
-      text-align: center; 
-      white-space: nowrap;
-      width: auto;
-      padding: 10px 30px;
-      }
-  }
-}
-
-.rightMediumSection{
-  font-size: 2.5vw;
-  position: relative;
- 
-  width: 40%;
-  img{
-    margin-top: 40px;
-    width: 15%;
-    height: 15%;
-    border-radius: 50%;
-  }
-  .rating{
-    position: absolute;
-    margin-top: 0px;
-    right: 30%;
-    width: 6%;
-    font-size: 3vw; 
-  }
-}
-
-.hostContent{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hostName{
-  margin-top: 39px;
-  margin-right: 15px;
-  font-size: 1.2vw;
-  p{
+    justify-content: space-between;
+    font-family: $font1;
+    color: $primary-color;
     margin-top: 15px;
-  }
 }
 
-.bottom{
-  display: flex; 
-  justify-content: space-between; 
-  height: 450px;
-  margin: auto;
-  margin-top: 90px;
-  margin-bottom: 200px;
-  width: 90%;
+.leftMediumSection {
+    width: 50%;
+    margin-top: 20px;
+    font-family: $font1;
+    h1 {
+        font-weight: 100;
+        font-size: 2.8vw;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-weight: 100;
+        font-size: 1.2vw;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    ul {
+        padding: 0%;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.2vw;
+        list-style-type: none;
+        width: auto;
+        li {
+            margin-right: 15px;
+            margin-top: 30px;
+            color: $secondary-color;
+            background-color: $primary-color;
+            border-radius: 15px;
+            width: 22%;
+            text-align: center;
+            white-space: nowrap;
+            width: auto;
+            padding: 10px 30px;
+        }
+    }
+}
+
+.rightMediumSection {
+    font-size: 2.5vw;
+    position: relative;
+
+    width: 40%;
+    img {
+        margin-top: 40px;
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+    }
+    .rating {
+        position: absolute;
+        margin-top: 0px;
+        right: 30%;
+        width: 6%;
+        font-size: 3vw;
+    }
+}
+
+.hostContent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hostName {
+    margin-top: 39px;
+    margin-right: 15px;
+    font-size: 1.2vw;
+    p {
+        margin-top: 15px;
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 450px;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 200px;
+    width: 90%;
     .accordionApart-item {
-      flex-basis: 45%;
+        flex-basis: 45%;
     }
     .equalHeight {
-      display: flex;
-      flex-wrap: wrap;
-      > * {
-        flex: 1 0 50%;
-      }
+        display: flex;
+        flex-wrap: wrap;
+        > * {
+            flex: 1 0 50%;
+        }
     }
-  }
+}
 
 .accordionApart {
-  border-radius: 0.8rem;
-  overflow: hidden;
-  font-family: $font1;
-  font-size: 2rem;
-  color: $primary-color;
-  background-color: $tertiary-color;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    font-family: $font1;
+    font-size: 2rem;
+    color: $primary-color;
+    background-color: $tertiary-color;
 }
 
 button {
-  background-color: $primary-color;
-  border: none;
-  color: $secondary-color;
-  border-radius: 15px;
-  font-family: $font1;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  width: 100%;
-  img{
-    width: 2em;
-  }
-  img.active {
-    transform: rotate(180deg);
-  }
-}
-  
-.accordionApart-item {
-  font-family: $font1;
-  border-radius: 15px;
-  width : 45%;    
-}
-  
-h3{
-  font-size: 2rem;
-  font-family: $font1;
-}
-
-.accordionSectionApart{
-  background-color: $tertiary-color;
-  font-size: 2rem;
-  color: $primary-color;
-  border-radius: 0px 0px 25px 25px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  &.show {
-    max-height: 1000px;
-    transition: max-height 0.5s ease-in-out;
-    .accordion-button::after {
-      &.collapsed {
-        transform: translateY(-50%) rotate(180deg);
-      }
-      &.expanded {
-        transform: translateY(-50%) rotate(0deg);
-      }
+    background-color: $primary-color;
+    border: none;
+    color: $secondary-color;
+    border-radius: 15px;
+    font-family: $font1;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    img {
+        width: 2em;
     }
-  }
-  ul{
-    list-style-type: none;
+    img.active {
+        transform: rotate(180deg);
+    }
+}
+
+.accordionApart-item {
+    font-family: $font1;
+    border-radius: 15px;
+    width: 45%;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: $font1;
+}
+
+.accordionSectionApart {
+    background-color: $tertiary-color;
+    font-size: 2rem;
+    color: $primary-color;
+    border-radius: 0px 0px 25px 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    &.show {
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in-out;
+        .accordion-button::after {
+            &.collapsed {
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &.expanded {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding: 25px 25px 80px 40px;
+    }
+}
+accordion-icon {
+    width: 0.1%;
+}
+.accordion-button {
+    font-size: 2rem;
+    height: 80px;
+}
+.accordionTextApart {
+    margin-top: 0%;
     padding: 25px 25px 80px 40px;
-  }
-}
-  accordion-icon {
-  width: 0.1%; 
- }
- .accordion-button {
-  font-size: 2rem;
-  height: 80px;
-}
-.accordionTextApart{
-  margin-top: 0%;
-  padding: 25px 25px 80px 40px;
 }
 
-#apartAccordionItem1{
-  width: 15%;
+#apartAccordionItem1 {
+    width: 15%;
 }
 
-#apartAccordionItem2{
-  width: 45%;
+#apartAccordionItem2 {
+    width: 45%;
 }
 
 .equalHeight {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .equalHeight > * {
-  flex: 1 0 50%;
+    flex: 1 0 50%;
 }
 
 @media (max-width: 1200px) {
+    .leftMediumSection {
+        h1 {
+            font-size: 2.8vw;
+        }
+        h2 {
+            font-size: 1.8vw;
+            margin-bottom: 0px;
+            margin-top: 15px;
+        }
+        ul {
+            font-size: 1.3vw;
+        }
+    }
 
-  .leftMediumSection{
-    h1{
-      font-size: 2.8vw;
+    .rightMediumSection {
+        font-size: 2.5vw;
+        position: relative;
+        width: 40%;
+        img {
+            margin-top: 40px;
+            width: 15%;
+            height: 15%;
+            border-radius: 50%;
+        }
+        .rating {
+            position: absolute;
+            margin-top: 0px;
+            right: 30%;
+            width: 6%;
+            font-size: 3vw;
+        }
     }
-    h2{
-      font-size: 1.8vw;
-      margin-bottom: 0px;
-      margin-top: 15px;
-    }
-    ul{ 
-      font-size: 1.3vw; 
-    }
-  }
 
-  .rightMediumSection{
-    font-size: 2.5vw;
-    position: relative;
-    width: 40%;
-    img{
-      margin-top: 40px;
-      width: 15%;
-      height: 15%;
-      border-radius: 50%;
+    .hostName {
+        margin-top: 23px;
+        margin-right: 15px;
+        font-size: 1.7vw;
+        p {
+            margin-top: 15px;
+        }
     }
-    .rating{
-      position: absolute;
-      margin-top: 0px;
-      right: 30%;
-      width: 6%;
-      font-size: 3vw; 
+
+    .accordionTextApart {
+        font-size: 2vw;
     }
-  }
-  
-.hostName{
-  margin-top: 23px;
-  margin-right: 15px;
-  font-size: 1.7vw;
-  p{
-    margin-top: 15px;
-  }
-}
 
-  .accordionTextApart{
-    font-size: 2vw;
-  }
-
-  .accordionSectionApart{
-      font-size: 2vw;  
-  }
+    .accordionSectionApart {
+        font-size: 2vw;
+    }
 }
 
 @media (max-width: 900px) {
-
-  .leftMediumSection{
-    width: 90%;
-    margin-top: 0px;
-    h1{
-      margin-bottom: 10px;
-    }
-    h2{
-      font-size: 2vw;
-      margin-bottom: 0px;
-      margin-top: 0px;
-    }
-    ul{
-      padding: 0%;
-      font-size: 3vw;
-      flex-wrap: wrap;
-      li{
-        margin-right: 15px;
-        margin-top: 15px ;
-        padding: 3px 10px;;
-        border-radius: 6.5px;
-        white-space: nowrap;
-        width: auto;
+    .leftMediumSection {
+        width: 90%;
+        margin-top: 0px;
+        h1 {
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2vw;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        ul {
+            padding: 0%;
+            font-size: 3vw;
+            flex-wrap: wrap;
+            li {
+                margin-right: 15px;
+                margin-top: 15px;
+                padding: 3px 10px;
+                border-radius: 6.5px;
+                white-space: nowrap;
+                width: auto;
+            }
         }
     }
-  }
 
-  .hostContent{
-    width: 100%;
-  }
-
-  .hostName{
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 2vw;
-    height: 35px;
-    p{
-      margin-bottom: 0;
+    .hostContent {
+        width: 100%;
     }
-  }
 
-  .rightMediumSection{
-    font-size: 2.5vw;
-    position: relative; 
-    width: 40%;
-    img{
-      margin-top: 20px;
-      width: 28%;
-      height: 28%;
-      border-radius: 50%;
+    .hostName {
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 2vw;
+        height: 35px;
+        p {
+            margin-bottom: 0;
+        }
     }
-    .rating{
-      position: absolute;
-      margin-top: 0px;
-      right: 39%;
-      width: 7%;
-      font-size: 3vw; 
+
+    .rightMediumSection {
+        font-size: 2.5vw;
+        position: relative;
+        width: 40%;
+        img {
+            margin-top: 20px;
+            width: 28%;
+            height: 28%;
+            border-radius: 50%;
+        }
+        .rating {
+            position: absolute;
+            margin-top: 0px;
+            right: 39%;
+            width: 7%;
+            font-size: 3vw;
+        }
     }
-  }
 
-  .bottom{
-    height: 280px;
-  }
+    .bottom {
+        height: 280px;
+    }
 
-  .accordion-button {
-    font-size: 3vw;
-    height: 50px;
-    border-radius: 7px;
-    padding-top: 10px;
-  }
+    .accordion-button {
+        font-size: 3vw;
+        height: 50px;
+        border-radius: 7px;
+        padding-top: 10px;
+    }
 
-  .accordionApart-item{  
-    height: 30px;
-  }
+    .accordionApart-item {
+        height: 30px;
+    }
 
-  .apartAccordionItem2{
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
+    .apartAccordionItem2 {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
 
-  .accordionTextApart{
-    padding-left: 10px;
-  }
+    .accordionTextApart {
+        padding-left: 10px;
+    }
 
-  .accordionSectionApart ul{
-    padding-left: 10px;
-  }
-
+    .accordionSectionApart ul {
+        padding-left: 10px;
+    }
 }
-
 
 @media (max-width: 576px) {
-
-  .mediumSection{
-    flex-direction: column;
-   margin : auto;
-   width: 90%;
-  }
-
-  .leftMediumSection{
-    width: 90%;
-    margin-top: 0px;
-    h1{
-      font-size: 6.5vw;
-      margin-bottom: 10px;
+    .mediumSection {
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
     }
-    h2{
-      font-size: 4.5vw;
-      margin-bottom: 0px;
-      margin-top: 0px;
-    }
-    ul{
-      padding: 0%;
-      font-size: 3vw;
-      flex-wrap: wrap;
-      li{
-        margin-right: 15px;
-        margin-top: 15px ;
-        padding: 3px 10px;;
-        border-radius: 6.5px;
-        white-space: nowrap;
-        width: auto;
+
+    .leftMediumSection {
+        width: 90%;
+        margin-top: 0px;
+        h1 {
+            font-size: 6.5vw;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 4.5vw;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        ul {
+            padding: 0%;
+            font-size: 3vw;
+            flex-wrap: wrap;
+            li {
+                margin-right: 15px;
+                margin-top: 15px;
+                padding: 3px 10px;
+                border-radius: 6.5px;
+                white-space: nowrap;
+                width: auto;
+            }
         }
     }
-  }
 
-  .rightMediumSection{
-    font-size: 4vw;
-    position: relative;
-    width: 100%;
-    img{
-      margin-top: 15px;
-      margin-right: 8px;
-      width: 14%;
-      height: 14%;
-      border-radius: 60%;
-    }
-    .rating{
-      position: absolute;
-      left: 0%;
-      font-size: 6vw; 
-      top: 20px;
-    }
-  }
-
-  .hostContent{
-    width: 100%;
-  }
-
-  .hostName{
-    margin-top: 15px;
-    margin-right: 10px;
-    font-size: 4vw;
-    p{
-      margin-top: 5px;
-      margin-bottom: 0;
-    }
-  }
-  
-  .bottom{
-    flex-direction: column;
-    height: auto;
-    margin: auto;
-    margin-top: 0px;
-    width: 90%;
-    margin-bottom: 0px;
+    .rightMediumSection {
+        font-size: 4vw;
+        position: relative;
+        width: 100%;
+        img {
+            margin-top: 15px;
+            margin-right: 8px;
+            width: 14%;
+            height: 14%;
+            border-radius: 60%;
+        }
+        .rating {
+            position: absolute;
+            left: 0%;
+            font-size: 6vw;
+            top: 20px;
+        }
     }
 
-  #apartAccordion1{
-    margin-top: 16px;
-    margin-bottom: 25px;
-    width:100%;
-  }
+    .hostContent {
+        width: 100%;
+    }
 
-  #apartAccordion2{
-    margin-top: 0px;
-    width:100%;
-  }
+    .hostName {
+        margin-top: 15px;
+        margin-right: 10px;
+        font-size: 4vw;
+        p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    }
 
-  .accordionApart-item{  
-    height: 30px;
-  }
+    .bottom {
+        flex-direction: column;
+        height: auto;
+        margin: auto;
+        margin-top: 0px;
+        width: 90%;
+        margin-bottom: 0px;
+    }
 
-  .apartAccordionItem1{
-    width: 100%;
-    margin: 0;
-    margin-left: 0;
-    margin-top: 0!important;
-    left: 0;
-  }
-    
-  .apartAccordionItem2{
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
+    #apartAccordion1 {
+        margin-top: 16px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
 
-  .accordion-button{
-    padding: 7px;
-    height: 30px;
-    border-radius: 6px;
-  }
+    #apartAccordion2 {
+        margin-top: 0px;
+        width: 100%;
+    }
 
-  .accordionSectionApart {
-    border-radius: 7px;
-    font-size: 4vw;
-    margin-left: 0;
-  }
+    .accordionApart-item {
+        height: 30px;
+    }
 
-  .accordionTextApart{
-    font-size: 4vw;
-    padding-top: 20px;
-    padding-left: 12px;
-    padding-bottom: 10px;
-  }
+    .apartAccordionItem1 {
+        width: 100%;
+        margin: 0;
+        margin-left: 0;
+        margin-top: 0 !important;
+        left: 0;
+    }
 
-  .accordionSectionApart ul{
-    padding: 0;
-    padding-left: 12px;
-    padding-top: 20px;
-  }
+    .apartAccordionItem2 {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
 
-  .accordionApart-item {
-    margin-bottom: 30px;
-    flex-shrink: 0;
-  }
+    .accordion-button {
+        padding: 7px;
+        height: 30px;
+        border-radius: 6px;
+    }
 
-.accordionSectionApart {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease;
-}
+    .accordionSectionApart {
+        border-radius: 7px;
+        font-size: 4vw;
+        margin-left: 0;
+    }
 
-.accordion-header {
-  margin: 0;
-}
+    .accordionTextApart {
+        font-size: 4vw;
+        padding-top: 20px;
+        padding-left: 12px;
+        padding-bottom: 10px;
+    }
 
-.accordionSectionApart {
-  display: none;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  }
-  
-  .show {
-  display: block;
-  }
-  
+    .accordionSectionApart ul {
+        padding: 0;
+        padding-left: 12px;
+        padding-top: 20px;
+    }
+
+    .accordionApart-item {
+        margin-bottom: 30px;
+        flex-shrink: 0;
+    }
+
+    .accordionSectionApart {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+    }
+
+    .accordion-header {
+        margin: 0;
+    }
+
+    .accordionSectionApart {
+        display: none;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .show {
+        display: block;
+    }
 }

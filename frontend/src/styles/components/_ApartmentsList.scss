@@ -1,146 +1,141 @@
 .cardContainer {
-  margin: auto;
-  margin-top: 100px;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  height: auto;
-  margin-right: 3.5%;
-  }
-  
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    margin-right: 3.5%;
+}
+
 .apartCard {
-position: relative;
-overflow: hidden;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-transition: all 0.3s ease-in-out;
-border-radius: 20px;
-margin-bottom: 60px;
-margin-right: 3%;
-width: 30%;
-height: 550px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    margin-right: 3%;
+    width: 30%;
+    height: 550px;
 }
-   
+
 .card-image {
-background-size: cover;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-padding: 16px;
-border-radius: 8px;
-position: relative;
-overflow: hidden;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-transition: all 0.3s ease-in-out;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
-  
+
 .card-image::before {
-content: "";
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.4);
-opacity: 0;
-transition: opacity 0.3s ease-in-out;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
-  
+
 .apartCard:hover .card-image::before,
 .apartCard:focus .card-image::before {
-opacity: 1;
+    opacity: 1;
 }
-  
-.card-title {
-position: absolute;
-font-family: $font1;
-font-weight: bold;
-font-size: 1.5rem;
-text-decoration: none !important;
-color: $secondary-color;
-margin: 0;
-bottom: 6%;
-width: 37%;
 
+.card-title {
+    position: absolute;
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    color: $secondary-color;
+    margin: 0;
+    bottom: 6%;
+    width: 37%;
 }
-  
+
 .apartCard .card-image,
 .apartCard:hover .card-image,
 .apartCard:focus .card-image {
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-width: 100%;
-height: 100%;
-padding-bottom: 56.25%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.25%;
 
-// padding-bottom: 98%;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    // padding-bottom: 98%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
-  
+
 .card-image:hover,
 .card-image:focus,
 .apartCard:hover .card-image,
 .apartCard:focus .card-image {
-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
-  
-.apartCard {  
-  &:hover {
-  // transform: translateY(-4px);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  }
+
+.apartCard {
+    &:hover {
+        // transform: translateY(-4px);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
 }
 
 @media (max-width: 1200px) {
-  .cardContainer{
-    margin-top: 60px;
-  }
-  .apartCard {
-    margin-right: 3%;
-    width: 30%;
-    height: 350px;
+    .cardContainer {
+        margin-top: 60px;
+    }
+    .apartCard {
+        margin-right: 3%;
+        width: 30%;
+        height: 350px;
     }
 
-  .card-title {
-    font-size: 0.8rem;
-    width: 37%;
-    bottom: 5%;
-  }
+    .card-title {
+        font-size: 0.8rem;
+        width: 37%;
+        bottom: 5%;
+    }
 
-  .main-container{
-    margin-top: 30px;
-  }
+    .main-container {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 900px) {
-
-  .apartCard{
-    height: 250px;
-  }
-  
+    .apartCard {
+        height: 250px;
+    }
 }
 @media (max-width: 576px) {
+    .cardContainer {
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+    }
 
-  .cardContainer{
-    width: 90%;
-    margin: auto;
-    justify-content: center;
-  }
-  
-  .apartCard{
-    width: 100%;
-    margin: auto;
-    margin-top: 20px;
-    height: 225px;
-    border-radius: 7px;
-  }
-  
-  .card-title {
-    width: 26%;
-    font-size: 1rem;
-  }
+    .apartCard {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        height: 225px;
+        border-radius: 7px;
+    }
+
+    .card-title {
+        width: 26%;
+        font-size: 1rem;
+    }
 }
-

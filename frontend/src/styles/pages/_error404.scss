@@ -1,4 +1,4 @@
-#error-page{
+#error-page {
     width: 100%;
     height: 100%;
     display: flex;
@@ -8,14 +8,14 @@
     justify-content: center;
     margin-top: 200px;
     margin-bottom: 50px;
-    a{
+    a {
         text-decoration: none;
         text-decoration-line: underline;
         text-decoration-color: $primary-color;
     }
 }
 
-#errorNumber{
+#errorNumber {
     font-family: $font1;
     font-weight: 800;
     font-size: 288px;
@@ -23,7 +23,7 @@
     color: $primary-color;
 }
 
-#errorTxt{
+#errorTxt {
     font-family: $font1;
     font-weight: 500;
     font-size: 42px;
@@ -31,11 +31,11 @@
     color: $primary-color;
 }
 
-#mobileErrorTxtVersion{
+#mobileErrorTxtVersion {
     display: none;
 }
 
-#homeBack{
+#homeBack {
     font-family: $font1;
     color: $primary-color;
     font-weight: 500;
@@ -47,57 +47,54 @@
     margin-bottom: 200px;
 }
 @media (max-width: 768px) {
-
-    #error-page{
+    #error-page {
         width: 65%;
         height: auto;
-        }
-    #errorTxt{
+    }
+    #errorTxt {
         font-size: 34px;
         text-align: center;
-        }
-        #homeBack{
-            font-size: 14px;
-            line-height: 142.6%;
-            margin-top: 100px;
-            text-decoration: none;    
-            text-decoration-thickness: 0.5px;
-            margin-bottom: 200px;
-        }
+    }
+    #homeBack {
+        font-size: 14px;
+        line-height: 142.6%;
+        margin-top: 100px;
+        text-decoration: none;
+        text-decoration-thickness: 0.5px;
+        margin-bottom: 200px;
+    }
 }
 
 @media (max-width: 576px) {
-
-    #error-page{
+    #error-page {
         width: 65%;
         height: 450px;
     }
 
-    #errorNumber{
-        font-size: 100px;   
+    #errorNumber {
+        font-size: 100px;
     }
 
-    #errorTxt{
+    #errorTxt {
         display: none;
         font-size: 15px;
         text-align: center;
-        }
+    }
 
-    #mobileErrorTxtVersion{
+    #mobileErrorTxtVersion {
         font-family: $font1;
         color: $primary-color;
         font-size: 15px;
         text-align: center;
         display: block;
     }
- 
-    #homeBack{
+
+    #homeBack {
         font-size: 11px;
         line-height: 142.6%;
         margin-top: 100px;
-        text-decoration: none;    
+        text-decoration: none;
         text-decoration-thickness: 0.5px;
         margin-bottom: 200px;
-        }
-
+    }
 }

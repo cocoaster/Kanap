@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -239,7 +241,7 @@ body {
 }
 
 .accordionAbout-item {
-  background: #F7F7F7;
+  background: #f7f7f7;
   margin: auto;
   margin-bottom: 80px;
   width: 80%;
@@ -405,7 +407,8 @@ body {
     width: 7.5%;
   }
 }
-.mediumSection, .bottomSection {
+.mediumSection,
+.bottomSection {
   width: 90%;
   margin: auto;
 }
@@ -514,7 +517,7 @@ body {
   font-family: Montserrat;
   font-size: 2rem;
   color: #ff6060;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 button {
@@ -549,7 +552,7 @@ h3 {
 }
 
 .accordionSectionApart {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   font-size: 2rem;
   color: #ff6060;
   border-radius: 0px 0px 25px 25px;

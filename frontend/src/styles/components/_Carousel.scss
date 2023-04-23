@@ -1,38 +1,38 @@
 .carousel-content {
-  width: 90%;
-  height: 800px;
-  margin: 0 auto;
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
 
-  .carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 30px;
-    .carousel-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-
-      .carousel-item {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .carousel {
+        position: relative;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        transition: opacity 0.6s ease-in-out;
+        overflow: hidden;
+        border-radius: 30px;
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
 
-        &.active {
-          opacity: 1;
+            .carousel-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.6s ease-in-out;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
         }
-      }
     }
-  }  
 }
-  
+
 .carousel-control-prev,
-  .carousel-control-next {
+.carousel-control-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -48,152 +48,147 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     &:focus {
-      outline: none;
+        outline: none;
     }
     &.carousel-control-prev {
-      left: -18%;   
+        left: -18%;
     }
     &.carousel-control-next {
-      right: -18%;
+        right: -18%;
     }
     .carousel-control-icon {
-      width:15%;
+        width: 15%;
     }
-  }
+}
 
 .carousel-counter {
-  position: absolute;
-  top: 85%;
-  right: 50%;
-  transform: translateX(-50%);
-  font-family: $font1;
-  color: $secondary-color;
-  font-size: 1.7vw;
-}
-
-.imgCarousel{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 1200px) {
-
-   .carousel-content{
-    margin-top: 0px;
-    height: 600px;
-    margin-bottom: 30px;
-   }
-
-   .carousel-slide{
-    height: 100%;
-  }
-
-.carousel-inner{
-  height: 100%;
-}
-
-.carousel-item{
-  height: 100%;
-}
-
-.imgCarousel{
-  height: 100%; 
-  border-radius: 15px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  width: 100px;
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  &:focus {
-    outline: none;
-  }
-
-  &.carousel-control-prev {
-    left: -1%;   
-  }
-
-  &.carousel-control-next {
-    right: -1%;
-  }
-
-  .carousel-control-icon {
-    width:100%;
-  }
-}
-
-}
-
-@media (max-width: 900px) {
-
-  .carousel-content{
-   margin-bottom: 30px;
-   height: 400px;
-  }
-
-.imgCarousel{
- border-radius: 15px;
-}
-
-.carousel-control-prev,
-  .carousel-control-next {
-    width: 10%;
-    height: 60px;
-    
-    &.carousel-control-prev {
-      left: 0;   
-    }
-    &.carousel-control-next {
-      right: 0;
-    }  
-  }
-  .carousel-counter {
     position: absolute;
     top: 85%;
-    right: 45%;
+    right: 50%;
     transform: translateX(-50%);
     font-family: $font1;
     color: $secondary-color;
     font-size: 1.7vw;
-  }
+}
+
+.imgCarousel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .carousel-content {
+        margin-top: 0px;
+        height: 600px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-slide {
+        height: 100%;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+    }
+
+    .imgCarousel {
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        &:focus {
+            outline: none;
+        }
+
+        &.carousel-control-prev {
+            left: -1%;
+        }
+
+        &.carousel-control-next {
+            right: -1%;
+        }
+
+        .carousel-control-icon {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel-content {
+        margin-bottom: 30px;
+        height: 400px;
+    }
+
+    .imgCarousel {
+        border-radius: 15px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+        height: 60px;
+
+        &.carousel-control-prev {
+            left: 0;
+        }
+        &.carousel-control-next {
+            right: 0;
+        }
+    }
+    .carousel-counter {
+        position: absolute;
+        top: 85%;
+        right: 45%;
+        transform: translateX(-50%);
+        font-family: $font1;
+        color: $secondary-color;
+        font-size: 1.7vw;
+    }
 }
 
 @media (max-width: 576px) {
-
-  .carousel-content {
-    margin:  auto;
-    margin-top: 25px;
-    height: 240px;
-    margin-bottom: 12px; 
-    border-radius: 10px;
+    .carousel-content {
+        margin: auto;
+        margin-top: 25px;
+        height: 240px;
+        margin-bottom: 12px;
+        border-radius: 10px;
         .carousel {
-          border-radius: 10px;
+            border-radius: 10px;
         }
     }
-  
-    .imgCarousel{
+
+    .imgCarousel {
         border-radius: 10px;
     }
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 20%;
-    &.carousel-control-prev {
-        left: -5%;   
-      }
-      &.carousel-control-next {
-        right: -5%;
-      }  
-  }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 20%;
+        &.carousel-control-prev {
+            left: -5%;
+        }
+        &.carousel-control-next {
+            right: -5%;
+        }
+    }
 
-  .carousel-control-icon {
-    width:20%;
-  }
- 
+    .carousel-control-icon {
+        width: 20%;
+    }
 }

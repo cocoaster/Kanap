@@ -1,16 +1,16 @@
-#homeContent{
+#homeContent {
     position: relative;
     margin-top: 0px;
     height: auto;
     margin-bottom: 50px;
 }
 
-.banner{
-height: auto;
-position: relative;
+.banner {
+    height: auto;
+    position: relative;
 }
 
-.background{
+.background {
     background-color: rgb(79, 58, 58);
     height: auto;
     border-radius: 15px;
@@ -20,14 +20,14 @@ position: relative;
     left: 5%;
 }
 
-.imgBackground{
+.imgBackground {
     height: auto;
     object-fit: cover;
     position: absolute;
     opacity: 0.6;
 }
 
-#bannerTxt{
+#bannerTxt {
     position: absolute;
     padding-left: 25.4%;
     top: 29%;
@@ -39,32 +39,30 @@ position: relative;
     margin-bottom: 0px;
 }
 
-#mobileQuoteVersion{
+#mobileQuoteVersion {
     position: absolute;
     display: none;
-    .mobileQuoteVersionP{
-    font-family: $font1;
-    color: $secondary-color;
-    padding-left: 10.4%;
-    top: 20%;    
-    font-size: 7vw;
-    line-height: 142.6%;
-    margin-bottom: 10px;
+    .mobileQuoteVersionP {
+        font-family: $font1;
+        color: $secondary-color;
+        padding-left: 10.4%;
+        top: 20%;
+        font-size: 7vw;
+        line-height: 142.6%;
+        margin-bottom: 10px;
     }
-
 }
 
-
 @media (max-width: 1200px) {
-    #bannerTxt{
-        top:0%;
+    #bannerTxt {
+        top: 0%;
         font-size: 3.4vw;
     }
 }
 
 @media (max-width: 900px) {
-    #bannerTxt{
-        top:30%;
+    #bannerTxt {
+        top: 30%;
         font-size: 3.4vw;
     }
 }
@@ -72,25 +70,25 @@ position: relative;
 @media (max-width: 576px) {
     .banner {
         width: 100%;
-        margin-top: 20px;      
+        margin-top: 20px;
     }
 
-    .background{
+    .background {
         height: 90px;
         border-radius: 8px;
     }
 
-    #bannerTxt{
+    #bannerTxt {
         display: none;
-    } 
+    }
 
-    #mobileQuoteVersion{
+    #mobileQuoteVersion {
         position: absolute;
         display: block;
         top: 20px;
-        left: 14px; 
-        .mobileQuoteVersionP{
-            white-space: nowrap;   
+        left: 14px;
+        .mobileQuoteVersionP {
+            white-space: nowrap;
             line-height: 0;
             padding-left: 10.4%;
             font-size: 6.9vw;
@@ -99,19 +97,18 @@ position: relative;
         }
     }
 
-    P{
+    P {
         margin-top: 0%;
     }
 
-    p1{ 
+    p1 {
         position: relative;
         margin-top: 5%;
     }
 
-    p2{ 
+    p2 {
         position: absolute;
         margin-top: 0%;
         top: 0;
     }
-    
 }

@@ -1,4 +1,4 @@
-#header{
+#header {
     margin-top: 50px;
     margin-left: 6%;
     margin-right: 50%;
@@ -14,108 +14,106 @@
 }
 
 #navigation {
-width: 22%;
-padding-bottom: 40px;
+    width: 22%;
+    padding-bottom: 40px;
 }
 
-#navUl{
+#navUl {
     width: 100%;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     list-style-type: none;
     padding-top: 57px;
     white-space: nowrap;
 }
 
-.homeNav{
+.homeNav {
     text-decoration: none;
     font-family: $font1;
     color: $primary-color;
     font-size: 1.4vw;
     margin-right: 60px;
     &.active {
-        &::before, &::after{
+        &::before,
+        &::after {
             content: "";
             height: 20px;
         }
     }
 }
 
-.aboutNav{
-padding-bottom: 0px;
+.aboutNav {
+    padding-bottom: 0px;
 }
 
-.navActive{
+.navActive {
     text-decoration: none;
     border-bottom: 4px solid $primary-color;
-    &:hover{
+    &:hover {
         color: $primary-color;
         opacity: 0.5;
         border-bottom: 4px solid rgba($primary-color, 0.5);
     }
     &.active {
-    &::before, &::after{
-        content: "";
-    border-bottom: 10px solid $primary-color;  
-    opacity: 0.5;
-        border-bottom: 4px solid rgba($primary-color, 0.5);         
+        &::before,
+        &::after {
+            content: "";
+            border-bottom: 10px solid $primary-color;
+            opacity: 0.5;
+            border-bottom: 4px solid rgba($primary-color, 0.5);
         }
-    }    
+    }
 }
 
 .homeNav:not(.navActive):hover {
     color: $primary-color;
     opacity: 0.5;
-  }
-  
+}
+
 @media (max-width: 1200px) {
-
-#header{
-    
-    width: 88%;
-    height: 140px;
-            svg {
-        margin-top: -20px;
-        width: 200px;
+    #header {
+        width: 88%;
         height: 140px;
+        svg {
+            margin-top: -20px;
+            width: 200px;
+            height: 140px;
+        }
     }
-}
 
-#navUl{
-    width: 100%;    
-    padding-top: 57px;
-}
-
-.homeNav{
-    height: 20px;
-    text-align: left;
-    white-space: nowrap;   
-    font-size: 2vw;
-    margin-right: 20px;   
+    #navUl {
+        width: 100%;
+        padding-top: 57px;
     }
-    #navigation{
+
+    .homeNav {
+        height: 20px;
+        text-align: left;
+        white-space: nowrap;
+        font-size: 2vw;
+        margin-right: 20px;
+    }
+    #navigation {
         width: 30%;
         padding-top: 0;
         margin-top: -30px;
     }
 }
-    
-  @media (max-width: 900px) {
 
-    #header{
+@media (max-width: 900px) {
+    #header {
         margin-top: 16px;
     }
-    #navUl{
+    #navUl {
         padding-top: 74px;
     }
-  }
-  @media (max-width: 576px) {
-    
-    #header{
+}
+@media (max-width: 576px) {
+    #header {
         text-transform: uppercase;
         margin-top: 0px;
         margin-bottom: 0;
-        margin: auto;        
+        margin: auto;
         width: 80%;
         height: 68px;
         display: flex;
@@ -125,27 +123,27 @@ padding-bottom: 0px;
             width: 108px;
             height: 85px;
         }
-        #navUl{
+        #navUl {
             width: 50%;
             padding-top: 60px;
             text-align: left;
             margin-right: -25px;
             position: relative;
         }
-        .homeNav{
-        height: 9px;
-        text-align: left;
-        white-space: nowrap;   
-        font-size: 3vw;
-        margin-right: 20px;   
+        .homeNav {
+            height: 9px;
+            text-align: left;
+            white-space: nowrap;
+            font-size: 3vw;
+            margin-right: 20px;
         }
     }
 
     #navigation {
         width: 42%;
     }
-    
-    .navActive{
+
+    .navActive {
         border-bottom: 1px solid $primary-color;
-    }       
+    }
 }

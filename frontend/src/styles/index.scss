@@ -1,15 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import './settings';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import "./settings";
 
-
-
-
-@import './pages/error404';
-@import './pages/home';
+@import "./pages/error404";
+@import "./pages/home";
 @import "./pages/About";
-@import './pages/Apartment';
+@import "./pages/Apartment";
 
-@import './components/header';
+@import "./components/header";
 @import "./components/ApartmentsList";
 @import "./components/Footer";
 @import "./components/Carousel";
