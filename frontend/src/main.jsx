@@ -2,10 +2,8 @@ import React from "react";
 import {
     createBrowserRouter,
     RouterProvider,
-    matchRoutes,
 } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-
 import "./styles/index.css";
 import "./styles/index.scss";
 import AppHome from "./pages/Home.jsx";
@@ -17,26 +15,15 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <AppHome />,
-        errorElement: <ErrorPage />,
     },
     {
         path: "/About",
         element: <About />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/Apartment/*",
-        element: <ErrorPage />,
-        errorElement: <ErrorPage />,
     },
     {
         path: "/Apartment/:title",
         element: <ApartmentCard />,
         errorElement: <ErrorPage />,
-    },
-    {
-        path: "/Apartment/*",
-        element: <ErrorPage />,
     },
     {
         path: "*",

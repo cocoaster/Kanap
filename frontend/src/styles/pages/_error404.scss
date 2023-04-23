@@ -46,13 +46,13 @@
     text-decoration-color: $primary-color;
     margin-bottom: 200px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #error-page {
         width: 65%;
         height: auto;
     }
     #errorTxt {
-        font-size: 34px;
+        font-size: 20px;
         text-align: center;
     }
     #homeBack {
@@ -68,7 +68,7 @@
 @media (max-width: 576px) {
     #error-page {
         width: 65%;
-        height: 450px;
+        height: auto;
     }
 
     #errorNumber {
