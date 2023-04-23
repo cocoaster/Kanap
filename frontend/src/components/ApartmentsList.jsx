@@ -6,6 +6,7 @@ export default function List() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
+    // Call the getApartments function and set the state with the result
     getApartments().then(setApartments);
   }, []);
 

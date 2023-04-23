@@ -9,30 +9,39 @@ import  UpArrow  from "../assets/UpArrow.png";
 
 function ApartmentCard() {
 
-  const [apartments, setApartments] = useState([]);
-  const params = useLocation();
-  const apartment = apartments.find(apartment => apartment.id === params?.state?.id);
+    // State to store the list of apartments
+    const [apartments, setApartments] = useState([]);
 
-   useEffect(() => {
-    getApartments().then(setApartments )
-   }, [])
+    // Retrieve the id of the selected apartment from the location object provided by the router
+    const params = useLocation();
+    
+    // Find the apartment in the list based on the id
+    const apartment = apartments.find(apartment => apartment.id === params?.state?.id);
   
- // Constante contenant les images du carousel
-const apartmentPictures = apartment?.pictures?.map((picture, index) => (
-  <img className='imgCarousel d-block w-100' key={index} src={picture} alt={apartment?.title}  />
-));
-
-// Vérification si apartmentPictures est défini
-const hasPictures = !!apartmentPictures && apartmentPictures.length > 0;
-const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
-
-const toggleAccordion = (index) => {
-if (activeAccordionIndexes.includes(index)) {
-setActiveAccordionIndexes(activeAccordionIndexes.filter(i => i !== index));
-} else {
-setActiveAccordionIndexes([...activeAccordionIndexes, index]);
-}
-};
+    // Fetch the list of apartments from the API when the component mounts
+    useEffect(() => {
+      getApartments().then(setApartments )
+    }, [])
+  
+    // Create an array of images for the carousel component
+    const apartmentPictures = apartment?.pictures?.map((picture, index) => (
+      <img className='imgCarousel d-block w-100' key={index} src={picture} alt={apartment?.title}  />
+    ));
+  
+    // Check if there are any pictures to display
+    const hasPictures = !!apartmentPictures && apartmentPictures.length > 0;
+  
+    // State to store the active accordion indexes
+    const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
+  
+    // Function to toggle the state of an accordion
+    const toggleAccordion = (index) => {
+      if (activeAccordionIndexes.includes(index)) {
+        setActiveAccordionIndexes(activeAccordionIndexes.filter(i => i !== index));
+      } else {
+        setActiveAccordionIndexes([...activeAccordionIndexes, index]);
+      }
+    };
 return (
   <>
     <AppHeader />

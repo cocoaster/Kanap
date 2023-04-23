@@ -9,6 +9,7 @@ import  UpArrow  from "../assets/UpArrow.png";
 const About = () => {
   const [activeAccordionIndex, setActiveAccordionIndex] = useState(null);
 
+  // Function to toggle the accordion 
   const toggleAccordion = (index) => {
     setActiveAccordionIndex(activeAccordionIndex === index ? null : index);
   };
