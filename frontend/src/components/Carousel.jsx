@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import rightArrow from "../assets/Rightarrow.png";
 import leftArrow from "../assets/Leftarrow.png";
 
@@ -17,6 +17,9 @@ function Carousel({ apartments, selectedApartmentId }) {
   // Calculate the number of slides and whether there are any pictures to display
   const slideCount = apartmentPictures.length;
   const hasPictures = slideCount > 0;
+
+  // Hide the previous and next buttons, and the slide counter if there is only one picture
+  const showControls = slideCount > 1;
 
   // Handler functions for clicking the previous and next buttons
   const handlePrevClick = () => {
@@ -53,7 +56,7 @@ function Carousel({ apartments, selectedApartmentId }) {
             ))}
         </div>
         {/* Display the previous and next buttons, and the slide counter */}
-        {hasPictures && (
+        {showControls && (
           <>
             <button
               type="button"
@@ -88,6 +91,3 @@ function Carousel({ apartments, selectedApartmentId }) {
 }
 
 export default Carousel;
-
-
-
