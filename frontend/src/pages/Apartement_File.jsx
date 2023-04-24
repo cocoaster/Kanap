@@ -6,7 +6,6 @@ import Footer from "../components/Footer.jsx";
 import Carousel from "../components/Carousel.jsx";
 import DownArrow from "../assets/DownArrow.png";
 import UpArrow from "../assets/UpArrow.png";
-import { Outlet } from "react-router-dom";
 
 
 function ApartmentCard() {
