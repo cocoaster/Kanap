@@ -23,7 +23,6 @@ const router = createBrowserRouter([
     {
         path: "/Apartment/:title",
         element: <ApartmentCard />,
-        errorElement: <ErrorPage />,
     },
     {
         path: "*",
