@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getApartments } from "../service/index.jsx";
 
-export default function List() {
+export default function List(props) {
     const [apartments, setApartments] = useState([]);
 
     useEffect(() => {
@@ -24,6 +24,7 @@ export default function List() {
                             style={{
                                 backgroundImage: `url(${apartment?.cover})`,
                             }}
+                            onClick={() => props.handleApartmentClick(apartment)}
                         >
                             <h3 className="card-title">{apartment?.title}</h3>
                         </Link>

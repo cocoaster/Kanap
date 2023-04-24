@@ -6,6 +6,11 @@ import List from "../components/ApartmentsList";
 import Footer from "../components/Footer.jsx";
 
 const AppHome = () => {
+
+    const handleApartmentClick = (apartment) => {
+        // Faire quelque chose avec l'appartement cliqué
+        console.log(apartment);
+    }
     return (
         <>
             <AppHeader />
@@ -30,7 +35,7 @@ const AppHome = () => {
                         </p>
                     </div>
                 </div>
-                <List />
+                <List handleApartmentClick={handleApartmentClick} />
             </div>
             <Footer />
         </>

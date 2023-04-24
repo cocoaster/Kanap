@@ -43,8 +43,10 @@ function ApartmentCard() {
     return (
         <>
             <AppHeader />
-            <Carousel />
-            <div className="mediumSection">
+            <Carousel
+        apartments={apartments}
+        selectedApartmentId={params?.state?.id}
+      />            <div className="mediumSection">
                 <div className="leftMediumSection">
                     <h1>{apartment?.title} </h1>
                     <h2 className="subtitleList">{apartment?.location} </h2>
@@ -155,7 +157,6 @@ function ApartmentCard() {
                 </div>
             </div>
             <Footer />
-            <Outlet />
         </>
     );
 }
