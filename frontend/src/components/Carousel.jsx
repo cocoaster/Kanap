@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, {  useState } from "react";
 import rightArrow from "../assets/Rightarrow.png";
 import leftArrow from "../assets/Leftarrow.png";
 
