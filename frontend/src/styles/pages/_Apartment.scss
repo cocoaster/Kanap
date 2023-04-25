@@ -18,14 +18,14 @@
     font-family: $font1;
     h1 {
         font-weight: 100;
-        font-size: 2.8vw;
-        margin-bottom: 5px;
+        font-size: 2vw;
+        margin-bottom: 0px;
     }
     h2 {
         font-weight: 100;
-        font-size: 1.2vw;
-        margin-bottom: 30px;
-        margin-top: 20px;
+        font-size: 1.3vw;
+        margin-bottom: 21px;
+        margin-top: 10px;
     }
     ul {
         padding: 0%;
@@ -55,14 +55,14 @@
 
     width: 40%;
     img {
-        margin-top: 40px;
-        width: 15%;
-        height: 15%;
+        margin-top: 25px;
+        width: 18%;
+        height: 18%;
         border-radius: 50%;
     }
     .rating {
         position: absolute;
-        margin-top: 0px;
+        margin-top: 20px;
         right: 30%;
         width: 6%;
         font-size: 3vw;
@@ -77,7 +77,7 @@
 .hostName {
     margin-top: 39px;
     margin-right: 15px;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     p {
         margin-top: 15px;
     }
@@ -89,91 +89,13 @@
     justify-content: space-between;
     height: 450px;
     margin: auto;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-bottom: 200px;
     width: 90%;
-    .accordionApart-item {
-        flex-basis: 45%;
-        font-family: $font1;
-        border-radius: 15px;
-        width: 45%;
-    }
+  
 }
 
-.accordionApart {
-    border-radius: 0.8rem;
-    overflow: hidden;
-    font-family: $font1;
-    font-size: 2rem;
-    color: $primary-color;
-    background-color: $tertiary-color;
-}
 
-button {
-    background-color: $primary-color;
-    border: none;
-    color: $secondary-color;
-    border-radius: 15px;
-    font-family: $font1;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-    img {
-        width: 2em;
-    }
-    img.active {
-        transform: rotate(180deg);
-    }
-}
-
-.accordion-button {
-    font-size: 2rem;
-    height: 80px;
-}
-
-h3 {
-    font-size: 2rem;
-    font-family: $font1;
-}
-
-accordion-icon {
-    width: 0.1%;
-}
-
-.accordionSectionApart {
-    background-color: $tertiary-color;
-    font-size: 2rem;
-    color: $primary-color;
-    border-radius: 0px 0px 25px 25px;
-    max-height: 0;
-    height: 510px;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    &.show {
-        max-height: 1000px;
-        transition: max-height 0.5s ease-in-out;
-        .accordion-button::after {
-            &.collapsed {
-                transform: translateY(-50%) rotate(180deg);
-            }
-            &.expanded {
-                transform: translateY(-50%) rotate(0deg);
-            }
-        }
-    }
-    ul {
-        list-style-type: none;
-        padding: 25px 25px 80px 40px;
-    }
-}
-
-.accordionTextApart {
-    margin-top: 0%;
-    padding: 25px 25px 80px 40px;
-}
 
 @media (max-width: 1200px) {
     .leftMediumSection {

@@ -4,105 +4,105 @@
     height: auto;
 }
 
-#accordionAbout {
-    position: relative;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 90%;
-    overflow: visible;
-    scrollbar-width: none;
-    height: auto;
-}
+// #accordionAbout {
+//     position: relative;
+//     margin: auto;
+//     margin-top: 100px;
+//     margin-bottom: 50px;
+//     width: 90%;
+//     overflow: visible;
+//     scrollbar-width: none;
+//     height: auto;
+// }
 
-.accordionAbout-item {
-    background: $tertiary-color;
-    margin: auto;
-    margin-bottom: 80px;
-    width: 80%;
-}
+// .accordionAbout-item {
+//     background: $tertiary-color;
+//     margin: auto;
+//     margin-bottom: 80px;
+//     width: 80%;
+// }
 
-.accordionAbout-button {
-    width: 100%;
-    padding: 20px;
-    justify-content: left;
-    font-family: $font1;
-    font-size: 1.5vw;
-    color: $secondary-color;
-    background-color: $primary-color;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    border-radius: 7px;
-    &:active {
-        background-color: $primary-color;
-    }
-    &.active {
-        transform: rotate(180deg);
-    }
-    &.active {
-        flex-direction: row-reverse;
-    }
-}
+// .accordionAbout-button {
+//     width: 100%;
+//     padding: 20px;
+//     justify-content: left;
+//     font-family: $font1;
+//     font-size: 1.5vw;
+//     color: $secondary-color;
+//     background-color: $primary-color;
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     border-radius: 7px;
+//     &:active {
+//         background-color: $primary-color;
+//     }
+//     &.active {
+//         transform: rotate(180deg);
+//     }
+//     &.active {
+//         flex-direction: row-reverse;
+//     }
+// }
 
-.accordion-body {
-    font-family: $font1;
-    font-size: 1vw;
-    color: $primary-color;
-    padding-left: 2%;
-    padding-bottom: 20px;
-    margin-top: -20px;
-    padding-top: 0px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-    p {
-        margin-top: 70px;
-    }
-}
+// .accordion-body {
+//     font-family: $font1;
+//     font-size: 1vw;
+//     color: $primary-color;
+//     padding-left: 2%;
+//     padding-bottom: 20px;
+//     margin-top: -20px;
+//     padding-top: 0px;
+//     margin-bottom: 20px;
+//     overflow: hidden;
+//     transition: height 0.3s ease-in-out;
+//     p {
+//         margin-top: 70px;
+//     }
+// }
 
-.accordion-body {
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-    height: 0;
-    &.collapse {
-        height: 0;
-    }
-    &.show {
-        height: auto;
-    }
-}
+// .accordion-body {
+//     overflow: hidden;
+//     transition: height 0.3s ease-in-out;
+//     height: 0;
+//     &.collapse {
+//         height: 0;
+//     }
+//     &.show {
+//         height: auto;
+//     }
+// }
 
-.aboutAccordionButton {
-    width: 80%;
-}
+// .aboutAccordionButton {
+//     width: 80%;
+// }
 
-.accordionAbout-item.show .accordion-body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: auto;
-    overflow: visible;
-}
+// .accordionAbout-item.show .accordion-body {
+//     padding-top: 40px;
+//     padding-bottom: 40px;
+//     height: auto;
+//     overflow: visible;
+// }
 
-.arrows {
-    width: 3.5%;
-    &:hover {
-        opacity: 0.6;
-    }
-}
+// .arrows {
+//     width: 3.5%;
+//     &:hover {
+//         opacity: 0.6;
+//     }
+// }
 
-.accordion-body {
-    padding-top: 0; /* réinitialise la valeur par défaut du padding */
-    transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
-}
+// .accordion-body {
+//     padding-top: 0; /* réinitialise la valeur par défaut du padding */
+//     transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
+// }
 
-.accordionAbout-item:not(.show) .accordion-body {
-    padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
-}
+// .accordionAbout-item:not(.show) .accordion-body {
+//     padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
+// }
 
-.accordionAbout-item.show .accordion-body {
-    padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
-}
+// .accordionAbout-item.show .accordion-body {
+//     padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
+// }
 @media (max-width: 900px) {
     #aboutContent {
         height: auto;

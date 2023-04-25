@@ -1,8 +1,5 @@
 import React from "react";
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import "./styles/index.scss";
@@ -21,9 +18,13 @@ const router = createBrowserRouter([
         element: <About />,
     },
     {
-        path: "/Apartment/:title",
+        path: "/Apartment/:id",
         element: <ApartmentCard />,
     },
+    // {
+    //     path: "/Error404",
+    //     element: <ErrorPage />,
+    // },
     {
         path: "*",
         element: <ErrorPage />,

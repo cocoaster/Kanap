@@ -1,0 +1,85 @@
+/* Styles pour le bouton de chaque item de l'accordéon */
+
+.accordion.About .accordion-button {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.accordion-button {
+    /* Styles pour le bouton de chaque item de l'accordéon */
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 7px;
+    font-family: $font1;
+    height: 62px;
+    border-radius: 7px;
+    font-size: 3vh;
+}
+
+/* Styles pour la page ApartmentCard */
+.ApartmentCard-item {
+    width: 45%;
+}
+
+.ApartmentCard {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+.ApartmentCard-arrow {
+    width: 6.2%;
+    height: 190%;
+    padding-top: 28px;
+}
+
+/* Styles pour la page About */
+
+.accordion-body {
+    background-color: $tertiary-color;
+    padding-top: 0px;
+    font-family: $font1;
+    p {
+        margin-top: 0;
+        padding-top: 44px;
+        line-height: 150%;
+        font-size: 1.2vw;
+    }
+    ul {
+        list-style: none;
+        padding-top: 35px;
+        padding-bottom: 50px !important;
+        li {
+            line-height: 150%;
+            font-size: 1.2vw;
+        }
+    }
+}
+
+.accordionTextApart {
+    padding-left: 14px !important;
+}
+
+.AccordionContentAbout {
+    margin: auto;
+    width: 80% !important;
+}
+
+.accordion-body {
+    padding-top: 0;
+    margin-top: 0;
+}
+#accordionAbout {
+    margin-top: 60px;
+}
+.About-item {
+    margin-bottom: 60px;
+}
+
+.sectionText {
+    padding: 60px 50px 34px 5px !important;
+    font-family: $font1;
+    font-size: 1.6vw;
+    margin-right: 30px;
+}

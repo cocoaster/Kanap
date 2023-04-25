@@ -1,51 +1,88 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams, useNavigate, Navigate } from "react-router-dom";
 import { getApartments } from "../service/index.jsx";
+import apartments from "../data/logements.json"
 import AppHeader from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import Carousel from "../components/Carousel.jsx";
-import DownArrow from "../assets/DownArrow.png";
-import UpArrow from "../assets/UpArrow.png";
-
+import Accordion from "../components/Accordion.jsx";
 
 function ApartmentCard() {
-    // State to store the list of apartments
-    const [apartments, setApartments] = useState([]);
+  // State to store the list of apartments
+//   const [apartments, setApartments] = useState([]);
 
-    // Retrieve the id of the selected apartment from the location object provided by the router
-    const params = useLocation();
+  // Retrieve the id of the selected apartment from the location object provided by the router
+  const location = useLocation();
+  const params = useParams();
 
-    // Find the apartment in the list based on the id
-    const apartment = apartments.find(
-        (apartment) => apartment.id === params?.state?.id
-    );
+  // Find the apartment in the list based on the id
+  const apartment = apartments.find(
+    (apartment) => apartment?.id === params?.id
+  );
 
-    // Fetch the list of apartments from the API when the component mounts
-    useEffect(() => {
-        getApartments().then(setApartments);
-    }, []);
-   
+//   useEffect(() => {
+//     getApartments().then(setApartments);
+//   }, []);
+    //     const navigate = useNavigate();
+    // if(!apartment/*some condition*/){
+    //     navigate("/Error404");
+    // }
+    
+    // useEffect(() => {
+    //   if (!apartments/* invalid route params */) {
+    //     navigate("/Error404", { replace: true });
+    //   }
+    // }, [!apartment]);
 
-    // State to store the active accordion indexes
-    const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
+  // Fetch the list of apartments from the API when the component mounts
 
-    // Function to toggle the state of an accordion
-    const toggleAccordion = (index) => {
-        if (activeAccordionIndexes.includes(index)) {
-            setActiveAccordionIndexes(
-                activeAccordionIndexes.filter((i) => i !== index)
-            );
-        } else {
-            setActiveAccordionIndexes([...activeAccordionIndexes, index]);
-        }
-    };
+
+  // State to store the active accordion indexes
+  const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
+
+  // Function to toggle the state of an accordion
+  const toggleAccordion = (index) => {
+    if (activeAccordionIndexes.includes(index)) {
+      setActiveAccordionIndexes(
+        activeAccordionIndexes.filter((i) => i !== index)
+      );
+    } else {
+      setActiveAccordionIndexes([...activeAccordionIndexes, index]);
+    }
+  };
+    const items = [
+        {
+          id: "apartAccordion1",
+          title: "Description",
+          content: (
+            
+              <p className="accordionTextApart">{apartment?.description}</p>
+           
+          ),
+        },
+        {
+          id: "apartAccordion2",
+          title: "Equipements",
+          content: (
+            
+              <ul className="apartAccordion2">
+                {apartment?.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            
+          ),
+        },
+      ];
     return (
         <>
+            {
+                apartment ? (
+                    <div className="apartmentContent">
             <AppHeader />
-            <Carousel
-        apartments={apartments}
-        selectedApartmentId={params?.state?.id}
-      />            <div className="mediumSection">
+            <Carousel apartments={apartments} selectedApartmentId={params.id} />
+
+            <div className="mediumSection">
                 <div className="leftMediumSection">
                     <h1>{apartment?.title} </h1>
                     <h2 className="subtitleList">{apartment?.location} </h2>
@@ -80,82 +117,17 @@ function ApartmentCard() {
                 </div>
             </div>
 
+           
             <div className="bottom">
-                <div className="accordionApart-item" id="apartAccordion1">
-                    <h3 className="accordion-header">
-                        <button
-                            type="button"
-                            className="accordion-button"
-                            onClick={() => toggleAccordion(1)}
-                        >
-                            Description
-                            {activeAccordionIndexes.includes(1) ? (
-                                <img
-                                    src={UpArrow}
-                                    className="accordion-icon active"
-                                    alt="up-arrow"
-                                />
-                            ) : (
-                                <img
-                                    src={DownArrow}
-                                    className="accordion-icon active"
-                                    alt="down-arrow"
-                                />
-                            )}
-                        </button>
-                    </h3>
-                    <section
-                        className={
-                            "accordionSectionApart " +
-                            (activeAccordionIndexes.includes(1) ? "show" : "")
-                        }
-                        id="description"
-                    >
-                        <p className="accordionTextApart">
-                            {apartment?.description}
-                        </p>
-                    </section>
+            <Accordion items={items} className="ApartmentCard" />
+
+            
                 </div>
-                <div className="accordionApart-item" id="apartAccordion2">
-                    <h3 className="accordion-header">
-                        <button
-                            type="button"
-                            className="accordion-button"
-                            onClick={() => toggleAccordion(2)}
-                        >
-                            Equipements
-                            {activeAccordionIndexes.includes(2) ? (
-                                <img
-                                    src={UpArrow}
-                                    className="accordion-icon active"
-                                    alt="up-arrow"
-                                />
-                            ) : (
-                                <img
-                                    src={DownArrow}
-                                    className="accordion-icon active"
-                                    alt="down-arrow"
-                                />
-                            )}
-                        </button>
-                    </h3>
-                    <section
-                        className={
-                            "accordionSectionApart " +
-                            (activeAccordionIndexes.includes(2) ? "show" : "")
-                        }
-                        id="equipments"
-                        data-bs-parent="#apartAccordion2"
-                    >
-                        <ul className="apartAccordion2">
-                            {apartment?.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                            ))}
-                        </ul>
-                    </section>
-                </div>
-            </div>
-            <Footer />
+
+                        <Footer />
+                        </div>
+            ) : <Navigate replace to="/Error404" />
+            }
         </>
     );
 }

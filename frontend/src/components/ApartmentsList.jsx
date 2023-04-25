@@ -1,16 +1,15 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 export default function List({ apartments, selectedApartmentId }) {
-  const apartment = apartments.find(
-    (apartment) => apartment.id === selectedApartmentId
-  );
+
 
   return (
     <div className="cardContainer">
       {/* Boucle à travers les données pour afficher chaque appartement */}
       {apartments.map((apartment) => {
-        const title = apartment?.title.split(" ").join("-");
+        const title = apartment?.id;
         return (
           <div key={apartment?.id} className="apartCard">
             <Link
@@ -29,3 +28,4 @@ export default function List({ apartments, selectedApartmentId }) {
     </div>
   );
 }
+
