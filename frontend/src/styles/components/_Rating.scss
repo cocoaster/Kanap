@@ -1,0 +1,54 @@
+.starsContainer{
+    height: 100%;
+    width:37%;
+       Right: 0%;
+        position: absolute;
+        top: 90px;
+
+
+}
+.rating{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0%;
+    margin-top: 0%;
+    height: 100%;
+    width: 100%;    position: relative;
+
+}
+
+.stars{
+    height: 100%;
+    width: 100%;
+    top: -10px;
+    margin-right: 0%;
+    svg{
+height: 70%;
+    width: 70%;
+    padding: 1px;
+left:0;
+
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .rating{
+        margin-right: 20%;
+    }
+    .stars {
+        margin-left: 75%;
+ 
+    right: 0%;
+    font-size: 5vw;
+    margin-top: 0px;
+
+    }
+}
+@media (max-width: 900px) {
+
+}
+
+@media (max-width: 576px) {
+}

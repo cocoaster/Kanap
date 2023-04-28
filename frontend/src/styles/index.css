@@ -124,54 +124,6 @@ body {
   margin-bottom: 50px;
 }
 
-.banner {
-  height: auto;
-  position: relative;
-}
-
-.background {
-  background-color: rgb(79, 58, 58);
-  height: auto;
-  border-radius: 15px;
-  position: relative;
-  width: 90%;
-  top: 0;
-  left: 5%;
-}
-
-.imgBackground {
-  height: auto;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0.6;
-}
-
-#bannerTxt {
-  position: absolute;
-  padding-left: 25.4%;
-  top: 29%;
-  font-family: Montserrat;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 3.4vw;
-  line-height: 142.6%;
-  margin-bottom: 0px;
-}
-
-#mobileQuoteVersion {
-  position: absolute;
-  display: none;
-}
-#mobileQuoteVersion .mobileQuoteVersionP {
-  font-family: Montserrat;
-  color: #ffffff;
-  padding-left: 10.4%;
-  top: 20%;
-  font-size: 7vw;
-  line-height: 142.6%;
-  margin-bottom: 10px;
-}
-
 @media (max-width: 1200px) {
   #bannerTxt {
     top: 0%;
@@ -229,133 +181,14 @@ body {
   height: auto;
 }
 
-#accordionAbout {
-  position: relative;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  width: 90%;
-  overflow: visible;
-  scrollbar-width: none;
-  height: auto;
-}
-
-.accordionAbout-item {
-  background: #f7f7f7;
-  margin: auto;
-  margin-bottom: 80px;
-  width: 80%;
-}
-
-.accordionAbout-button {
-  width: 100%;
-  padding: 20px;
-  justify-content: left;
-  font-family: Montserrat;
-  font-size: 1.5vw;
-  color: #ffffff;
-  background-color: #ff6060;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  border-radius: 7px;
-}
-.accordionAbout-button:active {
-  background-color: #ff6060;
-}
-.accordionAbout-button.active {
-  transform: rotate(180deg);
-}
-.accordionAbout-button.active {
-  flex-direction: row-reverse;
-}
-
-.accordion-body {
-  font-family: Montserrat;
-  font-size: 1vw;
-  color: #ff6060;
-  padding-left: 2%;
-  padding-bottom: 20px;
-  margin-top: -20px;
-  padding-top: 0px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
-}
-.accordion-body p {
-  margin-top: 70px;
-}
-
-.accordion-body {
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
-  height: 0;
-}
-.accordion-body.collapse {
-  height: 0;
-}
-.accordion-body.show {
-  height: auto;
-}
-
-.aboutAccordionButton {
-  width: 80%;
-}
-
-.accordionAbout-item.show .accordion-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  height: auto;
-  overflow: visible;
-}
-
-.arrows {
-  width: 3.5%;
-}
-.arrows:hover {
-  opacity: 0.6;
-}
-
-.accordion-body {
-  padding-top: 0; /* réinitialise la valeur par défaut du padding */
-  transition: padding-top 0.3s ease; /* ajoute une transition pour une animation en douceur */
-}
-
-.accordionAbout-item:not(.show) .accordion-body {
-  padding-top: 0; /* lorsque la section est repliée, le padding est réduit à 0 */
-}
-
-.accordionAbout-item.show .accordion-body {
-  padding-top: 30px; /* lorsque la section est dépliée, le padding-top est de 30px */
-}
-
 @media (max-width: 900px) {
   #aboutContent {
     height: auto;
   }
-  .sectionText {
-    font-size: 1.8vw;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .accordion-body {
-    font-size: large;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-  .accordionAbout-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 2.75vw;
-    border-radius: 7px;
-  }
-  .arrows {
-    width: 7.5%;
-  }
 }
 @media (max-width: 576px) {
   #aboutContent {
-    height: 735px;
+    height: 800px;
     flex: 1;
     width: 100%;
   }
@@ -371,40 +204,6 @@ body {
   .imgBackgroundAbout {
     display: none;
     height: 190px;
-  }
-  #accordionAbout {
-    margin-top: 20px;
-    width: 100%;
-  }
-  .accordionAbout-item {
-    margin-bottom: 20px;
-    width: 90%;
-    border-radius: 8px;
-  }
-  .accordionAbout-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 4vw;
-    border-radius: 7px;
-    height: 38px;
-  }
-  .accordion-body {
-    font-size: 6vw;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-  }
-  .accordion-body p {
-    margin-top: 50px;
-    margin-bottom: 37px;
-  }
-  .sectionText {
-    font-size: 3.8vw;
-  }
-  .arrows {
-    width: 7.5%;
   }
 }
 .mediumSection,
@@ -422,40 +221,40 @@ body {
 }
 
 .leftMediumSection {
-  width: 50%;
+  width: 60%;
   margin-top: 20px;
   font-family: Montserrat;
 }
 .leftMediumSection h1 {
   font-weight: 100;
-  font-size: 2.8vw;
-  margin-bottom: 5px;
+  font-size: 1.9vw;
+  margin-bottom: 0px;
 }
 .leftMediumSection h2 {
   font-weight: 100;
-  font-size: 1.2vw;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  font-size: 1.1vw;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 .leftMediumSection ul {
   padding: 0%;
   display: flex;
   justify-content: flex-start;
-  font-size: 1.2vw;
+  font-size: 0.9vw;
   list-style-type: none;
   width: auto;
 }
 .leftMediumSection ul li {
   margin-right: 15px;
-  margin-top: 30px;
+  margin-top: 22px;
   color: #ffffff;
   background-color: #ff6060;
-  border-radius: 15px;
+  border-radius: 13px;
   width: 22%;
   text-align: center;
   white-space: nowrap;
   width: auto;
-  padding: 10px 30px;
+  padding: 7px 30px;
 }
 
 .rightMediumSection {
@@ -464,17 +263,11 @@ body {
   width: 40%;
 }
 .rightMediumSection img {
-  margin-top: 40px;
-  width: 15%;
-  height: 15%;
+  margin-top: 12px;
+  margin-right: 1%;
+  width: 12%;
+  height: 12%;
   border-radius: 50%;
-}
-.rightMediumSection .rating {
-  position: absolute;
-  margin-top: 0px;
-  right: 30%;
-  width: 6%;
-  font-size: 3vw;
 }
 
 .hostContent {
@@ -483,12 +276,12 @@ body {
 }
 
 .hostName {
-  margin-top: 39px;
+  margin-top: 10px;
   margin-right: 15px;
   font-size: 1.2vw;
 }
 .hostName p {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .bottom {
@@ -497,88 +290,9 @@ body {
   justify-content: space-between;
   height: 450px;
   margin: auto;
-  margin-top: 90px;
+  margin-top: 40px;
   margin-bottom: 200px;
   width: 90%;
-}
-.bottom .accordionApart-item {
-  flex-basis: 45%;
-  font-family: Montserrat;
-  border-radius: 15px;
-  width: 45%;
-}
-
-.accordionApart {
-  border-radius: 0.8rem;
-  overflow: hidden;
-  font-family: Montserrat;
-  font-size: 2rem;
-  color: #ff6060;
-  background-color: #f7f7f7;
-}
-
-button {
-  background-color: #ff6060;
-  border: none;
-  color: #ffffff;
-  border-radius: 15px;
-  font-family: Montserrat;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  width: 100%;
-}
-button img {
-  width: 2em;
-}
-button img.active {
-  transform: rotate(180deg);
-}
-
-.accordion-button {
-  font-size: 2rem;
-  height: 80px;
-}
-
-h3 {
-  font-size: 2rem;
-  font-family: Montserrat;
-}
-
-accordion-icon {
-  width: 0.1%;
-}
-
-.accordionSectionApart {
-  background-color: #f7f7f7;
-  font-size: 2rem;
-  color: #ff6060;
-  border-radius: 0px 0px 25px 25px;
-  max-height: 0;
-  height: 510px;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-.accordionSectionApart.show {
-  max-height: 1000px;
-  transition: max-height 0.5s ease-in-out;
-}
-.accordionSectionApart.show .accordion-button::after.collapsed {
-  transform: translateY(-50%) rotate(180deg);
-}
-.accordionSectionApart.show .accordion-button::after.expanded {
-  transform: translateY(-50%) rotate(0deg);
-}
-.accordionSectionApart ul {
-  list-style-type: none;
-  padding: 25px 25px 80px 40px;
-}
-
-.accordionTextApart {
-  margin-top: 0%;
-  padding: 25px 25px 80px 40px;
 }
 
 @media (max-width: 1200px) {
@@ -588,7 +302,7 @@ accordion-icon {
   .leftMediumSection h2 {
     font-size: 1.8vw;
     margin-bottom: 0px;
-    margin-top: 15px;
+    margin-top: 5px;
   }
   .leftMediumSection ul {
     font-size: 1.3vw;
@@ -599,32 +313,17 @@ accordion-icon {
     width: 40%;
   }
   .rightMediumSection img {
-    margin-top: 40px;
-    width: 15%;
-    height: 15%;
-    border-radius: 50%;
-  }
-  .rightMediumSection .rating {
-    position: absolute;
-    margin-top: 0px;
-    right: 30%;
-    width: 6%;
-    font-size: 3vw;
+    margin-top: 10px;
+    width: 26%;
+    height: 26%;
   }
   .hostName {
-    margin-top: 23px;
+    margin-top: 10px;
     margin-right: 15px;
-    font-size: 1.7vw;
+    font-size: 1.9vw;
   }
   .hostName p {
     margin-top: 15px;
-  }
-  .accordionTextApart {
-    font-size: 2vw;
-  }
-  .accordionSectionApart {
-    font-size: 2vw;
-    height: 350px;
   }
 }
 @media (max-width: 900px) {
@@ -637,12 +336,12 @@ accordion-icon {
   }
   .leftMediumSection h2 {
     font-size: 2vw;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     margin-top: 0px;
   }
   .leftMediumSection ul {
     padding: 0%;
-    font-size: 3vw;
+    font-size: 2.1vw;
     flex-wrap: wrap;
   }
   .leftMediumSection ul li {
@@ -650,16 +349,15 @@ accordion-icon {
     margin-top: 15px;
     padding: 3px 10px;
     border-radius: 6.5px;
-    white-space: nowrap;
     width: auto;
   }
   .hostContent {
     width: 100%;
   }
   .hostName {
-    margin-top: 10px;
+    margin-top: -8px;
     margin-right: 10px;
-    font-size: 2vw;
+    font-size: 2.2vw;
     height: 35px;
   }
   .hostName p {
@@ -667,48 +365,15 @@ accordion-icon {
   }
   .rightMediumSection {
     font-size: 2.5vw;
-    position: relative;
     width: 40%;
   }
   .rightMediumSection img {
-    margin-top: 20px;
-    width: 28%;
-    height: 28%;
-    border-radius: 50%;
-  }
-  .rightMediumSection .rating {
-    position: absolute;
     margin-top: 0px;
-    right: 39%;
-    width: 7%;
-    font-size: 3vw;
+    width: 35%;
+    height: 35%;
   }
   .bottom {
     height: 280px;
-  }
-  .accordion-button {
-    font-size: 3vw;
-    height: 50px;
-    border-radius: 7px;
-    padding-top: 10px;
-  }
-  .accordionApart-item {
-    height: 30px;
-  }
-  .apartAccordionItem2 {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
-  .accordionTextApart {
-    padding-left: 10px;
-  }
-  .accordionSectionApart {
-    height: 300px;
-  }
-  .accordionSectionApart ul {
-    padding-left: 10px;
   }
 }
 @media (max-width: 576px) {
@@ -744,8 +409,8 @@ accordion-icon {
     width: auto;
   }
   .rightMediumSection {
+    margin-top: -10px;
     font-size: 4vw;
-    position: relative;
     width: 100%;
   }
   .rightMediumSection img {
@@ -754,12 +419,6 @@ accordion-icon {
     width: 14%;
     height: 14%;
     border-radius: 60%;
-  }
-  .rightMediumSection .rating {
-    position: absolute;
-    left: 0%;
-    font-size: 6vw;
-    top: 20px;
   }
   .hostContent {
     width: 100%;
@@ -780,73 +439,6 @@ accordion-icon {
     margin-top: 0px;
     width: 90%;
     margin-bottom: 0px;
-  }
-  #apartAccordion1 {
-    margin-top: 16px;
-    margin-bottom: 25px;
-    width: 100%;
-  }
-  #apartAccordion2 {
-    margin-top: 0px;
-    width: 100%;
-  }
-  .accordionApart-item {
-    height: 30px;
-  }
-  .apartAccordionItem1 {
-    width: 100%;
-    margin: 0;
-    margin-left: 0;
-    margin-top: 0 !important;
-    left: 0;
-  }
-  .apartAccordionItem2 {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
-  .accordion-button {
-    padding: 7px;
-    height: 30px;
-    border-radius: 6px;
-  }
-  .accordionSectionApart {
-    border-radius: 7px;
-    font-size: 4vw;
-    margin-left: 0;
-    height: auto;
-  }
-  .accordionTextApart {
-    font-size: 4vw;
-    padding-top: 20px;
-    padding-left: 12px;
-    padding-bottom: 10px;
-  }
-  .accordionSectionApart ul {
-    padding: 0;
-    padding-left: 12px;
-    padding-top: 20px;
-  }
-  .accordionApart-item {
-    margin-bottom: 30px;
-    flex-shrink: 0;
-  }
-  .accordionSectionApart {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-  .accordion-header {
-    margin: 0;
-  }
-  .accordionSectionApart {
-    display: none;
-    overflow: hidden;
-    transition: height 0.3s ease;
-  }
-  .show {
-    display: block;
   }
 }
 #header {
@@ -1246,7 +838,7 @@ accordion-icon {
   transform: translateX(-50%);
   font-family: Montserrat;
   color: #ffffff;
-  font-size: 1.7vw;
+  font-size: 1.6vw;
 }
 
 .imgCarousel {
@@ -1361,4 +953,311 @@ accordion-icon {
   .carousel-control-icon {
     width: 20%;
   }
+  .carousel-counter {
+    display: none;
+  }
+}
+/* Styles pour le bouton de chaque item de l'accordéon */
+.accordion-button {
+  background-color: #ff6060;
+  color: #ffffff;
+  font-family: Montserrat;
+  border-radius: 8px;
+}
+
+.accordion-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  background-color: #f7f7f7;
+  font-family: Montserrat;
+}
+
+/* Styles pour la page ApartmentCard */
+.ApartmentCard {
+  display: flex;
+  justify-content: space-between;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.ApartmentCard-item {
+  width: 45%;
+}
+
+.ApartmentCard-button {
+  height: 62px;
+  font-size: 1.2vw;
+  border-radius: 10px;
+  position: relative;
+}
+
+.ApartmentCard-arrow {
+  width: 6.3%;
+  height: 55%;
+  transform: translateY(-50%);
+  top: 20%;
+  right: 1%;
+  position: absolute;
+}
+
+.ApartmentCard-body p {
+  margin-top: 0;
+  padding-top: 44px;
+  line-height: 150%;
+  font-size: 1.2vw;
+}
+.ApartmentCard-body ul {
+  list-style: none;
+  padding-top: 35px;
+  padding-bottom: 50px !important;
+  height: 365px;
+}
+.ApartmentCard-body ul li {
+  line-height: 150%;
+  font-size: 1.2vw;
+}
+
+.accordionTextApart {
+  padding-left: 14px !important;
+  height: 365px;
+}
+
+/* Styles pour la page About */
+.AccordionContentAbout {
+  margin: auto;
+  width: 80% !important;
+}
+
+#accordionAbout {
+  margin-top: 60px;
+}
+
+.About-item {
+  margin-bottom: 60px;
+}
+
+.sectionText {
+  margin-top: 35px !important;
+  padding: 0px 50px 9px 5px !important;
+  font-size: 1.58vw !important;
+  margin-right: 30px;
+  font-weight: 100 !important;
+}
+
+@media (max-width: 1200px) {
+  /* Styles pour le bouton de chaque item de l'accordéon */
+  .accordion-button {
+    height: 56px;
+    padding-bottom: 23px;
+    border-radius: 7px;
+    font-size: 2.5vh;
+  }
+  /* Styles pour la page ApartmentCard */
+  .ApartmentCard-button {
+    font-size: 3vh;
+  }
+  .ApartmentCard-arrow {
+    width: 10.2%;
+    height: 180%;
+    padding-top: 0;
+  }
+  .ApartmentCard-body {
+    border-radius: 0pc 0px 12px 12px;
+    height: 450px;
+  }
+  .ApartmentCard-body p {
+    margin-top: 0;
+    padding-top: 24px;
+    line-height: 150%;
+  }
+  .ApartmentCard-body ul {
+    padding-top: 35px;
+    padding-bottom: 50px !important;
+    height: 450px;
+  }
+  .ApartmentCard-body ul li {
+    line-height: 150%;
+    font-size: 2vw;
+  }
+  .accordionTextApart {
+    font-size: 1.9vw;
+    height: 450px;
+  }
+}
+@media (max-width: 900px) {
+  /* Styles pour la page ApartmentCard */
+  .ApartmentCard-arrow {
+    width: 11.2%;
+    height: 500%;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .ApartmentCard-button {
+    height: 37px;
+    font-size: 2.2vw;
+  }
+  .accordion-body {
+    padding-bottom: 0%;
+    padding-top: 0;
+    border-radius: 0pc 0px 12px 12px;
+  }
+  .accordion-body p {
+    font-size: 2vw;
+  }
+  .accordion-body ul {
+    padding-top: 35px;
+    padding-bottom: 50px !important;
+    height: 350px;
+  }
+  .About-button {
+    font-size: 2vh;
+  }
+}
+@media (max-width: 576px) {
+  .ApartmentCard {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+  .ApartmentCard-item {
+    width: 100%;
+  }
+  .ApartmentCard-arrow {
+    width: 9.2%;
+    height: 70%;
+    padding-top: 0px;
+  }
+  .accordion-button {
+    height: 30px;
+    padding-bottom: 0px;
+    font-size: 2vh;
+    border-radius: 5px;
+  }
+  .accordion-body {
+    border-radius: 0px 0px 1px 1px;
+    height: auto;
+  }
+  .accordion-body p {
+    margin-top: 0;
+    padding: 18px 0px 10px 7px !important;
+    line-height: 150%;
+    font-size: 3vw;
+    margin-bottom: 0%;
+  }
+  .accordion-body ul {
+    padding-left: 7px;
+    padding-top: 18px;
+    padding-bottom: 10px !important;
+  }
+  .accordion-body ul li {
+    line-height: 150%;
+    font-size: 3vw;
+  }
+  /* Styles pour la page About */
+  .AccordionContentAbout {
+    margin-top: -30px;
+    width: 90% !important;
+  }
+  .About-item {
+    margin-bottom: 25px;
+  }
+  .sectionText {
+    font-size: 2vw;
+    margin-top: 0;
+    padding: 34px 10px 13px 5px !important;
+  }
+}
+.starsContainer {
+  height: 100%;
+  width: 37%;
+  Right: 0%;
+  position: absolute;
+  top: 90px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0%;
+  margin-top: 0%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.stars {
+  height: 100%;
+  width: 100%;
+  top: -10px;
+  margin-right: 0%;
+}
+.stars svg {
+  height: 70%;
+  width: 70%;
+  padding: 1px;
+  left: 0;
+}
+
+@media (max-width: 1200px) {
+  .rating {
+    margin-right: 20%;
+  }
+  .stars {
+    margin-left: 75%;
+    right: 0%;
+    font-size: 5vw;
+    margin-top: 0px;
+  }
+}
+.banner-home, .banner {
+  height: 340px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  position: relative;
+  width: 90%;
+  top: 0;
+  left: 5%;
+  background-color: rgb(79, 58, 58);
+}
+
+.imgBackground {
+  height: 340px;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+
+.bannerTxt {
+  position: absolute;
+  width: 100%;
+  padding-left: 11.4%;
+  top: 35%;
+  font-family: Montserrat;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 3.4vw;
+  line-height: 142.6%;
+  margin-bottom: 0px;
+  opacity: 1;
+  z-index: 10;
+}
+
+#mobileQuoteVersion {
+  position: absolute;
+  display: none;
+}
+#mobileQuoteVersion .mobileQuoteVersionP {
+  font-family: Montserrat;
+  color: #ffffff;
+  padding-left: 10.4%;
+  top: 20%;
+  font-size: 7vw;
+  line-height: 142.6%;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=index.css.map */

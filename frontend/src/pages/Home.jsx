@@ -1,45 +1,44 @@
 import React, { useState, useEffect } from "react";
 import AppHeader from "../components/Header.jsx";
-import backgound from "../assets/Background.png";
-import imgBackgound from "../assets/IMGbackground.png";
+import background from "../assets/Background.png";
+import imgBackground from "../assets/IMGbackground.png";
 import List from "../components/ApartmentsList";
 import Footer from "../components/Footer.jsx";
-import { getApartments } from "../service/index.jsx";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import apartmentsData from "../data/logements.json";
+import Banner from "../components/Banner.jsx";
 
 const AppHome = () => {
-  const [apartments, setApartments] = useState([]);
-  const params = useLocation();
+  const [apartmentsList, setApartmentsList] = useState([]);
 
   useEffect(() => {
-    // Call the getApartments function and set the state with the result
-    getApartments().then(setApartments);
+    setApartmentsList(apartmentsData);
   }, []);
+
+  const params = useParams();
 
   return (
     <>
       <AppHeader />
-
-      <div id="homeContent">
-        <div className="banner">
-          <img className="background" src={backgound} alt="background" />
-          <img
-            className="background imgBackground"
-            src={imgBackgound}
-            alt="landscape"
-          />
-          <p id="bannerTxt">Chez vous, partout et ailleurs</p>
-          <div id="mobileQuoteVersion">
-            <p className="mobileQuoteVersionP p1">Chez vous,</p>
-            <p className="mobileQuoteVersionP p2">partout et ailleurs</p>
-          </div>
+      <Banner
+        background={background}
+        image={imgBackground}
+        alt="landscape"
+        className="banner-home"
+      >
+        <p className="bannerTxt">Chez vous, partout et ailleurs</p>
+        <div id="mobileQuoteVersion">
+          <p className="mobileQuoteVersionP p1">Chez vous,</p>
+          <p className="mobileQuoteVersionP p2">partout et ailleurs</p>
         </div>
+      </Banner>
+      <div id="homeContent">
         <List
-          apartments={apartments}
-          selectedApartmentId={params?.state?.id}
+          apartments={apartmentsList}
+          selectedApartmentId={params.id}
           setSelectedApartmentId={(id) => {
-            // Pass a callback function to update the selected apartment ID
-            params?.setState({ id: id });
+            // Use the `useParams` hook to update the selected apartment ID
+            params.id = id;
           }}
         />
       </div>
