@@ -28,27 +28,7 @@
     margin-bottom: 18px;
     margin-top: 10px;
   }
-  ul {
-    padding: 0%;
-    display: flex;
-    justify-content: flex-start;
-    font-size: 0.9vw;
-    list-style-type: none;
-    width: auto;
-    li {
-      margin-right: 15px;
-      margin-top: 22px;
-      color: $secondary-color;
-      background-color: $primary-color;
-      border-radius: 13px;
-      width: 22%;
-      text-align: center;
-      white-space: nowrap;
-      width: auto;
-      padding: 7px 30px;
 
-    }
-  }
 }
 
 .rightMediumSection {
@@ -110,9 +90,7 @@
       margin-bottom: 0px;
       margin-top: 5px;
     }
-    ul {
-      font-size: 1.3vw;
-    }
+
   }
 
   .rightMediumSection {
@@ -142,6 +120,11 @@
 }
 
 @media (max-width: 900px) {
+  .mediumSection{
+    flex-direction: column;
+    margin-bottom: 0;
+
+  }
   
   .leftMediumSection {
     width: 80%;
@@ -156,56 +139,52 @@
       margin-bottom: 0px;
       margin-top: 0px;
     }
-    ul {
-      margin-top: -5px;
-      font-weight: 500;
-      width: 100%;
-      padding: 0%;
-      font-size: 2.8vw;
-      flex-wrap: wrap;
-      li {
-        margin-right: 15px;
-        margin-top: 15px;
-        padding: 3px 20px;
-        border-radius: 10px;
-        width: auto;
-      }
     }
-  }
-
-  .hostName {
-    margin-top: -15px;
-    margin-right: 10px;
-    font-size: 2.2vw !important;
-    height: 35px;
   
-  }
-
+  
   .rightMediumSection {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
     font-size: 2.5vw;
+        width: 100%;
+        height: 120px;
    
   }
+
+ 
   .hostContent {
+    margin-top: 14px;
     width: 100%;
     height: 136px;
     justify-content: flex-end;
   }
+  .hostName {
+    margin-top: -10px;
+    margin-right: 19px;
+    p {
+      margin-top: 0px;
+      margin-bottom: 0;
+      font-size: 3vw;
+
+    }
+  }
   .hostFoto{
-    width: 52%;
-    height: 52%;
+    width: 80px;
+    height: 80px;
   }
 
   .bottom {
-    height: 280px;
+    margin-top: 0;
+    height: auto;
+    margin-bottom: 20px;
   }
 
 }
+
 @media (max-width: 576px) {
-
   .mediumSection{
-    flex-direction: column;
-    margin-bottom: 0;
-
+    height: auto;
   }
 
 .leftMediumSection{
@@ -220,20 +199,13 @@
     margin-top: 0px;
     font-weight: 500;
   }
-  ul{
-    width: 150%;
-    li{
-      padding: 3px 22px;
-      border-radius: 6px;
-    }
-  }
+
 }
 .rightMediumSection {
-  flex-direction: row-reverse;
-  justify-content: space-between;
   margin-top: -5px;
   font-size: 4vw;
-  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
  
 }
   .hostContent {
@@ -243,7 +215,7 @@
   }
 
   .hostName {
-    margin-top: -14px;
+    margin-top: -10px;
     margin-right: 10px;
     p {
       margin-top: 0px;
@@ -253,8 +225,8 @@
     }
   }
 .hostFoto{
-  width: 15%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
 }
   .bottom {
     flex-direction: column;

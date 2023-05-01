@@ -177,26 +177,6 @@ body {
   margin-bottom: 18px;
   margin-top: 10px;
 }
-.leftMediumSection ul {
-  padding: 0%;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 0.9vw;
-  list-style-type: none;
-  width: auto;
-}
-.leftMediumSection ul li {
-  margin-right: 15px;
-  margin-top: 22px;
-  color: #ffffff;
-  background-color: #ff6060;
-  border-radius: 13px;
-  width: 22%;
-  text-align: center;
-  white-space: nowrap;
-  width: auto;
-  padding: 7px 30px;
-}
 
 .rightMediumSection {
   display: flex;
@@ -253,9 +233,6 @@ body {
     margin-bottom: 0px;
     margin-top: 5px;
   }
-  .leftMediumSection ul {
-    font-size: 1.3vw;
-  }
   .rightMediumSection {
     font-size: 2.5vw;
     width: 20%;
@@ -293,21 +270,6 @@ body {
     margin-bottom: 0px;
     margin-top: 0px;
   }
-  .leftMediumSection ul {
-    margin-top: -5px;
-    font-weight: 500;
-    width: 100%;
-    padding: 0%;
-    font-size: 2.8vw;
-    flex-wrap: wrap;
-  }
-  .leftMediumSection ul li {
-    margin-right: 15px;
-    margin-top: 15px;
-    padding: 3px 20px;
-    border-radius: 10px;
-    width: auto;
-  }
   .hostName {
     margin-top: -15px;
     margin-right: 10px;
@@ -344,13 +306,6 @@ body {
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight: 500;
-  }
-  .leftMediumSection ul {
-    width: 150%;
-  }
-  .leftMediumSection ul li {
-    padding: 3px 22px;
-    border-radius: 6px;
   }
   .rightMediumSection {
     flex-direction: row-reverse;
@@ -1431,5 +1386,58 @@ body {
     position: absolute;
     margin-top: 0%;
     top: 0;
+  }
+}
+.tagList {
+  padding: 0%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.9vw;
+  list-style-type: none;
+  width: auto;
+}
+.tagList li {
+  margin-right: 15px;
+  margin-top: 22px;
+  color: #ffffff;
+  background-color: #ff6060;
+  border-radius: 13px;
+  width: 22%;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  padding: 7px 30px;
+}
+
+@media (max-width: 1200px) {
+  .tagList {
+    font-size: 1.3vw;
+  }
+}
+@media (max-width: 900px) {
+  .tagList {
+    margin-top: -5px;
+    font-weight: 500;
+    width: 100%;
+    padding: 0%;
+    font-size: 2vw;
+    flex-wrap: wrap;
+  }
+  .tagList li {
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 3px 20px;
+    border-radius: 10px;
+    width: auto;
+  }
+}
+@media (max-width: 576px) {
+  .tagList {
+    width: 150%;
+  }
+  .tagList li {
+    font-size: 2.8vw;
+    padding: 3px 22px;
+    border-radius: 6px;
   }
 }/*# sourceMappingURL=index.css.map */

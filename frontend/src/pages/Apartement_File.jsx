@@ -7,17 +7,10 @@ import Accordion from "../components/Accordion.jsx";
 import Rating from "../components/Rating";
 import TagList from "../components/Tag";
 
-
-
-
 function ApartmentCard() {
-  // Retrieve the id of the selected apartment from the location object provided by the router
   const params = useParams();
 
-  // Find the apartment in the list based on the id
-  const apartment = apartments.find(
-    (apartment) => apartment?.id === params?.id
-  );
+  const apartment = apartments.find((apartment) => apartment?.id === params?.id);
 
   const items = [
     {
@@ -37,46 +30,39 @@ function ApartmentCard() {
       ),
     },
   ];
-  return (
+
+  return apartment ? (
     <>
-      {apartment ? (
-        <div className="apartmentContent">
-          <AppHeader />
-          <Carousel apartments={apartments} selectedApartmentId={params.id} />
-
-          <div className="mediumSection">
-            <div className="leftMediumSection">
-              <h1>{apartment?.title} </h1>
-              <h2 className="subtitleList">{apartment?.location} </h2>
-              <TagList tags={apartment?.tags} />
-
+      <AppHeader />
+      <div className="apartmentContent">
+        <Carousel apartments={apartments} selectedApartmentId={params.id} />
+        <div className="mediumSection">
+          <div className="leftMediumSection">
+            <h1>{apartment?.title}</h1>
+            <h2 className="subtitleList">{apartment?.location}</h2>
+            <TagList tags={apartment?.tags} />
+          </div>
+          <div className="rightMediumSection">
+            <div className="hostContent">
+              <div className="hostName">
+                <p>{apartment?.host.name.split(" ")[0]}</p>
+                <p>{apartment?.host.name.split(" ")[1]}</p>
+              </div>
+              <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
             </div>
-            <div className="rightMediumSection">
-              <div className="hostContent">
-                <div className="hostName">
-                  <p>{apartment?.host.name.split(" ")[0]}</p>
-                  <p>{apartment?.host.name.split(" ")[1]}</p>
-                </div>
-
-                <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
-
-              </div>
-              <div className="starsContainer">
-                <Rating rating={apartment?.rating} />
-              </div>
+            <div className="starsContainer">
+              <Rating rating={apartment?.rating} />
             </div>
           </div>
-
-          <div className="bottom">
-            <Accordion items={items} className="ApartmentCard" />
-          </div>
-
-          <Footer />
         </div>
-      ) : (
-        <Navigate replace to="/Error404" />
-      )}
+        <div className="bottom">
+          <Accordion items={items} className="ApartmentCard" />
+        </div>
+      </div>
+      <Footer />
     </>
+  ) : (
+    <Navigate replace to="/Error404" />
   );
 }
 
