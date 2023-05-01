@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import apartments from "../data/logements.json";
 import AppHeader from "../components/Header.jsx";
@@ -7,6 +6,9 @@ import Carousel from "../components/Carousel.jsx";
 import Accordion from "../components/Accordion.jsx";
 import Rating from "../components/Rating";
 import TagList from "../components/Tag";
+
+
+
 
 function ApartmentCard() {
   // Retrieve the id of the selected apartment from the location object provided by the router
@@ -55,7 +57,9 @@ function ApartmentCard() {
                   <p>{apartment?.host.name.split(" ")[0]}</p>
                   <p>{apartment?.host.name.split(" ")[1]}</p>
                 </div>
-                <img src={apartment?.host.picture} alt="photo de l'hôte" />
+
+                <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
+
               </div>
               <div className="starsContainer">
                 <Rating rating={apartment?.rating} />

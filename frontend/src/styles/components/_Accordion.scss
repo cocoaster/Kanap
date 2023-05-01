@@ -1,237 +1,339 @@
-/* Styles pour le bouton de chaque item de l'accordéon */
+/* Styles généraux de chaque item de l'accordéon */
+.accordion {
+    font-family: $font1;
+}
 
 .accordion-button {
-  background-color: $primary-color;
-  color: $secondary-color;
-  font-family: $font1;
-  border-radius: 8px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $font1;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 0px;
+    border-color: transparent;
+    text-align: start;
+    padding-left: 2%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
 }
 
 .accordion-body {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  background-color: $tertiary-color;
-  font-family: $font1;
-}
+    color: $primary-color;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    background-color: $tertiary-color;
+    &.collapse {
+        height: 0;
+    }
+    &.show {
+        height: auto;
+    }
 
+  }
 /* Styles pour la page ApartmentCard */
 
 .ApartmentCard {
-  display: flex;
-  justify-content: space-between;
-  width: 100% !important;
-  margin-top: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+    margin-top: 0 !important;
 }
 
 .ApartmentCard-item {
-  width: 45%;
+    width: 45%;
 }
 
 .ApartmentCard-button {
-  height: 62px;
-  font-size: 1.2vw;
-  border-radius: 10px;
-  position: relative;
+    height: 62px;
+    font-size: 1.2vw;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .ApartmentCard-arrow {
-  width: 6.3%;
-  height: 55%;
-  transform: translateY(-50%);
- top: 20%;
- right: 1%;
-  position: absolute;
-
+    width: 6%;
+    height: 55%;
+    transform: translateY(-50%);
+    top: 47%;
+    right: 1%;
+    position: absolute;
 }
 
-
 .ApartmentCard-body {
-  p {
-    margin-top: 0;
-    padding-top: 44px;
-    line-height: 150%;
-    font-size: 1.2vw;
-  }
-  ul {
-    list-style: none;
-    padding-top: 35px;
-    padding-bottom: 50px !important;
-    height: 365px;
-
-    li {
-      line-height: 150%;
-      font-size: 1.2vw;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-radius: 0px 0px 15px 15px;
+    p {
+        margin-top: 0;
+        padding-top: 44px;
+        line-height: 150%;
+        font-size: 1.2vw;
     }
-  }
+    ul {
+        list-style: none;
+        padding-top: 35px;
+        padding-left: 24px;
+        padding-bottom: 50px !important;
+        height: 365px;
+
+        li {
+            line-height: 150%;
+            font-size: 1.2vw;
+        }
+    }
+    &.show {
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in-out;
+        .accordion-button::after {
+            &.collapsed {
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &.expanded {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
 }
 
 .accordionTextApart {
-    padding-left: 14px !important;
+    padding-left: 24px !important;
+    padding-right: 9px;
     height: 365px;
-  }
-  
+}
+
 
 /* Styles pour la page About */
 
 .AccordionContentAbout {
-  margin: auto;
-  width: 80% !important;
+    margin: auto;
+    width: 70%;
 }
 
 #accordionAbout {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 .About-item {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+.About-button {
+    height: 62px;
 
+    font-size: 1.4vw;
+}
+.About-arrow {
+    width: 3%;
+    height: 55%;
+    transform: translateY(-50%);
+    top: 47%;
+    right: 1%;
+    position: absolute;
+}
+.About-body {
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    height: 0;
+    &.collapse {
+        height: 0;
+    }
+    &.show {
+        height: auto;
+    }
+}
 .sectionText {
-    margin-top: 35px !important;
-  padding: 0px 50px 9px 5px !important;
-  font-size: 1.58vw !important;
-  margin-right: 30px;
-  font-weight: 100 !important;
+    margin-top: Opx !important;
+    padding: 40px 50px 16px 20px !important;
+    font-size: 1.58vw !important;
+    margin-right: 30px;
+    font-weight: 100 !important;
 }
 
 @media (max-width: 1200px) {
+    /* Styles généraux de chaque item de l'accordéon */
 
-  /* Styles pour le bouton de chaque item de l'accordéon */
-  .accordion-button {
-    height: 56px;
-    padding-bottom: 23px;
-    border-radius: 7px;
-    font-size: 2.5vh;
-  }
-
-  /* Styles pour la page ApartmentCard */
-
-  .ApartmentCard-button {
-    font-size: 3vh;
-  }
-  .ApartmentCard-arrow {
-    width: 10.2%;
-    height: 180%;
-    padding-top: 0;
-  }
-
-  .ApartmentCard-body {
-    border-radius: 0pc 0px 12px 12px;
-    height: 450px;
-
-    p {
-      margin-top: 0;
-      padding-top: 24px;
-      line-height: 150%;
+    .accordion-button {
+        height: 56px;
+        padding-bottom: 23px;
+        border-radius: 7px;
     }
-    ul {
-      padding-top: 35px;
-      padding-bottom: 50px !important;
-      height: 450px;
 
-      li {
-        line-height: 150%;
-        font-size: 2vw;
-      }
+    /* Styles pour la page ApartmentCard */
+
+    .ApartmentCard-button {
+        font-size: 2.5vh;
     }
-  }
-  .accordionTextApart {
-    font-size: 1.9vw;
-    height: 450px;
-  }
+    .ApartmentCard-arrow {
+        width: 10.2%;
+        height: 60%;
+        padding-top: 0;
+    }
+
+    .ApartmentCard-body {
+        border-radius: 0pc 0px 12px 12px;
+        height: 450px;
+        p {
+            margin-top: 0;
+            padding-top: 24px;
+            line-height: 150%;
+            font-size: 2vw;
+
+        }
+        ul {
+            padding-top: 35px;
+            padding-bottom: 50px !important;
+            height: 450px;
+
+            li {
+                line-height: 150%;
+                font-size: 2vw;
+            }
+        }
+    }
+    .accordionTextApart {
+        font-size: 2.5vw;
+        height: 450px;
+    }
 }
 
 @media (max-width: 900px) {
-  /* Styles pour la page ApartmentCard */
-  .ApartmentCard-arrow {
-    width: 11.2%;
-    height: 500%;
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .ApartmentCard-button {
-    height: 37px;
-    font-size: 2.2vw;
-  }
+    /* Styles généraux de chaque item de l'accordéon */
 
-  .accordion-body {
-    padding-bottom: 0%;
-    padding-top: 0;
-    border-radius: 0pc 0px 12px 12px;
-    p {
-      font-size: 2vw;
+    .accordion-body {
+        padding-bottom: 0%;
+        padding-top: 0;
+        border-radius: 0pc 0px 12px 12px;
     }
-    ul {
-      padding-top: 35px;
-      padding-bottom: 50px !important;
-      height: 350px;
-    }
-  }
 
-  .About-button {
-    font-size: 2vh;
-  }
+    /* Styles pour la page ApartmentCard */
+
+    .ApartmentCard-arrow {
+        width: 11.2%;
+        height: 52%;        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .ApartmentCard-button {
+        height: auto;
+        font-size: 2.2vw;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .accordion-body {
+        p {
+            font-size: 2vw;
+        }
+        ul {
+            padding-top: 35px;
+            padding-bottom: 50px !important;
+            height: 350px;
+        }
+    }
+.accordionTextApart{
+  height: 340px;
+}
+.apartAccordion2{
+  height: 340px;
+}
+    /* Styles pour la page About */
+
+    .About-button {
+        font-size: 2vh;
+    }
 }
 
 @media (max-width: 576px) {
-  .ApartmentCard {
-    display: flex;
-    flex-direction: column;
-    width: 100% !important;
-    margin-top: 20px !important;
-  }
+    /* Styles généraux de chaque item de l'accordéon */
 
-  .ApartmentCard-item {
-    width: 100%;
-  }
-
-  .ApartmentCard-arrow {
-    width: 9.2%;
-    height: 70%;
-    padding-top: 0px;
-  }
-
-  .accordion-button {
-    height: 30px;
-    padding-bottom: 0px;
-    font-size: 2vh;
-    border-radius: 5px;
-  }
-  .accordion-body {
-    border-radius: 0px 0px 1px 1px;
-    height: auto;
-    p {
-      margin-top: 0;
-      padding: 18px 0px 10px 7px !important;
-      line-height: 150%;
-      font-size: 3vw;
-      margin-bottom: 0%;
+    .accordion-button {
+        font-size: 2vh;
+        border-radius: 5px;
     }
-    ul {
-      padding-left: 7px;
-      padding-top: 18px;
-      padding-bottom: 10px !important;
-      li {
-        line-height: 150%;
-        font-size: 3vw;
-      }
+    .accordion-body {
+        border-radius: 0px 0px 1px 1px;
+        height: auto;
     }
-  }
 
-  /* Styles pour la page About */
-  .AccordionContentAbout {
-    margin-top: -30px;
-    width: 90% !important;
-  }
+    /* Styles pour la page ApartmentCard */
 
-  .About-item {
-    margin-bottom: 25px;
-  }
+    .ApartmentCard {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        margin-top: -30px;
+        height: auto;
 
-  .sectionText {
-    font-size: 2vw;
-    margin-top: 0;
-    padding: 34px 10px 13px 5px !important;
-  }
+    }
+
+    .ApartmentCard-item {
+        width: 100%;
+        margin-bottom: 19px;
+        height: auto;
+
+    }
+    .ApartmentCard-button {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+    }
+    .ApartmentCard-arrow {
+        width: 7.5%;
+        height: 50%;
+        padding-top: 0px;
+    }
+
+    .ApartmentCard-body {
+      height: 0;
+        p {
+            margin-top: 0;
+            padding: 18px 10px 0px 7px !important;
+            line-height: 150%;
+            font-size: 3.9vw;
+            margin-bottom: 0%;
+        }
+        ul {
+          height: auto;
+            padding-left: 7px;
+            padding-top: 18px;
+            padding-bottom: 1px !important;
+            li {
+                line-height: 150%;
+                font-size: 3.9vw;
+            }
+        }
+    }
+.accordionTextApart{
+  height: auto;
+  padding-bottom: 1px;
+}
+    /* Styles pour la page About */
+
+    .AccordionContentAbout {
+        margin-top: -45px;
+        width: 90% !important;
+    }
+.accordionAbout{
+  margin-top: 10px !important;
+}
+    .About-item {
+        margin-bottom: 16px;
+    }
+.About-button{
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.About-arrow{
+  width: 8%;
+}
+ .sectionText {
+        font-size: 4vw !important;
+        margin-top: 0;
+        padding: 20px 0px 50px 5px !important;
+    }
+
 }

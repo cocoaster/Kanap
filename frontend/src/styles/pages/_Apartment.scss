@@ -1,260 +1,268 @@
 .mediumSection,
 .bottomSection {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .mediumSection {
-    display: flex;
-    justify-content: space-between;
-    font-family: $font1;
-    color: $primary-color;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-family: $font1;
+  color: $primary-color;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .leftMediumSection {
-    width: 60%;
-    margin-top: 20px;
-    font-family: $font1;
-    h1 {
-        font-weight: 100;
-        font-size: 1.9vw;
-        margin-bottom: 0px;
+  width: 80%;
+  margin-top: 20px;
+  font-family: $font1;
+  h1 {
+    font-weight: 500;
+    font-size: 2.2vw;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 1.1vw;
+    margin-bottom: 18px;
+    margin-top: 10px;
+  }
+  ul {
+    padding: 0%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.9vw;
+    list-style-type: none;
+    width: auto;
+    li {
+      margin-right: 15px;
+      margin-top: 22px;
+      color: $secondary-color;
+      background-color: $primary-color;
+      border-radius: 13px;
+      width: 22%;
+      text-align: center;
+      white-space: nowrap;
+      width: auto;
+      padding: 7px 30px;
+
     }
-    h2 {
-        font-weight: 100;
-        font-size: 1.1vw;
-        margin-bottom: 7px;
-        margin-top: 7px;
-    }
-    ul {
-        padding: 0%;
-        display: flex;
-        justify-content: flex-start;
-        font-size: .9vw;
-        list-style-type: none;
-        width: auto;
-        li {
-            margin-right: 15px;
-            margin-top: 22px;
-            color: $secondary-color;
-            background-color: $primary-color;
-            border-radius: 13px;
-            width: 22%;
-            text-align: center;
-            white-space: nowrap;
-            width: auto;
-            padding: 7px 30px;
-        }
-    }
+  }
 }
 
 .rightMediumSection {
-    font-size: 2.5vw;
-    position: relative;
-    width: 40%;
-    img {
-        margin-top: 12px;
-        margin-right: 1%;
-        width: 12%;
-        height: 12%;
-        border-radius: 50%;
-    }
-    
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5vw;
+  width: 12%;
+  height: auto;
+
+
 }
 
 .hostContent {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  height: 150px;
+
 }
 
 .hostName {
-    margin-top: 10px;
-    margin-right: 15px;
-    font-size: 1.2vw;
-    p {
-        margin-top: 8px;
-    }
+  margin-top: 17px;
+  margin-right: 15px;
+  font-family: $font1;
+  font-size: 1.2vw;
+  text-align: end;
+  p {
+    margin-top: 8px;
+  }
+}
+.hostFoto {
+  margin-top: 13px;
+  margin-right: 1%;
+  width: 50%;
+  height: 70%;
+  border-radius: 50%;
 }
 
 .bottom {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    height: 450px;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 200px;
-    width: 90%;
-  
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 450px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 200px;
+  width: 90%;
 }
 
-
-
 @media (max-width: 1200px) {
-    .leftMediumSection {
-        h1 {
-            font-size: 2.8vw;
-        }
-        h2 {
-            font-size: 1.8vw;
-            margin-bottom: 0px;
-            margin-top: 5px;
-        }
-        ul {
-            font-size: 1.3vw;
-        }
-    }
+  .leftMediumSection {
+    h1 {
+      font-size: 2.4vw;
 
-    .rightMediumSection {
-        font-size: 2.5vw;
-        position: relative;
-        width: 40%;
-        img {
-            margin-top: 10px;
-            width: 26%;
-            height: 26%;
-        }
-        
     }
+    h2 {
+      font-size: 1.8vw;
+      margin-bottom: 0px;
+      margin-top: 5px;
+    }
+    ul {
+      font-size: 1.3vw;
+    }
+  }
 
-    .hostName {
-        margin-top: 10px;
-        margin-right: 15px;
-        font-size: 1.9vw;
-        p {
-            margin-top: 15px;
-        }
+  .rightMediumSection {
+    font-size: 2.5vw;
+    width: 20%;
+   
+  }
+
+  .hostContent {
+    width: 90%;
+    height: 136px;
+    justify-content: flex-end;
+  }
+.hostFoto{
+  margin-top: -15px;
+  width: 40%;
+  height: 52%;
+}
+  .hostName {
+    margin-top: -28px;
+    margin-right: 15px;
+    font-size: 1.9vw;
+    p {
+      margin-top: 15px;
     }
+  }
 }
 
 @media (max-width: 900px) {
-    .leftMediumSection {
-        width: 90%;
-        margin-top: 0px;
-        h1 {
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 2vw;
-            margin-bottom: 15px;
-            margin-top: 0px;
-        }
-        ul {
-            padding: 0%;
-            font-size: 2.1vw;
-            flex-wrap: wrap;
-            li {
-                margin-right: 15px;
-                margin-top: 15px;
-                padding: 3px 10px;
-                border-radius: 6.5px;
-                width: auto;
-            }
-        }
-    }
+  
+  .leftMediumSection {
+    width: 80%;
+    margin-top: 0px;
+    h1 {
+      margin-bottom: 8px;
+      font-size: 5.2vw;
 
-    .hostContent {
-        width: 100%;
     }
-
-    .hostName {
-        margin-top: -8px;
-        margin-right: 10px;
-        font-size: 2.2vw;
-        height: 35px;
-        p {
-            margin-bottom: 0;
-        }
+    h2 {
+      font-size: 4vw;
+      margin-bottom: 0px;
+      margin-top: 0px;
     }
-
-    .rightMediumSection {
-        font-size: 2.5vw;
-        width: 40%;
-        img {
-            margin-top: 0px;
-            width: 35%;
-            height: 35%;
-        }
-      
-    }
-
-    .bottom {
-        height: 280px;
-    }
-}
-
-@media (max-width: 576px) {
-    .mediumSection {
-        flex-direction: column;
-        margin: auto;
-        width: 90%;
-    }
-
-    .leftMediumSection {
-        width: 90%;
-        margin-top: 0px;
-        h1 {
-            font-size: 6.5vw;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 4.5vw;
-            margin-bottom: 0px;
-            margin-top: 0px;
-        }
-        ul {
-            padding: 0%;
-            font-size: 3vw;
-            flex-wrap: wrap;
-            li {
-                margin-right: 15px;
-                margin-top: 15px;
-                padding: 3px 10px;
-                border-radius: 6.5px;
-                white-space: nowrap;
-                width: auto;
-            }
-        }
-    }
-
-    .rightMediumSection {
-        margin-top: -10px;
-        font-size: 4vw;
-        width: 100%;
-        img {
-            margin-top: 15px;
-            margin-right: 8px;
-            width: 14%;
-            height: 14%;
-            border-radius: 60%;
-        }
-      
-    }
-
-    .hostContent {
-        width: 100%;
-    }
-
-    .hostName {
+    ul {
+      margin-top: -5px;
+      font-weight: 500;
+      width: 100%;
+      padding: 0%;
+      font-size: 2.8vw;
+      flex-wrap: wrap;
+      li {
+        margin-right: 15px;
         margin-top: 15px;
-        margin-right: 10px;
-        font-size: 4vw;
-        p {
-            margin-top: 5px;
-            margin-bottom: 0;
-        }
+        padding: 3px 20px;
+        border-radius: 10px;
+        width: auto;
+      }
     }
+  }
 
-    .bottom {
-        flex-direction: column;
-        height: auto;
-        margin: auto;
-        margin-top: 0px;
-        width: 90%;
-        margin-bottom: 0px;
+  .hostName {
+    margin-top: -15px;
+    margin-right: 10px;
+    font-size: 2.2vw !important;
+    height: 35px;
+  
+  }
+
+  .rightMediumSection {
+    font-size: 2.5vw;
+   
+  }
+  .hostContent {
+    width: 100%;
+    height: 136px;
+    justify-content: flex-end;
+  }
+  .hostFoto{
+    width: 52%;
+    height: 52%;
+  }
+
+  .bottom {
+    height: 280px;
+  }
+
+}
+@media (max-width: 576px) {
+
+  .mediumSection{
+    flex-direction: column;
+    margin-bottom: 0;
+
+  }
+
+.leftMediumSection{
+  h1 {
+    margin-bottom: 8px;
+    font-size: 5.2vw;
+
+  }
+  h2 {
+    font-size: 3.5vw;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: 500;
+  }
+  ul{
+    width: 150%;
+    li{
+      padding: 3px 22px;
+      border-radius: 6px;
     }
+  }
+}
+.rightMediumSection {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: -5px;
+  font-size: 4vw;
+  width: 100%;
+ 
+}
+  .hostContent {
+    width: 100%;
+    height: 35px;
+    margin-top: 34px;
+  }
 
+  .hostName {
+    margin-top: -14px;
+    margin-right: 10px;
+    p {
+      margin-top: 0px;
+      margin-bottom: 0;
+      font-size: 3.2vw;
 
+    }
+  }
+.hostFoto{
+  width: 15%;
+  height: 100%;
+}
+  .bottom {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    margin-top: 0px;
+    width: 90%;
+    margin-bottom: 0px;
+  }
 
 }

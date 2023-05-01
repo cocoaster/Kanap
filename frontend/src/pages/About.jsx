@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppHeader from "../components/Header.jsx";
-import background from "../assets/Background.png";
-import imgBackground from "../assets/IMGbackground2.png";
+import aboutBackground from "../assets/aboutBackground.png";
+import aboutBackground2 from "../assets/aboutBackground2.png";
+
 import Footer from "../components/Footer.jsx";
 import Accordion from "../components/Accordion";
 import Banner from "../components/Banner";
@@ -23,8 +24,10 @@ const About = () => {
       content: (
         <p className="sectionText">
           La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-          comportement discriminatoire ou de perturbation du voisinage
-          entrainera une exclusion de notre plateforme.
+
+          comportement discriminatoire ou de perturbation du voisinage entrainera
+          une exclusion de notre plateforme.
+
         </p>
       ),
     },
@@ -43,33 +46,36 @@ const About = () => {
       content: (
         <p className="sectionText">
           La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
-          pour les voyageurs, chaque logement correspond aux critères de
-          sécurité établis par nos services. En laissant une note aussi bien à
-          l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les
-          standards sont bien respectés. Nous organisons également des ateliers
-          sur la sécurité domestique pour nos hôtes.
+
+          pour les voyageurs, chaque logement correspond aux critères de sécurité
+          établis par nos services. En laissant une note aussi bien à l'hôte qu'au
+          locataire, cela permet à nos équipes de vérifier que les standards sont
+          bien respectés. Nous organisons également des ateliers sur la sécurité
+          domestique pour nos hôtes.
+
         </p>
       ),
     },
   ];
-  const isMobile = window.innerWidth < 576; // Remplacez 768 par la largeur de votre choix pour déterminer ce qui est considéré comme un mobile
 
-  const backgroundStyle = {
-    backgroundImage: `url(${isMobile ? imgBackground : background})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 576);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <AppHeader />
       <Banner
-        background={background}
-        image={imgBackground}
+        image={isMobile ? aboutBackground2 : aboutBackground}
         alt="landscape"
-        className={isMobile ? "bannerMobile" : ""}
+        className={isMobile ? "bannerMobileAbout" : "bannerDesktopAbout"}
       />
+
 
       <div id="aboutContent">
         <div className="AccordionContentAbout">
@@ -81,4 +87,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About

@@ -1,54 +1,72 @@
-.starsContainer{
-    height: 100%;
-    width:37%;
-       Right: 0%;
-        position: absolute;
-        top: 90px;
-
+.starsContainer {
+    height: 40px;
+    width: 85%;
+    margin-top: -30px;
+    margin-right: 10px;
 
 }
-.rating{
+.rating {
     display: flex;
     justify-content: flex-end;
-    margin-right: 0%;
     margin-top: 0%;
     height: 100%;
-    width: 100%;    position: relative;
-
+    width: 100%;
 }
 
-.stars{
+.stars {
     height: 100%;
-    width: 100%;
-    top: -10px;
-    margin-right: 0%;
-    svg{
-height: 70%;
-    width: 70%;
-    padding: 1px;
-left:0;
-
+    transform: scale(0.88);
+    margin-right: 5%;
+    svg {
+        height: 100%;
+        width: 100%;
+        margin-left: 49px;
     }
-
 }
 
 @media (max-width: 1200px) {
-
-    .rating{
-        margin-right: 20%;
+    .starsContainer {
+    margin-top: -55px ;
     }
+  
     .stars {
-        margin-left: 75%;
- 
-    right: 0%;
-    font-size: 5vw;
-    margin-top: 0px;
-
+        height: 90%;
+        width: 90%;
     }
 }
 @media (max-width: 900px) {
-
+    .starsContainer {
+margin-top: -65px;
+    }
+    .stars {
+        height: 100%;
+        transform: scale(0.8);
+        margin-right: 2%;
+        svg {
+            height: 100%;
+            width: 100%;
+            margin-left: 30px;
+        }
+    }
+    
 }
 
 @media (max-width: 576px) {
+    .starsContainer {
+        margin-top: 20px;
+        width: 40%;
+
+            }
+            .stars {
+                height: 100%;
+                transform: scale(1.7);
+                margin-right: 10%;
+                svg {
+                    height: 90%;
+                    width: 90%;
+                    margin-left: 4px;
+                    margin-right: 0;
+                }
+            }
 }
+

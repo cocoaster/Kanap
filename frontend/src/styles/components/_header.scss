@@ -48,7 +48,7 @@
 
 .navActive {
     text-decoration: none;
-    border-bottom: 4px solid $primary-color;
+    border-bottom: 3px solid $primary-color;
     &:hover {
         color: $primary-color;
         opacity: 0.5;
@@ -103,6 +103,7 @@
 @media (max-width: 900px) {
     #header {
         margin-top: 16px;
+        height: 110px;
     }
     #navUl {
         padding-top: 74px;
@@ -124,23 +125,24 @@
             height: 85px;
         }
         #navUl {
-            width: 50%;
             padding-top: 60px;
             text-align: left;
-            margin-right: -25px;
             position: relative;
+            li{
+                margin-left: -18px;
+            }
         }
         .homeNav {
             height: 9px;
             text-align: left;
             white-space: nowrap;
             font-size: 3vw;
-            margin-right: 20px;
+            margin-right: 28px;
         }
     }
 
     #navigation {
-        width: 42%;
+        width: 29%;
     }
 
     .navActive {

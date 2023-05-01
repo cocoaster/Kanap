@@ -1,35 +1,51 @@
-
-.banner-home, .banner {
+#bannerContent{
+    position: relative;
+}
+.banner {
     height: 340px;
     position: relative;
+    margin-top: 3px;
     margin-bottom: 20px;
     border-radius: 15px;
-    position: relative;
+
     width: 90%;
     top: 0;
     left: 5%;
     background-color: rgb(79, 58, 58);
-
 }
 
-
-
-.imgBackground {
-    height: 340px;
-
-    object-fit: cover;
+.bannerHome {
+    background-image: url("../assets/homeBackground.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0%;
+    left: 0;
     opacity: 0.6;
     border-radius: 15px;
-
 }
-
-.bannerTxt {
+.bannerDesktopAbout {
+    background-image: url("../assets/aboutBackground.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+.desktopQuoteVersion {
     position: absolute;
     width: 100%;
-    padding-left: 11.4%;
-    top: 35%;
+    left: 25.3%;
+    top: 36.4%;
+
     font-family: $font1;
     color: $secondary-color;
     font-weight: 500;
@@ -40,16 +56,97 @@
     z-index: 10;
 }
 
-#mobileQuoteVersion {
-    position: absolute;
+#mobileQuoteVersion{
     display: none;
-    .mobileQuoteVersionP {
-        font-family: $font1;
-        color: $secondary-color;
-        padding-left: 10.4%;
-        top: 20%;
-        font-size: 7vw;
-        line-height: 142.6%;
-        margin-bottom: 10px;
+ 
+}
+
+@media (max-width: 1200px) {
+    .banner{
+        height: 220px;
+    }
+   .desktopQuoteVersion{
+    top:27%;
+   }
+}
+
+@media (max-width: 900px) {
+    .banner{
+        height: 145px;
+    }
+    .desktopQuoteVersion{
+        top: 32%;       }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        width: 90%;
+        height: 100px;
+        border-radius: 12px;
+        margin-bottom: 0px;
+    }
+
+    .bannerMobileAbout-banner {
+        width: 90%;
+        border-radius: 8px;
+        height: 190px;
+        margin-bottom: 0;
+    }
+    .bannerMobileAbout {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 12px;
+        background-image: url("../assets/aboutBackground2.png");
+    }
+   
+    .banner-home {
+        width: 90%;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .background {
+        height: 90px;
+        border-radius: 8px;
+    }
+
+    .desktopQuoteVersion {
+        display: none;
+    }
+    .bannerMobile {
+        margin-top: 100px;
+    }
+    #mobileQuoteVersion {
+        position: absolute;
+        display: block;
+        top: 31px;
+        left: 14px;
+        .mobileQuoteVersionP {
+            font-family: $font1;
+            color: $secondary-color;
+            white-space: nowrap;
+            line-height: 0;
+            padding-left: 10.4%;
+            font-size: 6.9vw;
+            line-height: 24px;
+            margin-bottom: 0px;
+        }
+    }
+
+ 
+    p1 {
+        position: relative;
+        margin-top: 5%;
+    }
+
+    p2 {
+        position: absolute;
+        margin-top: 0%;
+        top: 0;
     }
 }
+

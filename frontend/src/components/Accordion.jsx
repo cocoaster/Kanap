@@ -3,17 +3,18 @@ import DownArrow from "../assets/downarrow.png";
 import UpArrow from "../assets/uparrow.png";
 
 function Accordion({ items, className }) {
-  const [activeAccordionIndices, setActiveAccordionIndices] = useState([]);
+
+  const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
 
   function toggleAccordion(index) {
-    const position = activeAccordionIndices.indexOf(index);
-    const newActiveAccordionIndices = [...activeAccordionIndices];
-    if (position !== -1) {
-      newActiveAccordionIndices.splice(position, 1);
+    if (activeAccordionIndexes.includes(index)) {
+      setActiveAccordionIndexes(
+        activeAccordionIndexes.filter((i) => i !== index)
+      );
     } else {
-      newActiveAccordionIndices.push(index);
+      setActiveAccordionIndexes([...activeAccordionIndexes, index]);
     }
-    setActiveAccordionIndices(newActiveAccordionIndices);
+
   }
 
   return (
@@ -27,24 +28,24 @@ function Accordion({ items, className }) {
               onClick={() => toggleAccordion(index)}
             >
               {item.title}
-              {activeAccordionIndices.includes(index) ? (
-                <img
-                  src={UpArrow}
-                  alt="arrow-up"
-                  className={`arrows ${className}-arrow active`}
-                />
-              ) : (
-                <img
-                  src={DownArrow}
-                  alt="arrow-down"
-                  className={`arrows ${className}-arrow active`}
-                />
-              )}
+
+              <img
+                src={
+                  activeAccordionIndexes.includes(index) ? UpArrow : DownArrow
+                }
+                alt={`arrow-${
+                  activeAccordionIndexes.includes(index) ? "up" : "down"
+                }`}
+                className={`arrows ${className}-arrow active`}
+              />
+
             </button>
           </h2>
           <section
             className={`accordion-body collapse ${
-              activeAccordionIndices.includes(index) ? "show" : ""
+
+              activeAccordionIndexes.includes(index) ? "show" : ""
+
             } ${className}-body`}
             id={`about-${item.title.toLowerCase()}`}
           >

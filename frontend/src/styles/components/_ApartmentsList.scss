@@ -105,6 +105,7 @@
 
     .card-title {
         font-size: 0.8rem;
+        font-weight: 500;
         width: 37%;
         bottom: 5%;
     }
@@ -115,9 +116,15 @@
 }
 
 @media (max-width: 900px) {
+    .cardContainer{
+        margin-top: 33px;
+
+    }
     .apartCard {
         height: 250px;
+        margin-bottom: 30px;
     }
+    
 }
 @media (max-width: 576px) {
     .cardContainer {

@@ -13,24 +13,11 @@
 
 @media (max-width: 576px) {
     #aboutContent {
-        height: 800px;
         flex: 1;
         width: 100%;
     }
 
-    .backkgroundAbout {
-        background-image: url(../assets/IMGbackground2mob.png);
-        height: 190px;
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 190px;
-        width: 90%;
-    }
+ 
 
-    .imgBackgroundAbout {
-        display: none;
-        height: 190px;
-    }
 
 }

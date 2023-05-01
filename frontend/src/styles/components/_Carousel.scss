@@ -164,7 +164,7 @@
 @media (max-width: 576px) {
     .carousel-content {
         margin: auto;
-        margin-top: 25px;
+        margin-top: 5px;
         height: 240px;
         margin-bottom: 12px;
         border-radius: 10px;
@@ -179,12 +179,12 @@
 
     .carousel-control-prev,
     .carousel-control-next {
-        width: 20%;
+        width: 6%;
         &.carousel-control-prev {
-            left: -5%;
+            left: 1.5%;
         }
         &.carousel-control-next {
-            right: -5%;
+            right: 1.5%;
         }
     }
 
