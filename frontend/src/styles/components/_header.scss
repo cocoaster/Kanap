@@ -134,15 +134,12 @@
             text-align: left;
             position: relative;
             li{
-                margin-left: -18px;
+                margin-left: -22px;
             }
         }
         .homeNav {
-            height: 9px;
-            text-align: left;
-            white-space: nowrap;
             font-size: 3vw;
-            margin-right: 28px;
+            margin-right: 34px;
         }
     }
 
@@ -152,5 +149,13 @@
 
     .navActive {
         border-bottom: 1px solid $primary-color;
+        &.active {
+            &::before,
+            &::after {
+                content: "";
+                opacity: 0.5;
+                border-bottom: 4px solid rgba($primary-color, 0.5);
+            }
+        }
     }
 }
