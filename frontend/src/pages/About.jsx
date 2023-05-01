@@ -69,6 +69,8 @@ const About = () => {
 
   return (
     <>
+      <main>
+
       <AppHeader />
       <Banner
         image={isMobile ? aboutBackground2 : aboutBackground}
@@ -81,7 +83,8 @@ const About = () => {
         <div className="AccordionContentAbout">
           <Accordion items={items} className="About" />
         </div>
-      </div>
+        </div>
+        </main>
       <Footer />
     </>
   );

@@ -243,9 +243,22 @@
   height: 340px;
 }
     /* Styles pour la page About */
+.AccordionContentAbout{
+        height: auto;
+        margin-bottom: 20px;
+    }
 
     .About-button {
+        height: auto;
+        padding-top: 10px ;
+        padding-bottom: 10px;
         font-size: 2vh;
+    }
+    .About-arrow{
+        width: 7%;;
+    }
+    .sectionText{
+        font-size: 2.2vw !important;
     }
 }
 

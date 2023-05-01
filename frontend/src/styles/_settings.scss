@@ -9,13 +9,22 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
-  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 #root{
+    flex: 1;
+
     width: auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: max-content;
+}
+main{
+    flex: 1;
+ 
 }
 @media (min-width: 576px) {
     body {
