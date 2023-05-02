@@ -33,32 +33,34 @@ function ApartmentCard() {
 
   return apartment ? (
     <>
-      <AppHeader />
-      <div className="apartmentContent">
-        <Carousel apartments={apartments} selectedApartmentId={params.id} />
-        <div className="mediumSection">
-          <div className="leftMediumSection">
-            <h1>{apartment?.title}</h1>
-            <h2 className="subtitleList">{apartment?.location}</h2>
-            <TagList tags={apartment?.tags} />
-          </div>
-          <div className="rightMediumSection">
-            <div className="hostContent">
-              <div className="hostName">
-                <p>{apartment?.host.name.split(" ")[0]}</p>
-                <p>{apartment?.host.name.split(" ")[1]}</p>
+      <main>
+        <AppHeader />
+        <div className="apartmentContent">
+          <Carousel apartments={apartments} selectedApartmentId={params.id} />
+          <div className="mediumSection">
+            <div className="leftMediumSection">
+              <h1>{apartment?.title}</h1>
+              <h2 className="subtitleList">{apartment?.location}</h2>
+              <TagList tags={apartment?.tags} />
+            </div>
+            <div className="rightMediumSection">
+              <div className="hostContent">
+                <div className="hostName">
+                  <p>{apartment?.host.name.split(" ")[0]}</p>
+                  <p>{apartment?.host.name.split(" ")[1]}</p>
+                </div>
+                <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
               </div>
-              <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
-            </div>
-            <div className="starsContainer">
-              <Rating rating={apartment?.rating} />
+              <div className="starsContainer">
+                <Rating rating={apartment?.rating} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bottom">
-          <Accordion items={items} className="ApartmentCard" />
-        </div>
-      </div>
+          <div className="bottom">
+            <Accordion items={items} className="ApartmentCard" />
+          </div>
+          </div>
+      </main>
       <Footer />
     </>
   ) : (

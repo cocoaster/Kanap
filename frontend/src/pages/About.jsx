@@ -71,19 +71,19 @@ const About = () => {
     <>
       <main>
 
-      <AppHeader />
-      <Banner
-        image={isMobile ? aboutBackground2 : aboutBackground}
-        alt="landscape"
-        className={isMobile ? "bannerMobileAbout" : "bannerDesktopAbout"}
-      />
+        <AppHeader />
+        <Banner
+          image={isMobile ? aboutBackground2 : aboutBackground}
+          alt="landscape"
+          className={isMobile ? "bannerMobileAbout" : "bannerDesktopAbout"}
+        />
 
 
-      <div id="aboutContent">
-        <div className="AccordionContentAbout">
-          <Accordion items={items} className="About" />
-        </div>
-        </div>
+        <div id="aboutContent">
+          <div className="AccordionContentAbout">
+            <Accordion items={items} className="About" />
+          </div>
+          </div>
         </main>
       <Footer />
     </>

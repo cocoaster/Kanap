@@ -1,14 +1,14 @@
-#footerBackground {
+footer {
     width: 100%;
-    height: 340px;
+    padding-bottom: 40px;
     background-color: black;
     color: $secondary-color;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 0%;
     svg {
-        margin-left: 16%;
-        width: 68%;
-        margin-top: 3%;
+        margin-left: 46.5%;
+        width: 7%;
+        margin-top: 63px;
         margin-bottom: 1%;
         path {
             fill: $secondary-color;
@@ -19,44 +19,49 @@
         font-family: $font1;
         text-align: center;
         vertical-align: middle;
-        font-size: 3vh;
-        margin-top: 34px;
+        font-size: 2.8vh;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 900px) {
-    #footerBackground {
-        height: 300px;
+    footer {
+        display: table-row;
+        height: 1;
 
         svg {
             margin-left: 35%;
             width: 30%;
-            margin-top: 10%;
-            margin-bottom: 4%;
+            margin-top: 7%;
+            margin-bottom: 0%;
         }
         P {
             text-align: center;
             font-size: 2vh;
+            padding-bottom: 60px;
+
         }
     }
 }
 
 @media (max-width: 576px) {
-    #footerBackground {
-        height: 180px;
-     margin-bottom: 0;
-     flex-shrink: 0;
+    footer {
+    display: table-row;
+     height: 1;
+     width: 100%;
 
         svg {
             margin-left: 34%;
-            width: 32%;
-            margin-top: 10%;
-            margin-bottom: 0%;
+            width: 28%;
+            margin-top: 11%;
+            margin-bottom: 2%;
         }
         P {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 7px;
             font-size: 1.8vh;
+            padding-bottom: 35px;
+
         }
     }
 }

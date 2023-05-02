@@ -79,19 +79,22 @@
 }
 
 @media (max-width: 576px) {
+
     .banner {
         width: 90%;
         height: 100px;
         border-radius: 12px;
         margin-bottom: 0px;
     }
+
 .bannerHome-banner{
     height: 120px;
 }
+
 .bannerHome {
     background-size: cover;
     background-position: right center;
-    background-position: 65% 50%;
+    background-position: 51% 50%;
     margin-top: 0px;
     margin-bottom: 40px;
 }

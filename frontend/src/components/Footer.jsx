@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <div id="footerBackground">
+            <footer>
                 <svg
                     width="211"
                     height="68"
@@ -34,7 +34,7 @@ const Footer = () => {
                 </svg>
 
                 <p>&copy; 2020 Kasa.All rights reserved</p>
-            </div>
+            </footer>
         </>
     );
 };
