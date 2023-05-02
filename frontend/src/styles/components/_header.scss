@@ -120,7 +120,7 @@
         margin-top: 0px;
         margin-bottom: 0;
         margin: auto;
-        width: 80%;
+        width: 90%;
         height: 68px;
         display: flex;
         justify-content: space-between;
@@ -134,20 +134,25 @@
             text-align: left;
             position: relative;
             li{
-                margin-left: -22px;
+                margin-left: 0px;
             }
         }
         .homeNav {
             font-size: 3vw;
-            margin-right: 34px;
+            margin-right: 0px;
+            padding-bottom: 0;
+
         }
     }
 
     #navigation {
-        width: 29%;
+        width: 36.5%;
+        padding-bottom: 0;
+
     }
 
     .navActive {
+        padding-bottom: 0;
         border-bottom: 1px solid $primary-color;
         &.active {
             &::before,

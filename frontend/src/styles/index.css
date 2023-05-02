@@ -12,10 +12,22 @@ html,
 body {
   margin: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #root {
-  width: 100%;
+  flex: 1;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: max-content;
+}
+
+main {
+  flex: 1;
 }
 
 @media (min-width: 576px) {
@@ -257,6 +269,10 @@ body {
   }
 }
 @media (max-width: 900px) {
+  .mediumSection {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
   .leftMediumSection {
     width: 80%;
     margin-top: 0px;
@@ -266,36 +282,46 @@ body {
     font-size: 5.2vw;
   }
   .leftMediumSection h2 {
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 0px;
     margin-top: 0px;
   }
-  .hostName {
-    margin-top: -15px;
-    margin-right: 10px;
-    font-size: 2.2vw !important;
-    height: 35px;
-  }
   .rightMediumSection {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
     font-size: 2.5vw;
+    width: 100%;
+    height: 120px;
   }
   .hostContent {
+    margin-top: 14px;
     width: 100%;
     height: 136px;
     justify-content: flex-end;
   }
+  .hostName {
+    margin-top: -10px;
+    margin-right: 19px;
+  }
+  .hostName p {
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-size: 3vw;
+  }
   .hostFoto {
-    width: 52%;
-    height: 52%;
+    width: 80px;
+    height: 80px;
   }
   .bottom {
-    height: 280px;
+    margin-top: 0;
+    height: auto;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 576px) {
   .mediumSection {
-    flex-direction: column;
-    margin-bottom: 0;
+    height: auto;
   }
   .leftMediumSection h1 {
     margin-bottom: 8px;
@@ -308,11 +334,10 @@ body {
     font-weight: 500;
   }
   .rightMediumSection {
-    flex-direction: row-reverse;
-    justify-content: space-between;
     margin-top: -5px;
     font-size: 4vw;
-    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
   }
   .hostContent {
     width: 100%;
@@ -320,7 +345,7 @@ body {
     margin-top: 34px;
   }
   .hostName {
-    margin-top: -14px;
+    margin-top: -10px;
     margin-right: 10px;
   }
   .hostName p {
@@ -329,8 +354,8 @@ body {
     font-size: 3.2vw;
   }
   .hostFoto {
-    width: 15%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
   }
   .bottom {
     flex-direction: column;
@@ -442,6 +467,9 @@ body {
   #navUl {
     padding-top: 74px;
   }
+  .homeNav {
+    font-size: 2.8vw;
+  }
 }
 @media (max-width: 576px) {
   #header {
@@ -449,7 +477,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0;
     margin: auto;
-    width: 80%;
+    width: 90%;
     height: 68px;
     display: flex;
     justify-content: space-between;
@@ -465,20 +493,25 @@ body {
     position: relative;
   }
   #header #navUl li {
-    margin-left: -18px;
+    margin-left: 0px;
   }
   #header .homeNav {
-    height: 9px;
-    text-align: left;
-    white-space: nowrap;
     font-size: 3vw;
-    margin-right: 28px;
+    margin-right: 0px;
+    padding-bottom: 0;
   }
   #navigation {
-    width: 29%;
+    width: 36.5%;
+    padding-bottom: 0;
   }
   .navActive {
+    padding-bottom: 0;
     border-bottom: 1px solid #ff6060;
+  }
+  .navActive.active::before, .navActive.active::after {
+    content: "";
+    opacity: 0.5;
+    border-bottom: 4px solid rgba(255, 96, 96, 0.5);
   }
 }
 .cardContainer {
@@ -621,9 +654,9 @@ body {
   width: 100%;
   height: 340px;
   background-color: black;
-  position: relative;
   color: #ffffff;
   margin-top: 50px;
+  margin-bottom: 0%;
 }
 #footerBackground svg {
   margin-left: 16%;
@@ -661,6 +694,8 @@ body {
 @media (max-width: 576px) {
   #footerBackground {
     height: 180px;
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
   #footerBackground svg {
     margin-left: 34%;
@@ -671,7 +706,7 @@ body {
   #footerBackground P {
     text-align: center;
     margin-top: 10px;
-    font-size: 1vh;
+    font-size: 1.8vh;
   }
 }
 .carousel-content {
@@ -1064,6 +1099,9 @@ body {
     border-radius: 0pc 0px 12px 12px;
   }
   /* Styles pour la page ApartmentCard */
+  .ApartmentCard {
+    height: auto !important;
+  }
   .ApartmentCard-arrow {
     width: 11.2%;
     height: 52%;
@@ -1092,8 +1130,21 @@ body {
     height: 340px;
   }
   /* Styles pour la page About */
+  .AccordionContentAbout {
+    height: auto;
+    margin-bottom: 20px;
+  }
   .About-button {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 2vh;
+  }
+  .About-arrow {
+    width: 7%;
+  }
+  .sectionText {
+    font-size: 2.2vw !important;
   }
 }
 @media (max-width: 576px) {
@@ -1162,12 +1213,13 @@ body {
     margin-top: 10px !important;
   }
   .About-item {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
   .About-button {
     height: auto;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 3.7vw;
   }
   .About-arrow {
     width: 8%;
@@ -1175,6 +1227,7 @@ body {
   .sectionText {
     font-size: 4vw !important;
     margin-top: 0;
+    margin-left: 5px;
     padding: 20px 0px 50px 5px !important;
   }
 }
@@ -1215,17 +1268,18 @@ body {
 }
 @media (max-width: 900px) {
   .starsContainer {
-    margin-top: -65px;
+    width: 55%;
+    margin-top: 20px;
   }
   .stars {
     height: 100%;
     transform: scale(0.8);
-    margin-right: 2%;
+    margin-right: 0%;
   }
   .stars svg {
     height: 100%;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 0px;
   }
 }
 @media (max-width: 576px) {
@@ -1331,24 +1385,24 @@ body {
     border-radius: 12px;
     margin-bottom: 0px;
   }
+  .bannerHome-banner {
+    height: 120px;
+  }
   .bannerMobileAbout-banner {
-    width: 90%;
     border-radius: 8px;
     height: 190px;
     margin-bottom: 0;
   }
   .bannerMobileAbout {
-    width: 100%;
-    height: 100%;
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
     border-radius: 12px;
     background-image: url("../assets/aboutBackground2.png");
   }
-  .banner-home {
-    width: 90%;
-    height: auto;
+  .bannerHome {
+    background-size: cover;
+    background-position: right center;
+    background-position: 65% 50%;
     margin-top: 0px;
     margin-bottom: 40px;
   }
@@ -1365,7 +1419,7 @@ body {
   #mobileQuoteVersion {
     position: absolute;
     display: block;
-    top: 31px;
+    top: 35px;
     left: 14px;
   }
   #mobileQuoteVersion .mobileQuoteVersionP {
@@ -1374,8 +1428,8 @@ body {
     white-space: nowrap;
     line-height: 0;
     padding-left: 10.4%;
-    font-size: 6.9vw;
-    line-height: 24px;
+    font-size: 6vw;
+    line-height: 28px;
     margin-bottom: 0px;
   }
   p1 {
@@ -1433,7 +1487,7 @@ body {
 }
 @media (max-width: 576px) {
   .tagList {
-    width: 150%;
+    width: 100%;
   }
   .tagList li {
     font-size: 2.8vw;
