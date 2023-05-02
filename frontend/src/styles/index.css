@@ -323,6 +323,9 @@ main {
   .mediumSection {
     height: auto;
   }
+  .leftMediumSection {
+    width: 100%;
+  }
   .leftMediumSection h1 {
     margin-bottom: 8px;
     font-size: 5.2vw;
