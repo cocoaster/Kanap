@@ -88,25 +88,31 @@
 .bannerHome-banner{
     height: 120px;
 }
+.bannerHome {
+    background-size: cover;
+    background-position: right center;
+    background-position: 65% 50%;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
     .bannerMobileAbout-banner {
         border-radius: 8px;
         height: 190px;
         margin-bottom: 0;
     }
     .bannerMobileAbout {
+        width: 100%;
+        height: 100%;
         background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
         border-radius: 12px;
         background-image: url("../assets/aboutBackground2.png");
+        z-index: 10;
+        position: relative;
     }
    
-    .bannerHome {
-        background-size: cover;
-        background-position: right center;
-        background-position: 65% 50%;
-        margin-top: 0px;
-        margin-bottom: 40px;
-    }
 
 
     .background {

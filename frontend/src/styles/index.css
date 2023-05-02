@@ -475,28 +475,25 @@ main {
   #header {
     text-transform: uppercase;
     margin-top: 0px;
-    margin-bottom: 0;
     margin: auto;
+    margin-bottom: 12px;
     width: 90%;
     height: 68px;
-    display: flex;
-    justify-content: space-between;
   }
   #header svg {
     margin-top: -6px;
-    width: 108px;
+    width: 150px;
     height: 85px;
   }
   #header #navUl {
     padding-top: 60px;
-    text-align: left;
-    position: relative;
   }
   #header #navUl li {
     margin-left: 0px;
   }
   #header .homeNav {
-    font-size: 3vw;
+    font-size: 2.9vw;
+    font-weight: 500;
     margin-right: 0px;
     padding-bottom: 0;
   }
@@ -507,11 +504,7 @@ main {
   .navActive {
     padding-bottom: 0;
     border-bottom: 1px solid #ff6060;
-  }
-  .navActive.active::before, .navActive.active::after {
-    content: "";
-    opacity: 0.5;
-    border-bottom: 4px solid rgba(255, 96, 96, 0.5);
+    vertical-align: bottom;
   }
 }
 .cardContainer {
@@ -1388,23 +1381,28 @@ main {
   .bannerHome-banner {
     height: 120px;
   }
-  .bannerMobileAbout-banner {
-    border-radius: 8px;
-    height: 190px;
-    margin-bottom: 0;
-  }
-  .bannerMobileAbout {
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 12px;
-    background-image: url("../assets/aboutBackground2.png");
-  }
   .bannerHome {
     background-size: cover;
     background-position: right center;
     background-position: 65% 50%;
     margin-top: 0px;
     margin-bottom: 40px;
+  }
+  .bannerMobileAbout-banner {
+    border-radius: 8px;
+    height: 190px;
+    margin-bottom: 0;
+  }
+  .bannerMobileAbout {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    background-image: url("../assets/aboutBackground2.png");
+    z-index: 10;
+    position: relative;
   }
   .background {
     height: 90px;
