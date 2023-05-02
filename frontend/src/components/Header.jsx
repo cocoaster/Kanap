@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 function AppHeader() {
     return (
         <>
-            <div id="header">
+            <header>
                 <svg
                     viewBox="0 0 211 68"
                     fill="#ff6060"
@@ -59,7 +59,7 @@ function AppHeader() {
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </header>
                 <Outlet />
            
         </>

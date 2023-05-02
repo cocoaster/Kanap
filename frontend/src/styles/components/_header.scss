@@ -1,4 +1,4 @@
-#header {
+header {
     margin-top: 10px;
     margin-left: 6%;
     margin-right: 50%;
@@ -70,7 +70,7 @@
 }
 
 @media (max-width: 1200px) {
-    #header {
+    header {
         width: 88%;
         height: 140px;
         svg {
@@ -100,7 +100,7 @@
 }
 
 @media (max-width: 900px) {
-    #header {
+    header {
         margin-top: 16px;
         height: 110px;
     }
@@ -114,7 +114,7 @@
     }
 }
 @media (max-width: 576px) {
-    #header {
+    header {
         text-transform: uppercase;
         margin: auto;
         margin-bottom: 12px;
