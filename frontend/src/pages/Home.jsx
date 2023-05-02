@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import List from "../components/ApartmentsList";
 import Footer from "../components/Footer.jsx";
 import Banner from "../components/Banner.jsx";
-import apartmentsData from "../data/logements.json"
+import apartmentsData from "../data/logements.json";
 const AppHome = () => {
     const [apartmentsList, setApartmentsList] = useState([]);
 
@@ -50,7 +50,6 @@ const AppHome = () => {
             <Footer />
         </>
     );
-
 };
 
 export default AppHome;

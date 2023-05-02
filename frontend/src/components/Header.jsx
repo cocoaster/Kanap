@@ -60,8 +60,7 @@ function AppHeader() {
                     </ul>
                 </nav>
             </header>
-                <Outlet />
-           
+            <Outlet />
         </>
     );
 }

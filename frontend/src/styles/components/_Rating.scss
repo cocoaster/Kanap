@@ -3,7 +3,6 @@
     width: 85%;
     margin-top: -30px;
     margin-right: 10px;
-
 }
 .rating {
     display: flex;
@@ -26,9 +25,9 @@
 
 @media (max-width: 1200px) {
     .starsContainer {
-    margin-top: -55px ;
+        margin-top: -55px;
     }
-  
+
     .stars {
         height: 90%;
         width: 90%;
@@ -37,7 +36,7 @@
 @media (max-width: 900px) {
     .starsContainer {
         width: 55%;
-margin-top: 20px;
+        margin-top: 20px;
     }
     .stars {
         height: 100%;
@@ -49,25 +48,22 @@ margin-top: 20px;
             margin-left: 0px;
         }
     }
-    
 }
 
 @media (max-width: 576px) {
     .starsContainer {
         margin-top: 20px;
         width: 40%;
-
-            }
-            .stars {
-                height: 100%;
-                transform: scale(1.7);
-                margin-right: 10%;
-                svg {
-                    height: 90%;
-                    width: 90%;
-                    margin-left: 4px;
-                    margin-right: 0;
-                }
-            }
+    }
+    .stars {
+        height: 100%;
+        transform: scale(1.7);
+        margin-right: 10%;
+        svg {
+            height: 90%;
+            width: 90%;
+            margin-left: 4px;
+            margin-right: 0;
+        }
+    }
 }
-

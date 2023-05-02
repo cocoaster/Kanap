@@ -8,64 +8,77 @@ import Rating from "../components/Rating";
 import TagList from "../components/Tag";
 
 function ApartmentCard() {
-  const params = useParams();
+    const params = useParams();
 
-  const apartment = apartments.find((apartment) => apartment?.id === params?.id);
+    const apartment = apartments.find(
+        (apartment) => apartment?.id === params?.id
+    );
 
-  const items = [
-    {
-      id: "apartAccordion1",
-      title: "Description",
-      content: <p className="accordionTextApart">{apartment?.description}</p>,
-    },
-    {
-      id: "apartAccordion2",
-      title: "Equipements",
-      content: (
-        <ul className="apartAccordion2">
-          {apartment?.equipments.map((equipment, index) => (
-            <li key={index}>{equipment}</li>
-          ))}
-        </ul>
-      ),
-    },
-  ];
+    const items = [
+        {
+            id: "apartAccordion1",
+            title: "Description",
+            content: (
+                <p className="accordionTextApart">{apartment?.description}</p>
+            ),
+        },
+        {
+            id: "apartAccordion2",
+            title: "Equipements",
+            content: (
+                <ul className="apartAccordion2">
+                    {apartment?.equipments.map((equipment, index) => (
+                        <li key={index}>{equipment}</li>
+                    ))}
+                </ul>
+            ),
+        },
+    ];
 
-  return apartment ? (
-    <>
-      <main>
-        <AppHeader />
-        <div className="apartmentContent">
-          <Carousel apartments={apartments} selectedApartmentId={params.id} />
-          <div className="mediumSection">
-            <div className="leftMediumSection">
-              <h1>{apartment?.title}</h1>
-              <h2 className="subtitleList">{apartment?.location}</h2>
-              <TagList tags={apartment?.tags} />
-            </div>
-            <div className="rightMediumSection">
-              <div className="hostContent">
-                <div className="hostName">
-                  <p>{apartment?.host.name.split(" ")[0]}</p>
-                  <p>{apartment?.host.name.split(" ")[1]}</p>
+    return apartment ? (
+        <>
+            <main>
+                <AppHeader />
+                <div className="apartmentContent">
+                    <Carousel
+                        apartments={apartments}
+                        selectedApartmentId={params.id}
+                    />
+                    <div className="mediumSection">
+                        <div className="leftMediumSection">
+                            <h1>{apartment?.title}</h1>
+                            <h2 className="subtitleList">
+                                {apartment?.location}
+                            </h2>
+                            <TagList tags={apartment?.tags} />
+                        </div>
+                        <div className="rightMediumSection">
+                            <div className="hostContent">
+                                <div className="hostName">
+                                    <p>{apartment?.host.name.split(" ")[0]}</p>
+                                    <p>{apartment?.host.name.split(" ")[1]}</p>
+                                </div>
+                                <img
+                                    className="hostFoto"
+                                    src={apartment?.host.picture}
+                                    alt="photo de l'hôte"
+                                />
+                            </div>
+                            <div className="starsContainer">
+                                <Rating rating={apartment?.rating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bottom">
+                        <Accordion items={items} className="ApartmentCard" />
+                    </div>
                 </div>
-                <img className="hostFoto" src={apartment?.host.picture} alt="photo de l'hôte" />
-              </div>
-              <div className="starsContainer">
-                <Rating rating={apartment?.rating} />
-              </div>
-            </div>
-          </div>
-          <div className="bottom">
-            <Accordion items={items} className="ApartmentCard" />
-          </div>
-          </div>
-      </main>
-      <Footer />
-    </>
-  ) : (
-    <Navigate replace to="/Error404" />
-  );
+            </main>
+            <Footer />
+        </>
+    ) : (
+        <Navigate replace to="/Error404" />
+    );
 }
 
 export default ApartmentCard;

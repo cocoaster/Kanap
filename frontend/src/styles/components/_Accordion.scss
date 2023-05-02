@@ -33,8 +33,7 @@
     &.show {
         height: auto;
     }
-
-  }
+}
 /* Styles pour la page ApartmentCard */
 
 .ApartmentCard {
@@ -106,7 +105,6 @@
     height: 365px;
 }
 
-
 /* Styles pour la page About */
 
 .AccordionContentAbout {
@@ -122,7 +120,7 @@
 }
 .About-button {
     height: 62px;
-border-radius: 5px;
+    border-radius: 5px;
     font-size: 1.4vw;
 }
 .About-arrow {
@@ -180,7 +178,6 @@ border-radius: 5px;
             padding-top: 24px;
             line-height: 150%;
             font-size: 2vw;
-
         }
         ul {
             padding-top: 35px;
@@ -209,12 +206,12 @@ border-radius: 5px;
     }
 
     /* Styles pour la page ApartmentCard */
-.ApartmentCard{
-    height: auto !important;
-}
+    .ApartmentCard {
+        height: auto !important;
+    }
     .ApartmentCard-arrow {
         width: 11.2%;
-        height: 52%;        
+        height: 52%;
         padding-top: 0;
         margin-top: 0;
         margin-bottom: 0;
@@ -236,28 +233,28 @@ border-radius: 5px;
             height: 350px;
         }
     }
-.accordionTextApart{
-  height: 340px;
-}
-.apartAccordion2{
-  height: 340px;
-}
+    .accordionTextApart {
+        height: 340px;
+    }
+    .apartAccordion2 {
+        height: 340px;
+    }
     /* Styles pour la page About */
-.AccordionContentAbout{
+    .AccordionContentAbout {
         height: auto;
         margin-bottom: 20px;
     }
 
     .About-button {
         height: auto;
-        padding-top: 10px ;
+        padding-top: 10px;
         padding-bottom: 10px;
         font-size: 2vh;
     }
-    .About-arrow{
-        width: 7%;;
+    .About-arrow {
+        width: 7%;
     }
-    .sectionText{
+    .sectionText {
         font-size: 2.2vw !important;
     }
 }
@@ -282,14 +279,12 @@ border-radius: 5px;
         width: 100% !important;
         margin-top: -30px;
         height: auto;
-
     }
 
     .ApartmentCard-item {
         width: 100%;
         margin-bottom: 19px;
         height: auto;
-
     }
     .ApartmentCard-button {
         padding-top: 7px;
@@ -303,7 +298,7 @@ border-radius: 5px;
     }
 
     .ApartmentCard-body {
-      height: 0;
+        height: 0;
         p {
             margin-top: 0;
             padding: 18px 10px 0px 7px !important;
@@ -312,7 +307,7 @@ border-radius: 5px;
             margin-bottom: 0%;
         }
         ul {
-          height: auto;
+            height: auto;
             padding-left: 7px;
             padding-top: 18px;
             padding-bottom: 1px !important;
@@ -322,36 +317,35 @@ border-radius: 5px;
             }
         }
     }
-.accordionTextApart{
-  height: auto;
-  padding-bottom: 1px;
-}
+    .accordionTextApart {
+        height: auto;
+        padding-bottom: 1px;
+    }
     /* Styles pour la page About */
 
     .AccordionContentAbout {
         margin-top: -45px;
         width: 90% !important;
     }
-.accordionAbout{
-  margin-top: 10px !important;
-}
+    .accordionAbout {
+        margin-top: 10px !important;
+    }
     .About-item {
         margin-bottom: 22px;
     }
-.About-button{
-  height: auto;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  font-size: 3.7vw;
-}
-.About-arrow{
-  width: 8%;
-}
- .sectionText {
+    .About-button {
+        height: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 3.7vw;
+    }
+    .About-arrow {
+        width: 8%;
+    }
+    .sectionText {
         font-size: 4vw !important;
         margin-top: 0;
         margin-left: 5px;
         padding: 20px 0px 50px 5px !important;
     }
-
 }

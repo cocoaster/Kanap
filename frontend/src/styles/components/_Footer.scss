@@ -39,16 +39,15 @@ footer {
             text-align: center;
             font-size: 2vh;
             padding-bottom: 60px;
-
         }
     }
 }
 
 @media (max-width: 576px) {
     footer {
-    display: table-row;
-     height: 1;
-     width: 100%;
+        display: table-row;
+        height: 1;
+        width: 100%;
 
         svg {
             margin-left: 34%;
@@ -61,7 +60,6 @@ footer {
             margin-top: 7px;
             font-size: 1.8vh;
             padding-bottom: 35px;
-
         }
     }
 }
