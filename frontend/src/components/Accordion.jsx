@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DownArrow from "../assets/downarrow.png";
-import UpArrow from "../assets/uparrow.png";
+import DownArrow from "../assets/DownArrow.png";
+import UpArrow from "../assets/UpArrow.png";
 
 function Accordion({ items, className }) {
     const [activeAccordionIndexes, setActiveAccordionIndexes] = useState([]);
